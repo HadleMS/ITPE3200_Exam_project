@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\helmelk.jpg",
+      "PackagePath": "staticwebassets\\images\\helmelk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\kjøttdeig.jpg",
+      "PackagePath": "staticwebassets\\images\\kjøttdeig.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\kylling.jpg",
+      "PackagePath": "staticwebassets\\images\\kylling.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\lettmelk.jpg",
+      "PackagePath": "staticwebassets\\images\\lettmelk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\peanøtter.jpg",
+      "PackagePath": "staticwebassets\\images\\peanøtter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\polpa.jpg",
+      "PackagePath": "staticwebassets\\images\\polpa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MyShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MyShop.props",
+      "PackagePath": "build\\MyShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MyShop.props",
+      "PackagePath": "buildMultiTargeting\\MyShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MyShop.props",
+      "PackagePath": "buildTransitive\\MyShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

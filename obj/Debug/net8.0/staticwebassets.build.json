@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z1INM6nYpl3cvvoy9/2hqgA1Jm7vfBTbpTZtHkOoe0U=",
+  "Hash": "uF5OfGpwnLmBY9LE8aN8u4Qjj9McVEfo40+H1uJgowg=",
   "Source": "MyShop",
   "BasePath": "_content/MyShop",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyShop\\wwwroot",
       "Source": "MyShop",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css",
       "SourceId": "MyShop",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "MyShop.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css"
+      "OriginalItemSpec": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
       "SourceId": "MyShop",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "MyShop.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
+      "OriginalItemSpec": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\helmelk.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/helmelk.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\helmelk.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\kjøttdeig.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/kjøttdeig.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kjøttdeig.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\kylling.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/kylling.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kylling.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\lettmelk.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/lettmelk.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lettmelk.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\peanøtter.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/peanøtter.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\peanøtter.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\images\\polpa.jpg",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/polpa.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\polpa.jpg"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\bootstrap.js",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/bootstrap.js",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.min.js",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.min.js",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.validate.js",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.validate.js",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200-24H-main\\ITPE3200-24H-main\\4-Errorhandling-Logging_Inputvalidation\\Demo-Inputvalidation\\MyShop\\wwwroot\\",
+      "ContentRoot": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.validate.unobtrusive.js",
       "AssetKind": "All",

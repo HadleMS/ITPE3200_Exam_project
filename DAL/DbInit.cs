@@ -98,17 +98,5 @@ public static class DBInit
             context.AddRange(customers);
             context.SaveChanges();
         }
-
-        if (!context.Orders.Any())
-        {
-            var orders = new List<Order>
-            {
-                new Order {OrderDate = DateTime.Today.ToString(), CustomerId = 1,},
-                new Order {OrderDate = DateTime.Today.ToString(), CustomerId = 2,},
-            };
-            context.AddRange(orders);
-            context.SaveChanges();
-        }
-
        
 }}

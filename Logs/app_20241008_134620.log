@@ -1,0 +1,220 @@
+2024-10-08 13:46:22.013 +02:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-08 13:46:22.061 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-08 13:46:22.064 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-08 13:46:22.065 +02:00 [INF] Hosting environment: Development
+2024-10-08 13:46:22.065 +02:00 [INF] Content root path: C:\TestMappe\ITPE3200_Exam_project
+2024-10-08 13:46:26.273 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-08 13:46:26.296 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:46:26.303 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-08 13:46:26.313 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-08 13:46:26.372 +02:00 [INF] Executed ViewResult - view Index executed in 57.7984ms.
+2024-10-08 13:46:26.375 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 71.2437ms
+2024-10-08 13:46:26.376 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:46:26.379 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 106.7968ms
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - null null
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - null null
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - null null
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - null null
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - null null
+2024-10-08 13:46:26.393 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - null null
+2024-10-08 13:46:26.396 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - 404 0 null 2.9709ms
+2024-10-08 13:46:26.396 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - 404 0 null 2.6134ms
+2024-10-08 13:46:26.398 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/fishandchips.jpg, Response status code: 404
+2024-10-08 13:46:26.398 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/pizza.jpg, Response status code: 404
+2024-10-08 13:46:26.410 +02:00 [INF] Sending file. Request path: '/js/jquery.min.js'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\js\jquery.min.js'
+2024-10-08 13:46:26.410 +02:00 [INF] Sending file. Request path: '/js/jquery.validate.unobtrusive.js'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\js\jquery.validate.unobtrusive.js'
+2024-10-08 13:46:26.410 +02:00 [INF] Sending file. Request path: '/js/jquery.validate.js'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\js\jquery.validate.js'
+2024-10-08 13:46:26.411 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - 200 87535 text/javascript 17.8441ms
+2024-10-08 13:46:26.411 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - 200 54238 text/javascript 17.8426ms
+2024-10-08 13:46:26.411 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - 200 19820 text/javascript 17.8462ms
+2024-10-08 13:46:26.412 +02:00 [INF] Sending file. Request path: '/js/bootstrap.js'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\js\bootstrap.js'
+2024-10-08 13:46:26.412 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - 200 149895 text/javascript 19.5346ms
+2024-10-08 13:46:26.597 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - null null
+2024-10-08 13:46:26.598 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - 404 0 null 1.6884ms
+2024-10-08 13:46:26.598 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/tacos.jpg, Response status code: 404
+2024-10-08 13:46:28.574 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-08 13:46:28.575 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:46:28.581 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-08 13:46:28.696 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:46:28.769 +02:00 [INF] Executed ViewResult - view Table executed in 74.8837ms.
+2024-10-08 13:46:28.769 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 187.6743ms
+2024-10-08 13:46:28.769 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:46:28.773 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 198.9953ms
+2024-10-08 13:46:29.558 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Order/Table - null null
+2024-10-08 13:46:29.558 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Order/Table - 404 0 null 0.4984ms
+2024-10-08 13:46:29.559 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/Order/Table, Response status code: 404
+2024-10-08 13:46:31.811 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-08 13:46:31.812 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:46:31.812 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-08 13:46:31.933 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:46:31.940 +02:00 [INF] Executed ViewResult - view Table executed in 7.495ms.
+2024-10-08 13:46:31.940 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 127.9146ms
+2024-10-08 13:46:31.940 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:46:31.941 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 129.5777ms
+2024-10-08 13:46:32.385 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-08 13:46:32.385 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-08 13:46:32.392 +02:00 [INF] Route matched with {action = "Table", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-08 13:46:32.415 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:46:32.438 +02:00 [INF] Executed ViewResult - view Table executed in 24.2591ms.
+2024-10-08 13:46:32.439 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 46.787ms
+2024-10-08 13:46:32.439 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-08 13:46:32.440 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 55.1142ms
+2024-10-08 13:46:32.460 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/helmelk.jpg - null null
+2024-10-08 13:46:32.461 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/kjøttdeig.jpg - null null
+2024-10-08 13:46:32.461 +02:00 [INF] Sending file. Request path: '/images/helmelk.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\helmelk.jpg'
+2024-10-08 13:46:32.461 +02:00 [INF] Sending file. Request path: '/images/kjøttdeig.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\kjøttdeig.jpg'
+2024-10-08 13:46:32.462 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/kjøttdeig.jpg - 200 25555 image/jpeg 1.0302ms
+2024-10-08 13:46:32.462 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/helmelk.jpg - 200 17192 image/jpeg 2.0492ms
+2024-10-08 13:46:32.474 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/kylling.jpg - null null
+2024-10-08 13:46:32.474 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/peanøtter.jpg - null null
+2024-10-08 13:46:32.474 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/lettmelk.jpg - null null
+2024-10-08 13:46:32.474 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/polpa.jpg - null null
+2024-10-08 13:46:32.475 +02:00 [INF] Sending file. Request path: '/images/kylling.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\kylling.jpg'
+2024-10-08 13:46:32.475 +02:00 [INF] Sending file. Request path: '/images/peanøtter.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\peanøtter.jpg'
+2024-10-08 13:46:32.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/kylling.jpg - 200 14044 image/jpeg 0.8355ms
+2024-10-08 13:46:32.475 +02:00 [INF] Sending file. Request path: '/images/polpa.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\polpa.jpg'
+2024-10-08 13:46:32.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/peanøtter.jpg - 200 28086 image/jpeg 0.933ms
+2024-10-08 13:46:32.475 +02:00 [INF] Sending file. Request path: '/images/lettmelk.jpg'. Physical path: 'C:\TestMappe\ITPE3200_Exam_project\wwwroot\images\lettmelk.jpg'
+2024-10-08 13:46:32.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/polpa.jpg - 200 31503 image/jpeg 0.9189ms
+2024-10-08 13:46:32.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/lettmelk.jpg - 200 22011 image/jpeg 1.0985ms
+2024-10-08 13:46:35.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-08 13:46:35.785 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:46:35.785 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-08 13:46:35.786 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-08 13:46:35.788 +02:00 [INF] Executed ViewResult - view Index executed in 1.8436ms.
+2024-10-08 13:46:35.788 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 3.0758ms
+2024-10-08 13:46:35.788 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:46:35.788 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 3.7483ms
+2024-10-08 13:46:35.809 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - null null
+2024-10-08 13:46:35.809 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - null null
+2024-10-08 13:46:35.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - 404 0 null 0.4486ms
+2024-10-08 13:46:35.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - 404 0 null 0.4394ms
+2024-10-08 13:46:35.810 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/pizza.jpg, Response status code: 404
+2024-10-08 13:46:35.810 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/fishandchips.jpg, Response status code: 404
+2024-10-08 13:46:35.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - null null
+2024-10-08 13:46:35.824 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - 404 0 null 0.4046ms
+2024-10-08 13:46:35.824 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/tacos.jpg, Response status code: 404
+2024-10-08 13:47:02.226 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-08 13:47:02.227 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:47:02.227 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-08 13:47:02.229 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:47:02.232 +02:00 [INF] Executed ViewResult - view Table executed in 2.9874ms.
+2024-10-08 13:47:02.232 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 5.0087ms
+2024-10-08 13:47:02.232 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:47:02.232 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 5.7375ms
+2024-10-08 13:47:02.255 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - null null
+2024-10-08 13:47:02.255 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - null null
+2024-10-08 13:47:02.255 +02:00 [INF] The file /js/bootstrap.js was not modified
+2024-10-08 13:47:02.255 +02:00 [INF] The file /js/jquery.min.js was not modified
+2024-10-08 13:47:02.255 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - null null
+2024-10-08 13:47:02.255 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - 304 null text/javascript 0.6896ms
+2024-10-08 13:47:02.255 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - 304 null text/javascript 0.3817ms
+2024-10-08 13:47:02.255 +02:00 [INF] The file /js/jquery.validate.js was not modified
+2024-10-08 13:47:02.255 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - null null
+2024-10-08 13:47:02.256 +02:00 [INF] The file /js/jquery.validate.unobtrusive.js was not modified
+2024-10-08 13:47:02.256 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - 304 null text/javascript 0.3015ms
+2024-10-08 13:47:02.256 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - 304 null text/javascript 0.4292ms
+2024-10-08 13:48:13.270 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-08 13:48:13.270 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:48:13.270 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-08 13:48:13.271 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-08 13:48:13.272 +02:00 [INF] Executed ViewResult - view Index executed in 1.3221ms.
+2024-10-08 13:48:13.272 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 1.5267ms
+2024-10-08 13:48:13.272 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-08 13:48:13.272 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 2.4211ms
+2024-10-08 13:48:13.297 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - null null
+2024-10-08 13:48:13.298 +02:00 [INF] The file /js/bootstrap.js was not modified
+2024-10-08 13:48:13.298 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - 304 null text/javascript 0.4232ms
+2024-10-08 13:48:13.298 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - null null
+2024-10-08 13:48:13.298 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - null null
+2024-10-08 13:48:13.298 +02:00 [INF] The file /js/jquery.validate.js was not modified
+2024-10-08 13:48:13.298 +02:00 [INF] The file /js/jquery.min.js was not modified
+2024-10-08 13:48:13.299 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - 304 null text/javascript 0.3243ms
+2024-10-08 13:48:13.299 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - 304 null text/javascript 0.3172ms
+2024-10-08 13:48:13.299 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - null null
+2024-10-08 13:48:13.299 +02:00 [INF] The file /js/jquery.validate.unobtrusive.js was not modified
+2024-10-08 13:48:13.299 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - null null
+2024-10-08 13:48:13.299 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - 304 null text/javascript 0.6125ms
+2024-10-08 13:48:13.300 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/pizza.jpg - 404 0 null 0.4449ms
+2024-10-08 13:48:13.300 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/pizza.jpg, Response status code: 404
+2024-10-08 13:48:13.300 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - null null
+2024-10-08 13:48:13.300 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/fishandchips.jpg - 404 0 null 0.2869ms
+2024-10-08 13:48:13.300 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/fishandchips.jpg, Response status code: 404
+2024-10-08 13:48:13.311 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - null null
+2024-10-08 13:48:13.311 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/tacos.jpg - 404 0 null 0.278ms
+2024-10-08 13:48:13.311 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/tacos.jpg, Response status code: 404
+2024-10-08 13:49:53.470 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-08 13:49:53.470 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:49:53.470 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-08 13:49:53.474 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:49:53.479 +02:00 [INF] Executed ViewResult - view Table executed in 5.018ms.
+2024-10-08 13:49:53.479 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 8.1443ms
+2024-10-08 13:49:53.479 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:49:53.479 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 9.4366ms
+2024-10-08 13:49:53.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - null null
+2024-10-08 13:49:53.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - null null
+2024-10-08 13:49:53.513 +02:00 [INF] The file /js/bootstrap.js was not modified
+2024-10-08 13:49:53.513 +02:00 [INF] The file /js/jquery.validate.js was not modified
+2024-10-08 13:49:53.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - null null
+2024-10-08 13:49:53.513 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - 304 null text/javascript 0.5382ms
+2024-10-08 13:49:53.513 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - 304 null text/javascript 0.5345ms
+2024-10-08 13:49:53.513 +02:00 [INF] The file /js/jquery.min.js was not modified
+2024-10-08 13:49:53.513 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - null null
+2024-10-08 13:49:53.514 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - 304 null text/javascript 0.3291ms
+2024-10-08 13:49:53.514 +02:00 [INF] The file /js/jquery.validate.unobtrusive.js was not modified
+2024-10-08 13:49:53.514 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - 304 null text/javascript 0.2138ms
+2024-10-08 13:50:01.992 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-08 13:50:01.994 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-08 13:50:01.995 +02:00 [INF] Route matched with {action = "Table", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-08 13:50:01.998 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:50:02.001 +02:00 [INF] Executed ViewResult - view Table executed in 3.1007ms.
+2024-10-08 13:50:02.001 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 6.4891ms
+2024-10-08 13:50:02.001 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-08 13:50:02.001 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 9.7661ms
+2024-10-08 13:50:02.025 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/kjøttdeig.jpg - null null
+2024-10-08 13:50:02.025 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/helmelk.jpg - null null
+2024-10-08 13:50:02.026 +02:00 [INF] The file /images/helmelk.jpg was not modified
+2024-10-08 13:50:02.026 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/helmelk.jpg - 304 null image/jpeg 0.6806ms
+2024-10-08 13:50:02.026 +02:00 [INF] The file /images/kjøttdeig.jpg was not modified
+2024-10-08 13:50:02.026 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/kjøttdeig.jpg - 304 null image/jpeg 0.9362ms
+2024-10-08 13:50:02.047 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/kylling.jpg - null null
+2024-10-08 13:50:02.047 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/lettmelk.jpg - null null
+2024-10-08 13:50:02.047 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/peanøtter.jpg - null null
+2024-10-08 13:50:02.048 +02:00 [INF] The file /images/lettmelk.jpg was not modified
+2024-10-08 13:50:02.048 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/lettmelk.jpg - 304 null image/jpeg 0.8634ms
+2024-10-08 13:50:02.047 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/polpa.jpg - null null
+2024-10-08 13:50:02.054 +02:00 [INF] The file /images/kylling.jpg was not modified
+2024-10-08 13:50:02.054 +02:00 [INF] The file /images/polpa.jpg was not modified
+2024-10-08 13:50:02.054 +02:00 [INF] The file /images/peanøtter.jpg was not modified
+2024-10-08 13:50:02.054 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/kylling.jpg - 304 null image/jpeg 6.5606ms
+2024-10-08 13:50:02.054 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/peanøtter.jpg - 304 null image/jpeg 6.4647ms
+2024-10-08 13:50:02.054 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/polpa.jpg - 304 null image/jpeg 6.4472ms
+2024-10-08 13:50:09.848 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Order/Table - null null
+2024-10-08 13:50:09.848 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Order/Table - 404 0 null 0.1445ms
+2024-10-08 13:50:09.848 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/Order/Table, Response status code: 404
+2024-10-08 13:50:14.758 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Order/Table - null null
+2024-10-08 13:50:14.759 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Order/Table - 404 0 null 0.2961ms
+2024-10-08 13:50:14.759 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/Order/Table, Response status code: 404
+2024-10-08 13:50:22.016 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Order/Table - null null
+2024-10-08 13:50:22.016 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Order/Table - 404 0 null 0.2811ms
+2024-10-08 13:50:22.016 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/Order/Table, Response status code: 404
+2024-10-08 13:50:57.437 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-08 13:50:57.438 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:50:57.438 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-08 13:50:57.441 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-08 13:50:57.444 +02:00 [INF] Executed ViewResult - view Table executed in 2.9484ms.
+2024-10-08 13:50:57.444 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 5.9439ms
+2024-10-08 13:50:57.444 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-08 13:50:57.444 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 7.1062ms
+2024-10-08 13:50:57.471 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - null null
+2024-10-08 13:50:57.471 +02:00 [INF] The file /js/jquery.min.js was not modified
+2024-10-08 13:50:57.471 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.min.js - 304 null text/javascript 0.4992ms
+2024-10-08 13:50:57.471 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - null null
+2024-10-08 13:50:57.471 +02:00 [INF] The file /js/jquery.validate.js was not modified
+2024-10-08 13:50:57.472 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.js - 304 null text/javascript 0.3117ms
+2024-10-08 13:50:57.472 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - null null
+2024-10-08 13:50:57.472 +02:00 [INF] The file /js/jquery.validate.unobtrusive.js was not modified
+2024-10-08 13:50:57.472 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/jquery.validate.unobtrusive.js - 304 null text/javascript 0.1828ms
+2024-10-08 13:50:57.472 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - null null
+2024-10-08 13:50:57.472 +02:00 [INF] The file /js/bootstrap.js was not modified
+2024-10-08 13:50:57.472 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js - 304 null text/javascript 0.249ms

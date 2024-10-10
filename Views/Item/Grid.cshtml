@@ -3,14 +3,15 @@
 <h1>A Visual Display of Nutritional Products (@Model.CurrentViewName View)</h1>
 <a href="/Item/Table">Table View</a>
 
-<!-- Embedding CSS directly in the file -->
 <style>
     .custom-image-size {
         width: 100%;  /* Make the image take the full width of the container */
-        height: 200px; /* Set a fixed height */
-        object-fit: cover; /* Ensures the image maintains its aspect ratio and covers the container */
+        height: auto; /* Let the height be dynamic to maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits within the container without being cropped */
+        max-height: 200px; /* Set a max-height to keep a consistent grid */
     }
 </style>
+
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model.Items)
@@ -27,3 +28,4 @@
         </div>
     }
 </div>
+

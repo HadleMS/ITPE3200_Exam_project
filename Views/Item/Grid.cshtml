@@ -1,11 +1,29 @@
 @model ItemsViewModel
 
-<h1>List of Shop Items (@Model.CurrentViewName View)</h1>
+<h1>A Visual Display of Nutritional Products (@Model.CurrentViewName View)</h1>
 <a href="/Item/Table">Table View</a>
+
+<!-- Embedding CSS directly in the file -->
+<style>
+    .custom-image-size {
+        width: 100%;  /* Make the image take the full width of the container */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensures the image maintains its aspect ratio and covers the container */
+    }
+</style>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model.Items)
     {
-        <partial name="_ItemCard" model="item" />
+        <div class="col">
+            <div class="card">
+                <!-- Using the custom class for image size -->
+                <img src="@item.ImageUrl" class="img-fluid custom-image-size" alt="@item.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">Some nutritional information here</p>
+                </div>
+            </div>
+        </div>
     }
 </div>

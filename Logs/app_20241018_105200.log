@@ -1,0 +1,66 @@
+2024-10-18 10:52:01.695 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 10:52:01.745 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 10:52:01.748 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 10:52:01.748 +02:00 [INF] Hosting environment: Development
+2024-10-18 10:52:01.748 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 10:52:03.907 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 10:52:03.931 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:03.941 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 10:52:03.952 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 10:52:03.994 +02:00 [INF] Executed ViewResult - view Index executed in 43.3613ms.
+2024-10-18 10:52:03.995 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 53.6785ms
+2024-10-18 10:52:03.996 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:03.997 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 90.8129ms
+2024-10-18 10:52:04.019 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - null null
+2024-10-18 10:52:04.019 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - null null
+2024-10-18 10:52:04.020 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - null null
+2024-10-18 10:52:04.022 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - 404 0 null 2.5557ms
+2024-10-18 10:52:04.022 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - 404 0 null 2.5558ms
+2024-10-18 10:52:04.022 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - 404 0 null 1.7625ms
+2024-10-18 10:52:04.023 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/img/about.jpg, Response status code: 404
+2024-10-18 10:52:04.023 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7B%20url_for('static',filename='styles/css/styles.css')%20%7D%7D, Response status code: 404
+2024-10-18 10:52:04.023 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7Burl_for('static',%20filename='styles/img/home.png')%7D%7D, Response status code: 404
+2024-10-18 10:52:04.040 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - null null
+2024-10-18 10:52:04.042 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - 404 0 null 1.84ms
+2024-10-18 10:52:04.042 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/js/main.js, Response status code: 404
+2024-10-18 10:52:14.773 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 10:52:14.773 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:14.773 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 10:52:14.774 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 10:52:14.777 +02:00 [INF] Executed ViewResult - view Index executed in 3.2081ms.
+2024-10-18 10:52:14.777 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 3.7418ms
+2024-10-18 10:52:14.777 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:14.777 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 4.7639ms
+2024-10-18 10:52:14.838 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - null null
+2024-10-18 10:52:14.838 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - 404 0 null 0.3474ms
+2024-10-18 10:52:14.839 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7B%20url_for('static',filename='styles/css/styles.css')%20%7D%7D, Response status code: 404
+2024-10-18 10:52:14.841 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - null null
+2024-10-18 10:52:14.841 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - null null
+2024-10-18 10:52:14.842 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - 404 0 null 0.2553ms
+2024-10-18 10:52:14.842 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - 404 0 null 0.4071ms
+2024-10-18 10:52:14.842 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7Burl_for('static',%20filename='styles/img/home.png')%7D%7D, Response status code: 404
+2024-10-18 10:52:14.842 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/img/about.jpg, Response status code: 404
+2024-10-18 10:52:14.845 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - null null
+2024-10-18 10:52:14.846 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - 404 0 null 0.3406ms
+2024-10-18 10:52:14.846 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/js/main.js, Response status code: 404
+2024-10-18 10:52:20.042 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 10:52:20.042 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:20.042 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 10:52:20.042 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 10:52:20.043 +02:00 [INF] Executed ViewResult - view Index executed in 0.7677ms.
+2024-10-18 10:52:20.043 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 0.9637ms
+2024-10-18 10:52:20.043 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 10:52:20.044 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 1.6437ms
+2024-10-18 10:52:20.102 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - null null
+2024-10-18 10:52:20.102 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{ url_for('static',filename='styles/css/styles.css') }} - 404 0 null 0.3407ms
+2024-10-18 10:52:20.102 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7B%20url_for('static',filename='styles/css/styles.css')%20%7D%7D, Response status code: 404
+2024-10-18 10:52:20.103 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - null null
+2024-10-18 10:52:20.104 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/{{url_for('static', filename='styles/img/home.png')}} - 404 0 null 0.1868ms
+2024-10-18 10:52:20.104 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/%7B%7Burl_for('static',%20filename='styles/img/home.png')%7D%7D, Response status code: 404
+2024-10-18 10:52:20.104 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - null null
+2024-10-18 10:52:20.104 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/img/about.jpg - 404 0 null 0.2757ms
+2024-10-18 10:52:20.105 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/img/about.jpg, Response status code: 404
+2024-10-18 10:52:20.108 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - null null
+2024-10-18 10:52:20.109 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/static/styles/js/main.js - 404 0 null 0.3521ms
+2024-10-18 10:52:20.109 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/static/styles/js/main.js, Response status code: 404
+2024-10-18 10:53:00.348 +02:00 [INF] Application is shutting down...

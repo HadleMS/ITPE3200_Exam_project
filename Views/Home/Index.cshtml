@@ -1,9 +1,92 @@
-@{
-    ViewData["Title"] = "Home Page";
+@model FoodRegistration.Models.FoodProductViewModel
+
+<h2>Food Registration Tool</h2>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Track, Add, and Discover: Your Nutrition Journey Starts Here!</h1>
-</div>
+<form asp-action="SaveFood" method="post">
+    <input type="hidden" asp-for="Id" />
 
-<partial name="_Carousel" />
+    <label>Food Name</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <label>Food Group</label>
+    <select asp-for="FoodGroup">
+        <option value="">Select a food group</option>
+        <option value="Vegetables">Vegetables</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Meat">Meat</option>
+        <option value="Dairy">Dairy</option>
+    </select>
+    <span asp-validation-for="FoodGroup"></span>
+
+    <label>Calories</label>
+    <input asp-for="Calories" />
+    <span asp-validation-for="Calories"></span>
+
+    <label>Protein (g)</label>
+    <input asp-for="Protein" />
+    <span asp-validation-for="Protein"></span>
+
+    <label>Fat (g)</label>
+    <input asp-for="Fat" />
+    <span asp-validation-for="Fat"></span>
+
+    <label>Carbohydrates (g)</label>
+    <input asp-for="Carbohydrates" />
+    <span asp-validation-for="Carbohydrates"></span>
+
+    <label>Energy (kcal)</label>
+    <input asp-for="Energy" />
+    <span asp-validation-for="Energy"></span>
+
+    <button type="submit">Save</button>
+</form>
+
+<h3>Food Products</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Food Group</th>
+            <th>Calories</th>
+            <th>Protein</th>
+            <th>Fat</th>
+            <th>Carbohydrates</th>
+            <th>Energy</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.FoodProducts)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.FoodGroup</td>
+                <td>@product.Calories</td>
+                <td>@product.Protein</td>
+                <td>@product.Fat</td>
+                <td>@product.Carbohydrates</td>
+                <td>@product.Energy</td>
+                <td>
+                    <form method="post" asp-action="EditFood">
+                        <input type="hidden" name="id" value="@product.Id" />
+                        <button type="submit">Edit</button>
+                    </form>
+                    <form method="post" asp-action="DeleteFood">
+                        <input type="hidden" name="id" value="@product.Id" />
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form method="post" asp-action="CheckHealthyFood">
+                        <input type="hidden" name="id" value="@product.Id" />
+                        <button type="submit">Check Healthy Food</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -27,3 +27,51 @@
 2024-10-10 16:42:50.309 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 39.2998ms
 2024-10-10 16:42:50.309 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
 2024-10-10 16:42:50.310 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 45.3051ms
+2024-10-10 16:56:55.159 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-10 16:56:55.161 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-10 16:56:55.164 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-10 16:56:55.180 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-10 16:56:55.249 +02:00 [INF] Executed ViewResult - view Table executed in 69.5689ms.
+2024-10-10 16:56:55.249 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 84.5586ms
+2024-10-10 16:56:55.249 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-10 16:56:55.249 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 90.5392ms
+2024-10-10 16:56:56.075 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-10 16:56:56.078 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-10 16:56:56.078 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-10 16:56:56.079 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-10 16:56:56.080 +02:00 [INF] Executed ViewResult - view Index executed in 1.8439ms.
+2024-10-10 16:56:56.081 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 2.316ms
+2024-10-10 16:56:56.081 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-10 16:56:56.081 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 6.2242ms
+2024-10-10 16:56:57.341 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-10 16:56:57.342 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-10 16:56:57.342 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-10 16:56:57.342 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-10 16:56:57.344 +02:00 [INF] Executed ViewResult - view Index executed in 1.1979ms.
+2024-10-10 16:56:57.344 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 1.5215ms
+2024-10-10 16:56:57.344 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-10 16:56:57.344 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 2.7335ms
+2024-10-10 16:56:58.637 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-10 16:56:58.637 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-10 16:56:58.638 +02:00 [INF] Route matched with {action = "Table", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-10 16:56:58.643 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-10 16:56:58.645 +02:00 [INF] Executed ViewResult - view Table executed in 2.0696ms.
+2024-10-10 16:56:58.645 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 7.3202ms
+2024-10-10 16:56:58.645 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-10 16:56:58.645 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 8.0463ms
+2024-10-10 16:56:59.898 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-10-10 16:56:59.898 +02:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-10 16:56:59.898 +02:00 [INF] Route matched with {action = "Table", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-10-10 16:56:59.900 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-10 16:56:59.903 +02:00 [INF] Executed ViewResult - view Table executed in 3.749ms.
+2024-10-10 16:56:59.904 +02:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 5.3116ms
+2024-10-10 16:56:59.904 +02:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-10-10 16:56:59.904 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 6.0124ms
+2024-10-10 16:57:01.431 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-10 16:57:01.431 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-10 16:57:01.431 +02:00 [INF] Route matched with {action = "Table", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-10 16:57:01.433 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-10 16:57:01.435 +02:00 [INF] Executed ViewResult - view Table executed in 2.063ms.
+2024-10-10 16:57:01.436 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 4.0367ms
+2024-10-10 16:57:01.436 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-10 16:57:01.436 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 4.6706ms

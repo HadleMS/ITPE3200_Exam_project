@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
+      "PackagePath": "staticwebassets\\images\\healthy.jpg"
+    },
+    {
       "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
       "PackagePath": "staticwebassets\\images\\helmelk.jpg"
     },

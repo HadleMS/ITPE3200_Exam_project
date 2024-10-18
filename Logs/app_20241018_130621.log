@@ -1,0 +1,22 @@
+2024-10-18 13:06:22.315 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 13:06:22.364 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 13:06:22.367 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 13:06:22.367 +02:00 [INF] Hosting environment: Development
+2024-10-18 13:06:22.367 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 13:06:25.019 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:06:25.050 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:06:25.057 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:06:25.066 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:06:25.110 +02:00 [INF] Executed ViewResult - view Index executed in 44.9567ms.
+2024-10-18 13:06:25.112 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 54.4539ms
+2024-10-18 13:06:25.112 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:06:25.114 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 95.7965ms
+2024-10-18 13:06:27.183 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:06:27.183 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:06:27.184 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:06:27.184 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:06:27.188 +02:00 [INF] Executed ViewResult - view Index executed in 4.1292ms.
+2024-10-18 13:06:27.188 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 4.6705ms
+2024-10-18 13:06:27.188 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:06:27.189 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 6.2192ms
+2024-10-18 13:07:36.903 +02:00 [INF] Application is shutting down...

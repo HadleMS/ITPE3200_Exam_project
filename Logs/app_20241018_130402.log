@@ -1,0 +1,26 @@
+2024-10-18 13:04:03.600 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 13:04:03.652 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 13:04:03.654 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 13:04:03.655 +02:00 [INF] Hosting environment: Development
+2024-10-18 13:04:03.655 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 13:04:04.860 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:04:04.889 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:04:04.897 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:04:04.908 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:04:04.956 +02:00 [INF] Executed ViewResult - view Index executed in 48.6908ms.
+2024-10-18 13:04:04.958 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 60.5737ms
+2024-10-18 13:04:04.958 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:04:04.961 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 101.2413ms
+2024-10-18 13:04:04.982 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - null null
+2024-10-18 13:04:04.987 +02:00 [INF] The file /images/healthy.jpg was not modified
+2024-10-18 13:04:04.987 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - 304 null image/jpeg 5.6215ms
+2024-10-18 13:04:05.001 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/your-image-path1.jpg - null null
+2024-10-18 13:04:05.003 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/your-image-path1.jpg - 404 0 null 2.2863ms
+2024-10-18 13:04:05.005 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/your-image-path1.jpg, Response status code: 404
+2024-10-18 13:04:05.006 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/your-image-path2.jpg - null null
+2024-10-18 13:04:05.006 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/your-image-path2.jpg - 404 0 null 0.3663ms
+2024-10-18 13:04:05.006 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/your-image-path2.jpg, Response status code: 404
+2024-10-18 13:04:05.014 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/your-image-path3.jpg - null null
+2024-10-18 13:04:05.014 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/your-image-path3.jpg - 404 0 null 0.5916ms
+2024-10-18 13:04:05.015 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/your-image-path3.jpg, Response status code: 404
+2024-10-18 13:05:55.087 +02:00 [INF] Application is shutting down...

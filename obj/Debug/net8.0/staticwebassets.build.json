@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4xOs5gClklgGa5qnly54wlGUPQeWDiZcAAfIQffIihc=",
+  "Hash": "wJbCp4tn81/5DYbL+bHuQaGUxDkYXJpRA7xtSrZ+bAg=",
   "Source": "MyShop",
   "BasePath": "_content/MyShop",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
+      "SourceId": "MyShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "images/healthy.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\healthy.jpg"
     },
     {
       "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",

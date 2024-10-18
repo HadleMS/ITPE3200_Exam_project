@@ -1,0 +1,35 @@
+2024-10-18 12:41:46.522 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 12:41:46.567 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 12:41:46.570 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 12:41:46.570 +02:00 [INF] Hosting environment: Development
+2024-10-18 12:41:46.570 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 12:41:49.898 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 12:41:49.931 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:41:49.943 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 12:41:49.956 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 12:41:50.010 +02:00 [INF] Executed ViewResult - view Index executed in 54.2877ms.
+2024-10-18 12:41:50.013 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 69.3902ms
+2024-10-18 12:41:50.013 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:41:50.017 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 119.639ms
+2024-10-18 12:41:50.037 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - null null
+2024-10-18 12:41:50.040 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - 404 0 null 3.3492ms
+2024-10-18 12:41:50.042 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/healthy.jpg, Response status code: 404
+2024-10-18 12:42:08.699 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 12:42:08.700 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:42:08.700 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 12:42:08.701 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 12:42:08.704 +02:00 [INF] Executed ViewResult - view Index executed in 3.9045ms.
+2024-10-18 12:42:08.705 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 4.3827ms
+2024-10-18 12:42:08.705 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:42:08.705 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 5.8643ms
+2024-10-18 12:42:08.717 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - null null
+2024-10-18 12:42:08.733 +02:00 [INF] Sending file. Request path: '/images/healthy.jpg'. Physical path: 'C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project\wwwroot\images\healthy.jpg'
+2024-10-18 12:42:08.734 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - 200 187496 image/jpeg 17.3864ms
+2024-10-18 12:42:16.404 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 12:42:16.405 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:42:16.405 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 12:42:16.405 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 12:42:16.406 +02:00 [INF] Executed ViewResult - view Index executed in 0.8049ms.
+2024-10-18 12:42:16.406 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 0.9462ms
+2024-10-18 12:42:16.406 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 12:42:16.406 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 1.7215ms

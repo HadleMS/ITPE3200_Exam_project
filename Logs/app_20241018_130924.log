@@ -1,0 +1,28 @@
+2024-10-18 13:09:25.630 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 13:09:25.675 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 13:09:25.678 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 13:09:25.678 +02:00 [INF] Hosting environment: Development
+2024-10-18 13:09:25.678 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 13:09:27.758 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:09:27.783 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:09:27.790 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:09:27.801 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:09:27.841 +02:00 [INF] Executed ViewResult - view Index executed in 41.9641ms.
+2024-10-18 13:09:27.843 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 52.4544ms
+2024-10-18 13:09:27.843 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:09:27.846 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 89.1813ms
+2024-10-18 13:09:27.860 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/healthy.jpg - null null
+2024-10-18 13:09:27.863 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/healthy.jpg - 404 0 null 2.9867ms
+2024-10-18 13:09:27.864 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/healthy.jpg, Response status code: 404
+2024-10-18 13:09:51.283 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:09:51.285 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:09:51.285 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:09:51.287 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:09:51.294 +02:00 [INF] Executed ViewResult - view Index executed in 6.699ms.
+2024-10-18 13:09:51.299 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 13.9108ms
+2024-10-18 13:09:51.299 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:09:51.300 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 16.626ms
+2024-10-18 13:09:51.331 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/healthy.jpg - null null
+2024-10-18 13:09:51.333 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/healthy.jpg - 404 0 null 2.1267ms
+2024-10-18 13:09:51.334 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/healthy.jpg, Response status code: 404
+2024-10-18 13:11:16.115 +02:00 [INF] Application is shutting down...

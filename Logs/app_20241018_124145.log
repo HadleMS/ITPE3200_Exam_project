@@ -33,3 +33,4 @@
 2024-10-18 12:42:16.406 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 0.9462ms
 2024-10-18 12:42:16.406 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
 2024-10-18 12:42:16.406 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 1.7215ms
+2024-10-18 12:44:15.806 +02:00 [INF] Application is shutting down...

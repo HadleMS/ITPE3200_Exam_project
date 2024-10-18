@@ -22,3 +22,4 @@
 2024-10-18 13:20:45.969 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - null null
 2024-10-18 13:20:45.977 +02:00 [INF] The file /images/healthy.jpg was not modified
 2024-10-18 13:20:45.978 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/healthy.jpg - 304 null image/jpeg 8.356ms
+2024-10-18 13:22:09.448 +02:00 [INF] Application is shutting down...

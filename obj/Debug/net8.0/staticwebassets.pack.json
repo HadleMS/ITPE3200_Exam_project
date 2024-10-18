@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
+      "PackagePath": "staticwebassets\\images\\family.jpg"
+    },
+    {
       "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
       "PackagePath": "staticwebassets\\images\\healthy.jpg"
     },
@@ -25,12 +29,20 @@
       "PackagePath": "staticwebassets\\images\\lettmelk.jpg"
     },
     {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "PackagePath": "staticwebassets\\images\\nøkkelhull.png"
+    },
+    {
       "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
       "PackagePath": "staticwebassets\\images\\peanøtter.jpg"
     },
     {
       "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
       "PackagePath": "staticwebassets\\images\\polpa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
+      "PackagePath": "staticwebassets\\images\\salad.png"
     },
     {
       "Id": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",

@@ -92,6 +92,19 @@
         margin-bottom: 0;
         font-size: 1rem; /* Increase readability */
     }
+
+    /* Carousel Image Styles */
+    .carousel-item {
+        height: 300px; /* Fixed height for all carousel items */
+        overflow: hidden; /* Hide overflow for images that don't fit */
+    }
+
+    .carousel-item img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 100%; /* Limit height to the carousel item */
+        object-fit: contain; /* Scale the image to maintain aspect ratio */
+    }
 </style>
 
 <div class="container">
@@ -111,13 +124,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="~/images/healthy.jpg" class="d-block w-100" alt="Healthy">
+                        <img src="~/images/salad.png" class="d-block w-100" alt="Salad">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/polpa.jpg" class="d-block w-100" alt="Melk">
+                        <img src="~/images/nøkkelhull.png" class="d-block w-100" alt="Nøkkelhull">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/peanøtter.jpg" class="d-block w-100" alt="Peanøtter">
+                        <img src="~/images/family.jpg" class="d-block w-100" alt="Family">
                     </div>
                 </div>
             </div>
@@ -148,4 +161,3 @@
         </div>
     </section>
 </div>
-

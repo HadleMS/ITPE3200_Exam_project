@@ -1,14 +1,44 @@
 @model ItemsViewModel
 
 <h1>A Visual Display of Nutritional Products (@Model.CurrentViewName View)</h1>
-<a href="/Item/Table">Table View</a>
+<a href="/Item/Table" title="Table View">
+    <img src="/images/table.png" alt="Table View" style="width: 30px; height: auto; vertical-align: middle;" />
+</a>
 
 <style>
     .custom-image-size {
-        width: 100%;  /* Make the image take the full width of the container */
-        height: auto; /* Let the height be dynamic to maintain aspect ratio */
-        object-fit: contain; /* Ensure the image fits within the container without being cropped */
-        max-height: 200px; /* Set a max-height to keep a consistent grid */
+        width: 100%;  /* Use full width of the container */
+        height: auto; /* maintain aspect ratio */
+        object-fit: contain; /* Ensure the image fits*/
+        max-height: 200px; /* keep a consistent grid */
+    }
+
+    .card {
+        border: none; /* Remove border */
+        border-radius: 10px; /* rounded corners */
+        transition: transform 0.3s, box-shadow 0.3s; /* hover effects */
+    }
+
+    .card:hover {
+        transform: translateY(-5px); /* Lift card on hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* shadow */
+    }
+
+    .card-body {
+        padding: 1.5rem; /* Add padding */
+        text-align: center; /* Center text inside the card */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* title slightly larger */
+        font-weight: bold; /* Bold title */
+        color: #333; /* Dark color for better readability */
+    }
+
+    .card-text {
+        color: #666; /* Lighter color for text */
+        font-size: 0.9rem; /* Slightly smaller font for descriptions */
+        margin: 0.5rem 0; /* Space between paragraphs */
     }
 </style>
 
@@ -17,8 +47,7 @@
     @foreach (var item in Model.Items)
     {
         <div class="col">
-            <div class="card">
-                <!-- Using the custom class for image size -->
+            <div class="card">  
                 <img src="@item.ImageUrl" class="img-fluid custom-image-size" alt="@item.Name" />
                 <div class="card-body">
                     <h5 class="card-title">@item.Name</h5>

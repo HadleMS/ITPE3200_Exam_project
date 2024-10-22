@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wJbCp4tn81/5DYbL+bHuQaGUxDkYXJpRA7xtSrZ+bAg=",
+  "Hash": "N1+qcRU4YujFr67D9JaipNBDOmdM8GkXoRQtO8Wsff0=",
   "Source": "MyShop",
   "BasePath": "_content/MyShop",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
+      "SourceId": "MyShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "images/family.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\family.jpg"
     },
     {
       "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
@@ -150,6 +169,25 @@
       "OriginalItemSpec": "wwwroot\\images\\lettmelk.jpg"
     },
     {
+      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "SourceId": "MyShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "images/nøkkelhull.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\nøkkelhull.png"
+    },
+    {
       "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
@@ -186,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\polpa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
+      "SourceId": "MyShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "images/salad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\salad.png"
     },
     {
       "Identity": "C:\\Users\\Hadle\\Downloads\\ITPE3200\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",

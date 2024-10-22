@@ -1,0 +1,28 @@
+2024-10-18 13:30:47.419 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 13:30:47.466 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 13:30:47.469 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 13:30:47.469 +02:00 [INF] Hosting environment: Development
+2024-10-18 13:30:47.470 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 13:30:48.903 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:30:48.929 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:30:48.937 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:30:48.947 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:30:48.991 +02:00 [INF] Executed ViewResult - view Index executed in 44.9101ms.
+2024-10-18 13:30:48.992 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 54.8157ms
+2024-10-18 13:30:48.993 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:30:48.995 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 93.1565ms
+2024-10-18 13:30:49.013 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/salad.png - null null
+2024-10-18 13:30:49.036 +02:00 [INF] Sending file. Request path: '/images/salad.png'. Physical path: 'C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project\wwwroot\images\salad.png'
+2024-10-18 13:30:49.037 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/salad.png - 200 1249147 image/png 24.324ms
+2024-10-18 13:34:18.449 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:34:18.450 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:34:18.451 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:34:18.451 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:34:18.454 +02:00 [INF] Executed ViewResult - view Index executed in 3.0183ms.
+2024-10-18 13:34:18.454 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 3.4738ms
+2024-10-18 13:34:18.454 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:34:18.454 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 5.0552ms
+2024-10-18 13:34:18.473 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/salad.png - null null
+2024-10-18 13:34:18.475 +02:00 [INF] The file /images/salad.png was not modified
+2024-10-18 13:34:18.475 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/salad.png - 304 null image/png 2.4429ms
+2024-10-18 13:34:21.712 +02:00 [INF] Application is shutting down...

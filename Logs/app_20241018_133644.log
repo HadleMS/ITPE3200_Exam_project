@@ -1,0 +1,17 @@
+2024-10-18 13:36:45.312 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-18 13:36:45.358 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-18 13:36:45.360 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-18 13:36:45.361 +02:00 [INF] Hosting environment: Development
+2024-10-18 13:36:45.361 +02:00 [INF] Content root path: C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project
+2024-10-18 13:36:46.903 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-18 13:36:46.928 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:36:46.937 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-18 13:36:46.949 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-18 13:36:46.997 +02:00 [INF] Executed ViewResult - view Index executed in 48.5691ms.
+2024-10-18 13:36:46.999 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 60.9403ms
+2024-10-18 13:36:46.999 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-18 13:36:47.000 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 98.8318ms
+2024-10-18 13:36:47.022 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/salad.png - null null
+2024-10-18 13:36:47.035 +02:00 [INF] Sending file. Request path: '/images/salad.png'. Physical path: 'C:\Users\Hadle\Downloads\ITPE3200\ITPE3200_Exam_project\wwwroot\images\salad.png'
+2024-10-18 13:36:47.037 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/salad.png - 200 217875 image/png 14.6087ms
+2024-10-18 13:40:54.279 +02:00 [INF] Application is shutting down...

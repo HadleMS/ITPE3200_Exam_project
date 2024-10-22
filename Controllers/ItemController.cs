@@ -66,6 +66,7 @@ public class ItemController : Controller // Defines a controller
 
     // Action to return the form for creating a new item (GET request)
     [HttpGet]
+    [Authorize]
     public IActionResult Create()
     {
         // Return a blank form for item creation
@@ -75,6 +76,7 @@ public class ItemController : Controller // Defines a controller
      
     // Action to handle item creation (POST request)
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Create(Item item)
     {
          // Check if the model is valid
@@ -94,6 +96,7 @@ public class ItemController : Controller // Defines a controller
     }
     // Action to return the form for updating an existing item by its ID (GET request)
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Update(int id)
     {
         // Fetch item by ID asynchronously
@@ -110,6 +113,7 @@ public class ItemController : Controller // Defines a controller
     }
      // Action to handle item update (POST request)
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Update(Item item)
     {
         // Check if the model is valid
@@ -130,6 +134,7 @@ public class ItemController : Controller // Defines a controller
 
      // Action to return the confirmation view for deleting an item by its ID (GET request)
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
         // Fetch item by ID asynchronously
@@ -148,6 +153,7 @@ public class ItemController : Controller // Defines a controller
 
      // Action to handle confirmed deletion of an item (POST request)
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         // Delete the item from the repository

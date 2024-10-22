@@ -1,79 +1,79 @@
 {
   "Files": [
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/obj/Debug/net8.0/scopedcss/projectbundle/MyShop.bundle.scp.css",
-      "PackagePath": "staticwebassets/MyShop.bundle.scp.css"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/family.jpg",
-      "PackagePath": "staticwebassets/images/family.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
+      "PackagePath": "staticwebassets\\images\\family.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/healthy.jpg",
-      "PackagePath": "staticwebassets/images/healthy.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
+      "PackagePath": "staticwebassets\\images\\healthy.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/helmelk.jpg",
-      "PackagePath": "staticwebassets/images/helmelk.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
+      "PackagePath": "staticwebassets\\images\\helmelk.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/kjøttdeig.jpg",
-      "PackagePath": "staticwebassets/images/kjøttdeig.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
+      "PackagePath": "staticwebassets\\images\\kjøttdeig.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/kylling.jpg",
-      "PackagePath": "staticwebassets/images/kylling.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
+      "PackagePath": "staticwebassets\\images\\kylling.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/lettmelk.jpg",
-      "PackagePath": "staticwebassets/images/lettmelk.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
+      "PackagePath": "staticwebassets\\images\\lettmelk.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/nøkkelhull.png",
-      "PackagePath": "staticwebassets/images/nøkkelhull.png"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "PackagePath": "staticwebassets\\images\\nøkkelhull.png"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/peanøtter.jpg",
-      "PackagePath": "staticwebassets/images/peanøtter.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
+      "PackagePath": "staticwebassets\\images\\peanøtter.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/polpa.jpg",
-      "PackagePath": "staticwebassets/images/polpa.jpg"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
+      "PackagePath": "staticwebassets\\images\\polpa.jpg"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/images/salad.png",
-      "PackagePath": "staticwebassets/images/salad.png"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
+      "PackagePath": "staticwebassets\\images\\salad.png"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/js/bootstrap.js",
-      "PackagePath": "staticwebassets/js/bootstrap.js"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/js/jquery.min.js",
-      "PackagePath": "staticwebassets/js/jquery.min.js"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/js/jquery.validate.js",
-      "PackagePath": "staticwebassets/js/jquery.validate.js"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
     },
     {
-      "Id": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/wwwroot/js/jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets/js/jquery.validate.unobtrusive.js"
+      "Id": "C:\\TestMappe\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MyShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MyShop.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MyShop.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MyShop.props",
       "PackagePath": "build\\MyShop.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MyShop.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MyShop.props",
       "PackagePath": "buildMultiTargeting\\MyShop.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MyShop.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MyShop.props",
       "PackagePath": "buildTransitive\\MyShop.props"
     }
   ],

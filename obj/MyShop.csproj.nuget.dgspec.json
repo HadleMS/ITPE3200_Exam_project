@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/MyShop.csproj": {}
+    "C:\\TestMappe\\ITPE3200_Exam_project\\MyShop.csproj": {}
   },
   "projects": {
-    "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/MyShop.csproj": {
+    "C:\\TestMappe\\ITPE3200_Exam_project\\MyShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/MyShop.csproj",
+        "projectUniqueName": "C:\\TestMappe\\ITPE3200_Exam_project\\MyShop.csproj",
         "projectName": "MyShop",
-        "projectPath": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/MyShop.csproj",
-        "packagesPath": "/Users/sebastianpop/.nuget/packages/",
-        "outputPath": "/Users/sebastianpop/Documents/GitHub/ITPE3200_Exam_project/ITPE3200_Exam_project/obj/",
+        "projectPath": "C:\\TestMappe\\ITPE3200_Exam_project\\MyShop.csproj",
+        "packagesPath": "C:\\Users\\jovan\\.nuget\\packages\\",
+        "outputPath": "C:\\TestMappe\\ITPE3200_Exam_project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sebastianpop/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jovan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -107,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

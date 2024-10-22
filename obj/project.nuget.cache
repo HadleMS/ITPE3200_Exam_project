@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qtVOrOxvxwM=",
+  "dgSpecHash": "Slvh3mag88w=",
   "success": true,
-  "projectFilePath": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
+  "projectFilePath": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hadle\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Hadle\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

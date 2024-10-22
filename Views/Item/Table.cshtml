@@ -1,8 +1,49 @@
 @model ItemsViewModel
 
-<h1>Nutritional Information of Grocery Items (@Model.CurrentViewName View)</h1>
+<h1 style="font-size: 24px; margin-bottom: 20px;">Nutritional Information of Grocery Items (@Model.CurrentViewName View)</h1>
 <a href="/Item/Grid" title="Grid View">
     <img src="/images/grid-view.png" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
 </a>
+
+<style>
+    /* Styling for the table */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Collapses borders */
+        margin-top: 20px; /* Space above the table */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+        border-radius: 8px; /* Rounded corners */
+        overflow: hidden; /* Ensures rounded corners look good */
+    }
+
+    th {
+        background-color: #4CAF50; /* Green background for header */
+        color: white; /* White text */
+        padding: 12px; /* Padding for cells */
+        text-align: left; /* Left align text */
+        font-weight: bold; /* Bold text */
+    }
+
+    td {
+        border: 1px solid #ddd; /* Light gray border */
+        padding: 12px; /* Padding for cells */
+        transition: background-color 0.3s; /* Smooth transition for hover */
+    }
+
+    tr:hover {
+        background-color: #f1f1f1; /* Light gray background on hover */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9; /* Slightly darker background for even rows */
+    }
+
+    .action-icons img {
+        width: 20px; /* Size of action icons */
+        height: auto;
+        vertical-align: middle; /* Align icons vertically */
+        margin-left: 5px; /* Space between icons */
+    }
+</style>
 
 <partial name="_ItemTable" model="Model.Items" />

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AMh+6/eV6kaAMtZhbxEryBKVwEAj1QhW1Z0U5W/Lous=",
+  "Hash": "1b5JPKZ4gYMRsqzJnF93iw0uRNAV8tuzg1exzt3RJvs=",
   "Source": "MyShop",
   "BasePath": "_content/MyShop",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MyShop\\wwwroot",
       "Source": "MyShop",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css",
       "SourceId": "MyShop",
       "SourceType": "Computed",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "MyShop.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css"
+      "OriginalItemSpec": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MyShop.styles.css"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
       "SourceId": "MyShop",
       "SourceType": "Computed",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "MyShop.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
+      "OriginalItemSpec": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/family.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\family.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\grid-view.png",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\grid-view.png",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/grid-view.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\grid-view.png"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/healthy.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\healthy.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/helmelk.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\helmelk.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/kjøttdeig.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kjøttdeig.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/kylling.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kylling.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/lettmelk.jpg",
       "AssetKind": "All",
@@ -188,10 +188,29 @@
       "OriginalItemSpec": "wwwroot\\images\\lettmelk.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\logo.png",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "BasePath": "_content/MyShop",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
+    },
+    {
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "SourceId": "MyShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/nøkkelhull.png",
       "AssetKind": "All",
@@ -207,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nøkkelhull.png"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/peanøtter.jpg",
       "AssetKind": "All",
@@ -226,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\peanøtter.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/polpa.jpg",
       "AssetKind": "All",
@@ -245,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\polpa.jpg"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/salad.png",
       "AssetKind": "All",
@@ -264,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\salad.png"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\table.png",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\table.png",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "images/table.png",
       "AssetKind": "All",
@@ -283,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\images\\table.png"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/bootstrap.js",
       "AssetKind": "All",
@@ -302,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.js"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.min.js",
       "AssetKind": "All",
@@ -321,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.min.js"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.validate.js",
       "AssetKind": "All",
@@ -340,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.validate.js"
     },
     {
-      "Identity": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
       "SourceId": "MyShop",
       "SourceType": "Discovered",
-      "ContentRoot": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
+      "ContentRoot": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\",
       "BasePath": "_content/MyShop",
       "RelativePath": "js/jquery.validate.unobtrusive.js",
       "AssetKind": "All",

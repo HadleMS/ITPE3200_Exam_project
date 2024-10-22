@@ -1,0 +1,17 @@
+2024-10-22 15:45:47.179 +02:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-22 15:45:47.363 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-22 15:45:47.366 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-22 15:45:47.367 +02:00 [INF] Hosting environment: Development
+2024-10-22 15:45:47.367 +02:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-10-22 15:45:48.879 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-22 15:45:48.919 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 15:45:48.929 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-22 15:45:48.936 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-22 15:45:49.011 +02:00 [INF] Executed ViewResult - view Index executed in 77.0463ms.
+2024-10-22 15:45:49.014 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 84.4216ms
+2024-10-22 15:45:49.014 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 15:45:49.016 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 139.0129ms
+2024-10-22 15:45:49.036 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/path/to/your/image.png - null null
+2024-10-22 15:45:49.042 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/path/to/your/image.png - 404 0 null 5.424ms
+2024-10-22 15:45:49.043 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/path/to/your/image.png, Response status code: 404
+2024-10-22 15:46:19.352 +02:00 [INF] Application is shutting down...

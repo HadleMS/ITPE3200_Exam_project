@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj": {}
+    "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj": {}
   },
   "projects": {
-    "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj": {
+    "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
+        "projectUniqueName": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
         "projectName": "MyShop",
-        "projectPath": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
+        "projectPath": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\MyShop.csproj",
         "packagesPath": "C:\\Users\\Hadle\\.nuget\\packages\\",
-        "outputPath": "c:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\",
+        "outputPath": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hadle\\AppData\\Roaming\\NuGet\\NuGet.Config"

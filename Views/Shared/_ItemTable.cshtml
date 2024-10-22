@@ -1,7 +1,9 @@
 @model IEnumerable<Item>
 
+<!-- Container for the table displaying item details -->
 <div class="container">
     <table class='table table-striped'>
+        <!-- Table headers for item properties -->
         <tr>
             <th>Id</th>
             <th>Name</th>
@@ -14,10 +16,14 @@
             <th>Image</th>
             <th>Actions</th>
         </tr>
+
+        <!-- Loop through each item in the model and display its properties in the table rows -->
         @foreach (var item in Model)
         {
             <tr>
                 <td>@item.ItemId</td>
+                
+                <!-- Link to the item's details page -->
                 <td>
                     <a asp-controller="Item"
                         asp-action="Details"
@@ -29,9 +35,13 @@
                 <td>@item.Protein</td>
                 <td>@item.Karbohydrat</td>
                 <td>@item.Salt</td>
+                
+                <!-- Display the item image with a maximum size -->
                 <td>
                     <img src="@item.ImageUrl" alt="Item Image" style="max-width: 80px; max-height: 80px;" />
                 </td>
+                
+                <!-- Links to update or delete the item -->
                 <td>
                     <a asp-action="Update" asp-route-id="@item.ItemId">Update</a>
                     <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
@@ -39,9 +49,12 @@
             </tr>
         }
     </table>
+
+    <!-- Button to create a new item -->
     <p>
         <a class="btn btn-secondary"
            asp-controller="Item"
            asp-action="Create">Create New Item</a>
     </p>    
 </div>
+

@@ -1,6 +1,10 @@
 @model ItemsViewModel
 
+<!-- Display a header with the current view name -->
 <h1>Nutritional Information of Grocery Items (@Model.CurrentViewName View)</h1>
+
+<!-- Link to switch to the Grid View -->
 <a href="/Item/Grid">Grid View</a>
 
+<!-- Loads a partial view with the list of items from the ViewModel -->
 <partial name="_ItemTable" model="Model.Items" />

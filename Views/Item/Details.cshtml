@@ -1,11 +1,15 @@
 @model Item
 
+<!-- Display the name of the item as a header -->
 <h3 class="my-5">
     @Model.Name
 </h3>
 
 <div class="row gx-5">
+    <!-- Display the image of the item -->
     <img alt="@Model.Name" src="@Model.ImageUrl" class="img-fluid col-5" />
+    
+    <!-- Display the item's details -->
     <div class="col-7">
         <h5>@Model.Food_Group</h5>
         <h5>@Model.Energi_Kcal</h5>
@@ -13,6 +17,8 @@
         <h5>@Model.Protein</h5>
         <h5>@Model.Karbohydrat</h5>
         <h5>@Model.Salt</h5>
+
+        <!-- Links to navigate back to Table or Grid view -->
         <p><a href="/Item/Table">Back to Table View</a></p>
         <p><a href="/Item/Grid">Back to Grid View</a></p>
     </div>

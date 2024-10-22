@@ -4,11 +4,11 @@ using MyShop.Models;
 
 namespace MyShop.DAL;
 
-public class ItemDbContext : IdentityDbContext
+public class ItemDbContext : DbContext
 {
 	public ItemDbContext(DbContextOptions<ItemDbContext> options) : base(options)
 	{
-        // Database.EnsureCreated();  // Remove this line if you use migrations
+        // Database.EnsureCreated();  // Remove this line if you use migrations, Lærerkommentar
 	}
 
 	public DbSet<Item> Items { get; set; }

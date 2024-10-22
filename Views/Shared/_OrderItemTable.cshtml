@@ -1,7 +1,10 @@
 ﻿@model IEnumerable<OrderItem>
 
+<!-- Container for displaying order items in a table -->
 <div class="container">
-    <table class='table table-striped'  style='max-width: 1200px;'>
+    <table class='table table-striped' style='max-width: 1200px;'>
+       
+        <!-- Table headers for order item details -->
         <tr>
             <th>OrderItemId</th>
             <th>ItemId</th>
@@ -10,6 +13,8 @@
             <th>OrderItemPrice</th>
             <th>Actions</th>
         </tr>
+
+        <!-- Loop through each order item in the model and display its properties -->
         @foreach (var orderItem in Model)
         {
             <tr>

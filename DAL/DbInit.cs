@@ -5,17 +5,26 @@ namespace MyShop.DAL;
 
 public static class DBInit
 {
+
+    // Seed method to initialize the database with default data
     public static void Seed(IApplicationBuilder app)
     {
+         // Create a service scope to access the database context (ItemDbContext)
         using var serviceScope = app.ApplicationServices.CreateScope();
         ItemDbContext context = serviceScope.ServiceProvider.GetRequiredService<ItemDbContext>();
+
+        // Ensures that the database is deleted and recreated
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
+        // Check if there are any items in the Items table
         if (!context.Items.Any())
         {
+
+             // Define a list of sample Item objects to populate the database
             var items = new List<Item>
             {
+                // Each item represents a product with its attributes
                 new Item
                 {
                     Name = "Tine Helmelk",
@@ -84,7 +93,11 @@ public static class DBInit
                 },
              
             };
+
+            // Add the list of items to the database
             context.AddRange(items);
+
+            // Save the changes to the database
             context.SaveChanges();
         }
 

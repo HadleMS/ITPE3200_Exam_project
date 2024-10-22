@@ -1,0 +1,120 @@
+2024-10-22 12:14:46.325 +02:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-22 12:14:46.488 +02:00 [INF] Now listening on: http://localhost:5017
+2024-10-22 12:14:46.492 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-22 12:14:46.492 +02:00 [INF] Hosting environment: Development
+2024-10-22 12:14:46.492 +02:00 [INF] Content root path: C:\TestMappe\ITPE3200_Exam_project
+2024-10-22 12:14:48.817 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-22 12:14:48.850 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:48.857 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-22 12:14:48.866 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-22 12:14:48.937 +02:00 [INF] Executed ViewResult - view Index executed in 72.4991ms.
+2024-10-22 12:14:48.938 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 80.3289ms
+2024-10-22 12:14:48.938 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:48.943 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 127.0329ms
+2024-10-22 12:14:48.959 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/salad.png - null null
+2024-10-22 12:14:48.959 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/nøkkelhull.png - null null
+2024-10-22 12:14:48.964 +02:00 [INF] The file /images/nøkkelhull.png was not modified
+2024-10-22 12:14:48.964 +02:00 [INF] The file /images/salad.png was not modified
+2024-10-22 12:14:48.964 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/nøkkelhull.png - 304 null image/png 4.9001ms
+2024-10-22 12:14:48.964 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/salad.png - 304 null image/png 5.2211ms
+2024-10-22 12:14:49.035 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/family.jpg - null null
+2024-10-22 12:14:49.036 +02:00 [INF] The file /images/family.jpg was not modified
+2024-10-22 12:14:49.036 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/family.jpg - 304 null image/jpeg 1.5172ms
+2024-10-22 12:14:52.260 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-22 12:14:52.261 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:52.262 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-22 12:14:52.263 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-22 12:14:52.268 +02:00 [INF] Executed ViewResult - view Index executed in 5.6674ms.
+2024-10-22 12:14:52.268 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 6.2355ms
+2024-10-22 12:14:52.268 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:52.269 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 8.9816ms
+2024-10-22 12:14:54.332 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-22 12:14:54.336 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-22 12:14:54.345 +02:00 [INF] Route matched with {action = "Table", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-22 12:14:54.628 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-22 12:14:54.667 +02:00 [INF] Executed ViewResult - view Table executed in 40.6531ms.
+2024-10-22 12:14:54.667 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 322.5376ms
+2024-10-22 12:14:54.667 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-22 12:14:54.673 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 340.9922ms
+2024-10-22 12:14:56.748 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-10-22 12:14:56.749 +02:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:56.749 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-10-22 12:14:56.750 +02:00 [INF] Executing ViewResult, running view Index.
+2024-10-22 12:14:56.754 +02:00 [INF] Executed ViewResult - view Index executed in 4.0396ms.
+2024-10-22 12:14:56.754 +02:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 4.2874ms
+2024-10-22 12:14:56.754 +02:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-10-22 12:14:56.754 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 6.055ms
+2024-10-22 12:14:57.389 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-10-22 12:14:57.391 +02:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-22 12:14:57.392 +02:00 [INF] Route matched with {action = "Table", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-10-22 12:14:57.524 +02:00 [INF] Executing ViewResult, running view Table.
+2024-10-22 12:14:57.528 +02:00 [INF] Executed ViewResult - view Table executed in 4.1721ms.
+2024-10-22 12:14:57.528 +02:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 136.2918ms
+2024-10-22 12:14:57.529 +02:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-10-22 12:14:57.529 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 140.0132ms
+2024-10-22 12:14:59.224 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Create - null null
+2024-10-22 12:14:59.238 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-22 12:14:59.243 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-10-22 12:14:59.243 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Create - 302 0 null 18.9853ms
+2024-10-22 12:14:59.248 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - null null
+2024-10-22 12:14:59.248 +02:00 [INF] Executing endpoint '/Account/Login'
+2024-10-22 12:14:59.283 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-10-22 12:14:59.320 +02:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-10-22 12:14:59.329 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-10-22 12:14:59.331 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-10-22 12:14:59.337 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-10-22 12:14:59.337 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-10-22 12:14:59.425 +02:00 [INF] Executed page /Account/Login in 141.6796ms
+2024-10-22 12:14:59.426 +02:00 [INF] Executed endpoint '/Account/Login'
+2024-10-22 12:14:59.426 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - 200 null text/html; charset=utf-8 177.89ms
+2024-10-22 12:14:59.451 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-10-22 12:14:59.451 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-10-22 12:14:59.452 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.5807ms
+2024-10-22 12:14:59.452 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.8024ms
+2024-10-22 12:14:59.452 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-10-22 12:14:59.452 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-10-22 12:15:05.097 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Update/3 - null null
+2024-10-22 12:15:05.100 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-22 12:15:05.101 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-10-22 12:15:05.102 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Update/3 - 302 0 null 4.638ms
+2024-10-22 12:15:05.106 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FUpdate%2F3 - null null
+2024-10-22 12:15:05.115 +02:00 [INF] Executing endpoint '/Account/Login'
+2024-10-22 12:15:05.116 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-10-22 12:15:05.118 +02:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-10-22 12:15:05.119 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-10-22 12:15:05.119 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-10-22 12:15:05.119 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-10-22 12:15:05.119 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-10-22 12:15:05.125 +02:00 [INF] Executed page /Account/Login in 8.5806ms
+2024-10-22 12:15:05.125 +02:00 [INF] Executed endpoint '/Account/Login'
+2024-10-22 12:15:05.125 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FUpdate%2F3 - 200 null text/html; charset=utf-8 18.9043ms
+2024-10-22 12:15:05.144 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-10-22 12:15:05.144 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-10-22 12:15:05.145 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 1.6499ms
+2024-10-22 12:15:05.145 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 1.4387ms
+2024-10-22 12:15:05.146 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-10-22 12:15:05.146 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-10-22 12:15:09.408 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Delete/3 - null null
+2024-10-22 12:15:09.409 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-10-22 12:15:09.410 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-10-22 12:15:09.410 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Delete/3 - 302 0 null 2.08ms
+2024-10-22 12:15:09.415 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FDelete%2F3 - null null
+2024-10-22 12:15:09.415 +02:00 [INF] Executing endpoint '/Account/Login'
+2024-10-22 12:15:09.416 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-10-22 12:15:09.417 +02:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-10-22 12:15:09.418 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-10-22 12:15:09.418 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-10-22 12:15:09.418 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-10-22 12:15:09.418 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-10-22 12:15:09.422 +02:00 [INF] Executed page /Account/Login in 5.3779ms
+2024-10-22 12:15:09.422 +02:00 [INF] Executed endpoint '/Account/Login'
+2024-10-22 12:15:09.422 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FDelete%2F3 - 200 null text/html; charset=utf-8 6.9775ms
+2024-10-22 12:15:09.445 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-10-22 12:15:09.445 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-10-22 12:15:09.446 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.5127ms
+2024-10-22 12:15:09.446 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.3854ms
+2024-10-22 12:15:09.446 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-10-22 12:15:09.446 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404

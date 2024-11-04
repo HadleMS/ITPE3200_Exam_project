@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
     },
     {
+      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\Facebook.png",
+      "PackagePath": "staticwebassets\\images\\Facebook.png"
+    },
+    {
+      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\Google.png",
+      "PackagePath": "staticwebassets\\images\\Google.png"
+    },
+    {
+      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\Linkedin.png",
+      "PackagePath": "staticwebassets\\images\\Linkedin.png"
+    },
+    {
+      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\Twitter.png",
+      "PackagePath": "staticwebassets\\images\\Twitter.png"
+    },
+    {
       "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
       "PackagePath": "staticwebassets\\images\\family.jpg"
     },

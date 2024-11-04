@@ -1,0 +1,110 @@
+2024-11-04 13:04:48.953 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 13:04:49.093 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 13:04:49.099 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 13:04:49.100 +01:00 [INF] Hosting environment: Development
+2024-11-04 13:04:49.100 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 13:04:50.460 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 13:04:50.506 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:50.515 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:50.522 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 13:04:50.589 +01:00 [INF] Executed ViewResult - view Index executed in 67.9416ms.
+2024-11-04 13:04:50.591 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 75.0853ms
+2024-11-04 13:04:50.591 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:50.595 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 136.1199ms
+2024-11-04 13:04:51.414 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 13:04:51.417 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:51.418 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:51.418 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 13:04:51.422 +01:00 [INF] Executed ViewResult - view Index executed in 4.1847ms.
+2024-11-04 13:04:51.422 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 4.6277ms
+2024-11-04 13:04:51.422 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:51.423 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 8.8493ms
+2024-11-04 13:04:54.020 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Home/About - null null
+2024-11-04 13:04:54.031 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.About (MyShop)'
+2024-11-04 13:04:54.033 +01:00 [INF] Route matched with {action = "About", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult About() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:54.033 +01:00 [INF] Executing ViewResult, running view About.
+2024-11-04 13:04:54.042 +01:00 [ERR] The view 'About' was not found. Searched locations: ["/Views/Home/About.cshtml","/Views/Shared/About.cshtml","/Pages/Shared/About.cshtml"]
+2024-11-04 13:04:54.043 +01:00 [INF] Executed action MyShop.Controllers.HomeController.About (MyShop) in 10.5616ms
+2024-11-04 13:04:54.044 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.About (MyShop)'
+2024-11-04 13:04:54.055 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'About' was not found. The following locations were searched:
+/Views/Home/About.cshtml
+/Views/Shared/About.cshtml
+/Pages/Shared/About.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-04 13:04:54.068 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Home/About - 500 null text/html; charset=utf-8 47.6585ms
+2024-11-04 13:04:55.457 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 13:04:55.457 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:55.457 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:55.458 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 13:04:55.459 +01:00 [INF] Executed ViewResult - view Index executed in 1.1159ms.
+2024-11-04 13:04:55.459 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 1.2893ms
+2024-11-04 13:04:55.459 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:55.459 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 2.2767ms
+2024-11-04 13:04:56.359 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Grid - null null
+2024-11-04 13:04:56.360 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 13:04:56.363 +01:00 [INF] Route matched with {action = "Grid", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 13:04:56.463 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-04 13:04:56.467 +01:00 [INF] Executed ViewResult - view Grid executed in 4.57ms.
+2024-11-04 13:04:56.467 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 103.1665ms
+2024-11-04 13:04:56.467 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 13:04:56.470 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 111.1565ms
+2024-11-04 13:04:56.894 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 13:04:56.895 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:56.895 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:56.895 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 13:04:56.896 +01:00 [INF] Executed ViewResult - view Index executed in 1.0107ms.
+2024-11-04 13:04:56.896 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 1.1462ms
+2024-11-04 13:04:56.896 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 13:04:56.896 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 2.1097ms
+2024-11-04 13:04:58.757 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Home/About - null null
+2024-11-04 13:04:58.758 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.About (MyShop)'
+2024-11-04 13:04:58.758 +01:00 [INF] Route matched with {action = "About", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult About() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 13:04:58.758 +01:00 [INF] Executing ViewResult, running view About.
+2024-11-04 13:04:58.758 +01:00 [ERR] The view 'About' was not found. Searched locations: ["/Views/Home/About.cshtml","/Views/Shared/About.cshtml","/Pages/Shared/About.cshtml"]
+2024-11-04 13:04:58.759 +01:00 [INF] Executed action MyShop.Controllers.HomeController.About (MyShop) in 0.7989ms
+2024-11-04 13:04:58.759 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.About (MyShop)'
+2024-11-04 13:04:58.760 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'About' was not found. The following locations were searched:
+/Views/Home/About.cshtml
+/Views/Shared/About.cshtml
+/Pages/Shared/About.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-04 13:04:58.763 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Home/About - 500 null text/html; charset=utf-8 5.8381ms
+2024-11-04 13:05:50.165 +01:00 [INF] Application is shutting down...

@@ -5,122 +5,144 @@
 <style>
     /* Custom styles for the home page */
     body {
-        font-family: 'Open Sans', sans-serif; /* Clean and modern font */
+        font-family: 'Open Sans', sans-serif;
         background-color: #f8f9fa;
         color: #343a40;
-        margin: 0; /* Reset default margin */
-        padding: 0; /* Reset default padding */
+        margin: 0;
+        padding: 0;
     }
 
     .container {
-        max-width: 1200px; /* Limit width for larger screens */
-        margin: 0 auto; /* Center the container */
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 2rem;
     }
 
     .homepage-container {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
-        padding: 2rem 0; /* Adjust top and bottom padding */
+        padding: 2rem 0;
+        gap: 2rem;
     }
 
     .homepage-text {
         flex: 1;
         text-align: left;
-        padding-right: 2rem; /* Space between text and carousel */
+        padding-right: 2rem;
+        min-width: 300px;
     }
 
     h1 {
         font-size: 3rem;
         font-weight: bold;
         color: #39a554;
-        margin: 0; /* Remove default margin */
+        margin-bottom: 1rem;
     }
 
     p {
-        margin-bottom: 1rem;
-        font-size: 1.1rem; /* Increase readability */
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
     }
 
     .button {
-        padding: 1rem 2rem;
+        padding: 0.75rem 1.5rem;
         background-color: #39a554;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        text-decoration: none; /* Remove underline from anchor */
-        transition: background-color 0.3s; /* Smooth transition */
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .button:hover {
         background-color: #28a745;
+        transform: translateY(-2px);
     }
 
     .features-section {
         margin-top: 4rem;
-        text-align: center; /* Center align section title */
+        text-align: center;
     }
 
     .features-section h2 {
         font-size: 2.5rem;
-        color: #39a554; /* Use main theme color */
-        margin-bottom: 2rem; /* Spacing below title */
+        color: #39a554;
+        margin-bottom: 2rem;
+        font-weight: bold;
     }
 
     .features-card {
-        background-color: #fff; /* Card background */
-        padding: 2rem;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        transition: transform 0.2s; /* Smooth scale effect */
-        margin-bottom: 2rem; /* Spacing between cards */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0rem;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
     }
 
-    .features-card:hover {
-        transform: translateY(-5px); /* Lift effect on hover */
+    .feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0.5rem; 
+        min-width: 0px;
     }
 
-    .features-card h4 {
-        font-size: 1.5rem; /* Slightly larger font */
-        margin-bottom: 1rem;
+    .features-icon {
+        font-size: 2.5rem;
+        color: #39a554;
+        margin-bottom: 0.5rem;
     }
 
-    .features-card p {
-        margin-bottom: 0;
-        font-size: 1rem; /* Increase readability */
+    .small-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #39a554;
+        color: white;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .small-button:hover {
+        background-color: #28a745;
     }
 
     /* Carousel Image Styles */
     .carousel-item {
-        height: 300px; /* Fixed height for all carousel items */
-        overflow: hidden; /* Hide overflow for images that don't fit */
+        height: 550px;
+        overflow: hidden;
     }
 
     .carousel-item img {
-        width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 100%; /* Limit height to the carousel item */
-        object-fit: contain; /* Scale the image to maintain aspect ratio */
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
     }
 </style>
 
 <div class="container">
     <div class="homepage-container">
         <div class="homepage-text">
-            <h1>Track, Add, and Discover: Your Nutrition Journey Starts Here!</h1>
-            <p>Join us in making healthier choices by keeping track of your food intake and nutritional information.</p>
-            <a href="/Food/Index" class="button">Get Started</a>
+            <h1>Your Nutrition Journey Starts Here!</h1>
+            <p>Make healthier choices by keeping track of your food intake and nutritional information.</p>
         </div>
         <!-- Carousel Section -->
         <div class="homepage-image" style="flex: 1;">
-            <div id="carouselImages" class="carousel slide" data-bs-ride="true">
+            <div id="carouselImages" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselImages" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -129,35 +151,37 @@
                     <div class="carousel-item">
                         <img src="~/images/nøkkelhull.png" class="d-block w-100" alt="Nøkkelhull">
                     </div>
-                    <div class="carousel-item">
-                        <img src="~/images/family.jpg" class="d-block w-100" alt="Family">
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="features-section">
-        <h2>Features of Our Tool</h2>
-        <div class="row" style="display: flex; justify-content: space-between;">
-            <div class="col-md-4" style="flex: 1; margin-right: 10px;">
-                <div class="features-card">
-                    <h4>Add New Foods</h4>
-                    <p>Quickly add your food items along with their nutritional values to keep track of what you're consuming.</p>
+        <div class="features-card">
+            <div class="feature-item">
+                <div class="features-icon">
+                    <i class="fas fa-apple-alt"></i>
                 </div>
+              <a asp-controller="Item" asp-action="Create" class="small-button">Add New Foods</a>
+
+
+
             </div>
-            <div class="col-md-4" style="flex: 1; margin-right: 10px;">
-                <div class="features-card">
-                    <h4>View Nutritional Information</h4>
-                    <p>Access detailed nutritional information of your food items in a clear and easy-to-read format.</p>
+            <div class="feature-item">
+                <div class="features-icon">
+                    <i class="fas fa-chart-bar"></i>
                 </div>
+                 <a asp-controller="Item" asp-action="Table" class="small-button">Nutritional Information</a>
             </div>
-            <div class="col-md-4" style="flex: 1;">
-                <div class="features-card">
-                    <h4>Track Your Progress</h4>
-                    <p>Monitor your dietary habits and make informed decisions for a healthier lifestyle.</p>
+            <div class="feature-item">
+                <div class="features-icon">
+                    <i class="fas fa-heartbeat"></i>
                 </div>
+                <a asp-controller="Customer" asp-action="Table" class="small-button">Eat Healthy</a>
             </div>
         </div>
     </section>
 </div>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

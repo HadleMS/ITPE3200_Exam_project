@@ -1,5 +1,110 @@
-@model  IEnumerable<Customer>
+@{
+    ViewData["Title"] = "About Us";
+}
 
-<h1>List of Customers</h1>
+<style>
+    .about-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-<partial name="_CustomerTable" model="Model" />
+    .about-header {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #39a554;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .about-section-title {
+        font-size: 1.5rem;
+        color: #343a40;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .about-list {
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .about-icon {
+        font-size: 1.5rem;
+        color: #39a554;
+        margin-right: 0.5rem;
+    }
+
+    .text-center-strong {
+        text-align: center;
+        font-weight: bold;
+        color: #343a40;
+        margin-top: 2rem;
+    }
+</style>
+
+<div class="about-container">
+    <h2 class="about-header">About Our Platform</h2>
+
+    <p class="about-text">
+        Welcome to our nutritional information platform, where we aim to help companies evaluate their food products' eligibility for the <strong>Nøkkelhull</strong> symbol – a trusted indicator of healthier food choices.
+        By providing an easy way for companies to input detailed nutritional data, we ensure they can quickly assess if their products meet the specific nutritional criteria set for "Nøkkelhull" certification.
+    </p>
+
+    <h4 class="about-section-title"><i class="about-icon fas fa-info-circle"></i>What is the Nøkkelhull Symbol?</h4>
+    <p class="about-text">
+        The <strong>Nøkkelhull</strong> symbol, widely recognized across Scandinavia, signifies a commitment to healthier nutrition. Products with this label meet standards in categories such as reduced energy (calories), lower fat, adequate protein, balanced carbohydrates, and minimized salt content. 
+        By achieving this label, companies signal their dedication to providing healthier options, and consumers gain a reliable way to make smarter choices when shopping.
+    </p>
+
+    <h4 class="about-section-title"><i class="about-icon fas fa-bullseye"></i>Our Mission</h4>
+    <p class="about-text">
+        Our mission is twofold:
+    </p>
+    <ul class="about-list">
+        <li><strong>For Companies:</strong> We provide a streamlined tool for companies to enter and review their food products' nutritional values, helping them assess if they qualify for the Nøkkelhull label.</li>
+        <li><strong>For Consumers:</strong> We offer a comprehensive resource for people to explore nutritional details of products, supporting healthier choices.</li>
+    </ul>
+
+    <h4 class="about-section-title"><i class="about-icon fas fa-tasks"></i>How It Works</h4>
+    <p class="about-text">
+        Companies can use our platform to:
+    </p>
+    <ol class="about-list">
+        <li><strong>Add new food products</strong> with complete nutritional information.</li>
+        <li><strong>Evaluate eligibility</strong> for the Nøkkelhull label based on provided criteria.</li>
+        <li><strong>Update and manage</strong> product information to stay aligned with nutritional standards.</li>
+    </ol>
+
+    <p class="about-text">
+        Consumers can browse our website to:
+    </p>
+    <ol class="about-list">
+        <li><strong>Search for products</strong> they wish to learn more about.</li>
+        <li><strong>Check nutritional details</strong> like calories, fat, protein, carbohydrates, and salt content to make informed decisions.</li>
+    </ol>
+
+    <h4 class="about-section-title"><i class="about-icon fas fa-shield-alt"></i>Our Commitment to Transparency</h4>
+    <p class="about-text">
+        We believe in the importance of transparency in food nutrition. By allowing companies to share their nutritional information and helping consumers access it freely, we aim to foster a community focused on better health and well-being.
+    </p>
+
+    <p class="text-center-strong">Let’s build a healthier future, one product at a time.</p>
+</div>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

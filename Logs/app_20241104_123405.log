@@ -1,0 +1,157 @@
+2024-11-04 12:34:06.873 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 12:34:07.014 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 12:34:07.017 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 12:34:07.018 +01:00 [INF] Hosting environment: Development
+2024-11-04 12:34:07.018 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 12:34:08.103 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 12:34:08.138 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:34:08.147 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 12:34:08.154 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 12:34:08.223 +01:00 [INF] Executed ViewResult - view Index executed in 70.8434ms.
+2024-11-04 12:34:08.225 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 77.3192ms
+2024-11-04 12:34:08.225 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:34:08.228 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 126.445ms
+2024-11-04 12:35:01.182 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Grid - null null
+2024-11-04 12:35:01.184 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:35:01.188 +01:00 [INF] Route matched with {action = "Grid", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:35:01.292 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-04 12:35:01.300 +01:00 [INF] Executed ViewResult - view Grid executed in 8.7626ms.
+2024-11-04 12:35:01.300 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 111.6951ms
+2024-11-04 12:35:01.300 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:35:01.303 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 121.2389ms
+2024-11-04 12:35:03.529 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-11-04 12:35:03.532 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:35:03.535 +01:00 [INF] Route matched with {action = "Table", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:35:03.576 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-04 12:35:03.592 +01:00 [INF] Executed ViewResult - view Table executed in 16.1356ms.
+2024-11-04 12:35:03.592 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 56.3496ms
+2024-11-04 12:35:03.592 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:35:03.592 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 62.8058ms
+2024-11-04 12:35:04.531 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Create - null null
+2024-11-04 12:35:04.537 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-04 12:35:04.540 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2024-11-04 12:35:04.540 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Create - 302 0 null 9.121ms
+2024-11-04 12:35:04.543 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - null null
+2024-11-04 12:35:04.543 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 12:35:04.559 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 12:35:04.572 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 12:35:04.576 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-04 12:35:04.576 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 12:35:04.578 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 12:35:04.579 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 12:35:04.613 +01:00 [INF] Executed page /Account/Login in 53.6893ms
+2024-11-04 12:35:04.613 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 12:35:04.613 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - 200 null text/html; charset=utf-8 70.1581ms
+2024-11-04 12:35:04.633 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 12:35:04.634 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 12:35:04.635 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.5476ms
+2024-11-04 12:35:04.635 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 1.4405ms
+2024-11-04 12:35:04.635 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 12:35:04.635 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 12:35:05.972 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - application/x-www-form-urlencoded 273
+2024-11-04 12:35:05.975 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 12:35:05.976 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 12:35:05.989 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2024-11-04 12:35:06.039 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 12:35:06.042 +01:00 [INF] Executed page /Account/Login in 66.7503ms
+2024-11-04 12:35:06.042 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 12:35:06.043 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5017/Identity/Account/Login?ReturnUrl=%2FItem%2FCreate - 200 null text/html; charset=utf-8 70.6117ms
+2024-11-04 12:35:06.059 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 12:35:06.059 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 12:35:06.059 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.5973ms
+2024-11-04 12:35:06.059 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.5978ms
+2024-11-04 12:35:06.060 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 12:35:06.060 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 12:35:08.322 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - null null
+2024-11-04 12:35:08.323 +01:00 [INF] Executing endpoint '/Account/Register'
+2024-11-04 12:35:08.327 +01:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2024-11-04 12:35:08.328 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 12:35:08.328 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 12:35:08.329 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 12:35:08.329 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 12:35:08.341 +01:00 [INF] Executed page /Account/Register in 13.7891ms
+2024-11-04 12:35:08.341 +01:00 [INF] Executed endpoint '/Account/Register'
+2024-11-04 12:35:08.341 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - 200 null text/html; charset=utf-8 18.8045ms
+2024-11-04 12:35:08.355 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 12:35:08.355 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 12:35:08.356 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.4054ms
+2024-11-04 12:35:08.356 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.4657ms
+2024-11-04 12:35:08.356 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 12:35:08.356 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 12:35:31.113 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5017/Identity/Account/Register - application/x-www-form-urlencoded 294
+2024-11-04 12:35:31.113 +01:00 [INF] Executing endpoint '/Account/Register'
+2024-11-04 12:35:31.113 +01:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2024-11-04 12:35:31.115 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.RegisterModel.OnPostAsync - ModelState is "Valid"
+2024-11-04 12:35:31.260 +01:00 [INF] User created a new account with password.
+2024-11-04 12:35:31.292 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2024-11-04 12:35:31.292 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2024-11-04 12:35:31.293 +01:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2024-11-04 12:35:31.293 +01:00 [INF] Executed page /Account/Register in 179.6859ms
+2024-11-04 12:35:31.293 +01:00 [INF] Executed endpoint '/Account/Register'
+2024-11-04 12:35:31.293 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5017/Identity/Account/Register - 302 0 null 180.2418ms
+2024-11-04 12:35:31.296 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 12:35:31.299 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:35:31.299 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 12:35:31.299 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 12:35:31.301 +01:00 [INF] Executed ViewResult - view Index executed in 2.0144ms.
+2024-11-04 12:35:31.301 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 2.1627ms
+2024-11-04 12:35:31.301 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:35:31.301 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 4.6308ms
+2024-11-04 12:35:33.929 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Grid - null null
+2024-11-04 12:35:33.930 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:35:33.930 +01:00 [INF] Route matched with {action = "Grid", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:35:33.931 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-04 12:35:33.933 +01:00 [INF] Executed ViewResult - view Grid executed in 1.287ms.
+2024-11-04 12:35:33.933 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 3.1259ms
+2024-11-04 12:35:33.933 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:35:33.933 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 4.4934ms
+2024-11-04 12:35:35.113 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-11-04 12:35:35.115 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:35:35.115 +01:00 [INF] Route matched with {action = "Table", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:35:35.117 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-04 12:35:35.118 +01:00 [INF] Executed ViewResult - view Table executed in 1.9456ms.
+2024-11-04 12:35:35.118 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 3.4311ms
+2024-11-04 12:35:35.118 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:35:35.119 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 5.3882ms
+2024-11-04 12:35:36.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Create - null null
+2024-11-04 12:35:36.505 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 12:35:36.506 +01:00 [INF] Route matched with {action = "Create", controller = "Item", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:35:36.507 +01:00 [INF] Executing ViewResult, running view Create.
+2024-11-04 12:35:36.537 +01:00 [INF] Executed ViewResult - view Create executed in 30.6162ms.
+2024-11-04 12:35:36.537 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Create (MyShop) in 30.855ms
+2024-11-04 12:35:36.537 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 12:35:36.537 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Create - 200 null text/html; charset=utf-8 34.6945ms
+2024-11-04 12:35:49.405 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 12:35:49.405 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:35:49.405 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 12:35:49.405 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 12:35:49.406 +01:00 [INF] Executed ViewResult - view Index executed in 0.6688ms.
+2024-11-04 12:35:49.406 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 0.7746ms
+2024-11-04 12:35:49.406 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:35:49.406 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 1.4592ms
+2024-11-04 12:36:37.644 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Grid - null null
+2024-11-04 12:36:37.645 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:36:37.645 +01:00 [INF] Route matched with {action = "Grid", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:36:37.646 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-04 12:36:37.647 +01:00 [INF] Executed ViewResult - view Grid executed in 0.7318ms.
+2024-11-04 12:36:37.647 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 1.9118ms
+2024-11-04 12:36:37.647 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 12:36:37.647 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 2.7763ms
+2024-11-04 12:36:39.339 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Table - null null
+2024-11-04 12:36:39.340 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:36:39.340 +01:00 [INF] Route matched with {action = "Table", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:36:39.341 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-04 12:36:39.343 +01:00 [INF] Executed ViewResult - view Table executed in 1.3163ms.
+2024-11-04 12:36:39.343 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Table (MyShop) in 2.6039ms
+2024-11-04 12:36:39.343 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Table (MyShop)'
+2024-11-04 12:36:39.343 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Table - 200 null text/html; charset=utf-8 3.4896ms
+2024-11-04 12:36:40.143 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Create - null null
+2024-11-04 12:36:40.145 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 12:36:40.145 +01:00 [INF] Route matched with {action = "Create", controller = "Item", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 12:36:40.145 +01:00 [INF] Executing ViewResult, running view Create.
+2024-11-04 12:36:40.147 +01:00 [INF] Executed ViewResult - view Create executed in 2.3294ms.
+2024-11-04 12:36:40.147 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Create (MyShop) in 2.4688ms
+2024-11-04 12:36:40.147 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 12:36:40.147 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Create - 200 null text/html; charset=utf-8 4.0906ms
+2024-11-04 12:37:55.263 +01:00 [INF] Application is shutting down...

@@ -1,0 +1,97 @@
+2024-11-04 10:29:00.488 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 10:29:00.639 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 10:29:00.642 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 10:29:00.643 +01:00 [INF] Hosting environment: Development
+2024-11-04 10:29:00.643 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 10:29:02.131 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 10:29:02.165 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 10:29:02.175 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 10:29:02.183 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 10:29:02.249 +01:00 [INF] Executed ViewResult - view Index executed in 67.6926ms.
+2024-11-04 10:29:02.251 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 75.0281ms
+2024-11-04 10:29:02.251 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 10:29:02.254 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 124.12ms
+2024-11-04 10:29:04.071 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - null null
+2024-11-04 10:29:04.073 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 10:29:04.087 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 10:29:04.100 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 10:29:04.104 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-04 10:29:04.105 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 10:29:04.107 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 10:29:04.107 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 10:29:04.143 +01:00 [INF] Executed page /Account/Login in 55.5738ms
+2024-11-04 10:29:04.143 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 10:29:04.144 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - 200 null text/html; charset=utf-8 72.6433ms
+2024-11-04 10:29:04.166 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 10:29:04.168 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 2.8553ms
+2024-11-04 10:29:04.169 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 10:29:04.170 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 10:29:04.170 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.4816ms
+2024-11-04 10:29:04.170 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 10:29:05.732 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - null null
+2024-11-04 10:29:05.735 +01:00 [INF] Executing endpoint '/Account/Register'
+2024-11-04 10:29:05.740 +01:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2024-11-04 10:29:05.748 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 10:29:05.749 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 10:29:05.749 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 10:29:05.749 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 10:29:05.761 +01:00 [INF] Executed page /Account/Register in 20.672ms
+2024-11-04 10:29:05.761 +01:00 [INF] Executed endpoint '/Account/Register'
+2024-11-04 10:29:05.761 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - 200 null text/html; charset=utf-8 29.3428ms
+2024-11-04 10:29:05.773 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 10:29:05.773 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 10:29:05.774 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.7158ms
+2024-11-04 10:29:05.774 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 10:29:05.774 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.2711ms
+2024-11-04 10:29:05.774 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 10:29:07.454 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - null null
+2024-11-04 10:29:07.454 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 10:29:07.454 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 10:29:07.455 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 10:29:07.455 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-04 10:29:07.455 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 10:29:07.455 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 10:29:07.455 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 10:29:07.458 +01:00 [INF] Executed page /Account/Login in 3.7317ms
+2024-11-04 10:29:07.458 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 10:29:07.458 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - 200 null text/html; charset=utf-8 4.6894ms
+2024-11-04 10:29:07.475 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 10:29:07.476 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 10:29:07.476 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.4947ms
+2024-11-04 10:29:07.476 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.4118ms
+2024-11-04 10:29:07.476 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 10:29:07.476 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 10:29:09.671 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - null null
+2024-11-04 10:29:09.671 +01:00 [INF] Executing endpoint '/Account/Register'
+2024-11-04 10:29:09.671 +01:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2024-11-04 10:29:09.672 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 10:29:09.672 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 10:29:09.672 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 10:29:09.672 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 10:29:09.674 +01:00 [INF] Executed page /Account/Register in 2.5412ms
+2024-11-04 10:29:09.674 +01:00 [INF] Executed endpoint '/Account/Register'
+2024-11-04 10:29:09.674 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Register - 200 null text/html; charset=utf-8 3.0601ms
+2024-11-04 10:29:09.689 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 10:29:09.689 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 10:29:09.690 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.5854ms
+2024-11-04 10:29:09.690 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.504ms
+2024-11-04 10:29:09.690 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 10:29:09.690 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 10:29:10.484 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - null null
+2024-11-04 10:29:10.484 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 10:29:10.485 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 10:29:10.485 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 10:29:10.485 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-04 10:29:10.485 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 10:29:10.485 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 10:29:10.485 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 10:29:10.487 +01:00 [INF] Executed page /Account/Login in 2.5003ms
+2024-11-04 10:29:10.487 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 10:29:10.487 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - 200 null text/html; charset=utf-8 3.1973ms
+2024-11-04 10:29:10.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 10:29:10.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 10:29:10.503 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.3111ms
+2024-11-04 10:29:10.503 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 0.4712ms
+2024-11-04 10:29:10.503 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404
+2024-11-04 10:29:10.503 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 10:31:59.169 +01:00 [INF] Application is shutting down...

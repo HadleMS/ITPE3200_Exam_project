@@ -2,79 +2,49 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Sign In";
 }
+<link rel="stylesheet" href="~/css/Login.css">
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
+<div class="container-fluid">
+    <div class="row min-vh-100">
+        <!-- Venstre seksjon -->
+        <div class="col-md-6 d-none d-md-flex flex-column align-items-center justify-content-center bg-success text-white left-section">
+            <h2>New here?</h2>
+            <p>Register yourself to access our services.</p>
+            <a class="btn btn-outline-light mt-3" asp-page="./Register">Sign Up</a>
+            <!-- Her kan du legge til en illustrasjon om ønskelig -->
+            <img src="~/images/SignUp.png" alt="Illustration" class="img-fluid mt-4" style="max-width: 70%;">
+        </div>
+
+         <!-- Høyre seksjon - Innloggingsskjema -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <h1 class="text-center mb-4">Sign in</h1>
+                <form id="account" method="post" class="text-center w-100" style="max-width: 400px;">
+                    <!-- E-post input-felt med SVG-ikon -->
+                    <div class="form-group mb-3 position-relative">
+                        <span class="icon position-absolute">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4C2.89 4 2 4.9 2 6V18C2 19.1 2.89 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#888"/>
+                            </svg>
+                        </span>
+                        <input asp-for="Input.Email" class="form-control pl-5" type="email" placeholder="Email" required />
                     </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
+
+                    <!-- Passord input-felt med SVG-ikon -->
+                    <div class="form-group mb-3 position-relative">
+                        <span class="icon position-absolute">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 17C11.45 17 11 16.55 11 16V14C11 13.45 11.45 13 12 13C12.55 13 13 13.45 13 14V16C13 16.55 12.55 17 12 17ZM17 8V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V8C5.9 8 5 8.9 5 10V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V10C19 8.9 18.1 8 17 8ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V8H9V7ZM17 20H7V10H17V20Z" fill="#888"/>
+                            </svg>
+                        </span>
+                        <input asp-for="Input.Password" type="password" class="form-control pl-5" placeholder="Password" required />
+                    </div>                 
+                    <button type="submit" class="btn btn-primary w-100">SIGN IN</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 

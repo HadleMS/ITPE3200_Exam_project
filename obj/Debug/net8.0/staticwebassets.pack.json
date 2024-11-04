@@ -1,75 +1,83 @@
 {
   "Files": [
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyShop.bundle.scp.css",
       "PackagePath": "staticwebassets\\MyShop.bundle.scp.css"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\SignUp.png",
+      "PackagePath": "staticwebassets\\images\\SignUp.png"
+    },
+    {
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\family.jpg",
       "PackagePath": "staticwebassets\\images\\family.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\grid-view.png",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\grid-view.png",
       "PackagePath": "staticwebassets\\images\\grid-view.png"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\healthy.jpg",
       "PackagePath": "staticwebassets\\images\\healthy.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\helmelk.jpg",
       "PackagePath": "staticwebassets\\images\\helmelk.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\kjøttdeig.jpg",
       "PackagePath": "staticwebassets\\images\\kjøttdeig.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\kylling.jpg",
       "PackagePath": "staticwebassets\\images\\kylling.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\lettmelk.jpg",
       "PackagePath": "staticwebassets\\images\\lettmelk.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\logo.png",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\nøkkelhull.png",
       "PackagePath": "staticwebassets\\images\\nøkkelhull.png"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\peanøtter.jpg",
       "PackagePath": "staticwebassets\\images\\peanøtter.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\polpa.jpg",
       "PackagePath": "staticwebassets\\images\\polpa.jpg"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\salad.png",
       "PackagePath": "staticwebassets\\images\\salad.png"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\images\\table.png",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\images\\table.png",
       "PackagePath": "staticwebassets\\images\\table.png"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.min.js"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.js"
     },
     {
-      "Id": "C:\\ITPE3200\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project-main\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\TestMappe\\Eksamen\\ITPE3200_Exam_project\\wwwroot\\js\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
     },
     {

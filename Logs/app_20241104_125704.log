@@ -1,0 +1,38 @@
+2024-11-04 12:57:05.225 +01:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 12:57:05.352 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 12:57:05.355 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 12:57:05.356 +01:00 [INF] Hosting environment: Development
+2024-11-04 12:57:05.356 +01:00 [INF] Content root path: C:\TestMappe\Eksamen\ITPE3200_Exam_project
+2024-11-04 12:57:07.443 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 12:57:07.482 +01:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2024-11-04 12:57:07.488 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:57:07.496 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 12:57:07.506 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 12:57:07.591 +01:00 [INF] Executed ViewResult - view Index executed in 88.8878ms.
+2024-11-04 12:57:07.593 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 96.4151ms
+2024-11-04 12:57:07.593 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 12:57:07.596 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 155.0093ms
+2024-11-04 12:57:10.106 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - null null
+2024-11-04 12:57:10.109 +01:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2024-11-04 12:57:10.110 +01:00 [INF] Executing endpoint '/Account/Login'
+2024-11-04 12:57:10.121 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2024-11-04 12:57:10.138 +01:00 [INF] Executing handler method MyShop.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2024-11-04 12:57:10.144 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2024-11-04 12:57:10.145 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2024-11-04 12:57:10.147 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2024-11-04 12:57:10.147 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2024-11-04 12:57:10.180 +01:00 [INF] Executed page /Account/Login in 57.8559ms
+2024-11-04 12:57:10.180 +01:00 [INF] Executed endpoint '/Account/Login'
+2024-11-04 12:57:10.180 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Identity/Account/Login - 200 null text/html; charset=utf-8 74.128ms
+2024-11-04 12:57:10.208 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/images/illustration.png - null null
+2024-11-04 12:57:10.212 +01:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2024-11-04 12:57:10.212 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/images/illustration.png - 404 0 null 4.3029ms
+2024-11-04 12:57:10.214 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/images/illustration.png, Response status code: 404
+2024-11-04 12:57:10.254 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2024-11-04 12:57:10.255 +01:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2024-11-04 12:57:10.255 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js - 404 0 null 1.2694ms
+2024-11-04 12:57:10.255 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2024-11-04 12:57:10.256 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation/dist/jquery.validate.min.js, Response status code: 404
+2024-11-04 12:57:10.256 +01:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2024-11-04 12:57:10.256 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 404 0 null 0.843ms
+2024-11-04 12:57:10.257 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js, Response status code: 404

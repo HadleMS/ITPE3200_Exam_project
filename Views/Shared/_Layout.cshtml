@@ -9,10 +9,26 @@
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery.validate.js"></script>
     <script src="~/js/jquery.validate.unobtrusive.js"></script>
+
+    <style>
+        /* Make the navbar background and borders invisible */
+        .navbar {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .navbar-nav .nav-link {
+            color: #343a40;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="/images/logo.png" alt="My Shop Logo" style="width: 50px; height: auto;" />

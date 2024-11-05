@@ -108,15 +108,6 @@ public static class DBInit
             context.SaveChanges();
         }
 
-        if (!context.Customers.Any())
-        {
-            var customers = new List<Customer>
-            {
-                new Customer { Name = "Alice Hansen", Address = "Osloveien 1"},
-                new Customer { Name = "Bob Johansen", Address = "Oslomet gata 2"},
-            };
-            context.AddRange(customers);
-            context.SaveChanges();
-        }
+ 
        
 }}

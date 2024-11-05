@@ -44,6 +44,16 @@
         vertical-align: middle; /* Align icons vertically */
         margin-left: 5px; /* Space between icons */
     }
+        html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+main {
+    min-height: 100vh; /* Adjust to fit the height of your content */
+    padding-bottom: 2rem; /* Add some space at the bottom for consistency */
+}
+
 </style>
 
 <partial name="_ItemTable" model="Model.Items" />

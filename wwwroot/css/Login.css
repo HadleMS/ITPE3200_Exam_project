@@ -89,26 +89,17 @@ html, body {
     border: none;
     border-radius: 25px;
     font-size: 1rem;
-    padding: 10px 30px; /* Reduser bredde ved å øke padding mindre */
-    max-width: 200px; /* Sett en maksimal bredde for knappen */
-    width: 100%; /* Gjør at den skaleres i sin beholder */
-    transition: background-color 0.3s ease;
-    margin: 0 auto; /* Sentrumrer knappen i forhold til beholderen */
+    padding: 10px 30px;
+    max-width: 200px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
 }
 
 .btn-primary:hover {
     background-color: #ff4da6;
-}
-
-/* Link styling for "Forgot Password?" */
-.forgot-password {
-    color: #555;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
+    transform: scale(1.1); /* Øk knappens størrelse til 110% */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Legg til en sterkere skygge */
 }
 
 /* "Sign Up"-knapp hover-effekt */

@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+/* Input-felt styling */
+.form-control {
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 20px 12px 45px; /* Rom for ikonet */
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+/* Ikon-styling */
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    pointer-events: none; /* Hindrer interaksjon med ikonet */
+}
+
+/* Animasjon på SVG-ikon i input-felt */
+.form-group.position-relative:focus-within .icon svg path {
+    fill: #ff66b2; /* Endre farge ved fokus */
+    transform: scale(1.1); /* Gjør ikonet litt større ved fokus */
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* Knapp med hover-animasjon */
+.btn-primary {
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 10px 30px;
+    max-width: 200px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.btn-primary:hover {
+    background-color: #ff4da6;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}

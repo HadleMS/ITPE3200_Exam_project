@@ -25,6 +25,7 @@
         color: #343a40;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
+        text-align: center;
     }
 
     .about-text {
@@ -32,21 +33,52 @@
         line-height: 1.7;
         color: #555;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
-    .about-list {
-        padding-left: 1rem;
-        margin-bottom: 1rem;
+    .features {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 2rem;
     }
 
-    .about-list li {
-        margin-bottom: 0.5rem;
+    .feature-item {
+        flex: 1;
+        padding: 1rem;
     }
 
-    .about-icon {
-        font-size: 1.5rem;
+    .feature-icon {
+        font-size: 2rem;
         color: #39a554;
-        margin-right: 0.5rem;
+    }
+
+    .cta-button {
+        display: inline-block;
+        margin: 2rem auto 0;
+        padding: 1rem 2rem;
+        background-color: #39a554;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+
+    .cta-button:hover {
+        background-color: #218838;
+    }
+
+    .team-section {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .divider {
+        height: 1px;
+        background-color: #ddd;
+        margin: 2rem 0;
     }
 
     .text-center-strong {
@@ -58,53 +90,84 @@
 </style>
 
 <div class="about-container">
+    <!-- Header -->
     <h2 class="about-header">About Our Platform</h2>
 
+    <!-- Summary Section -->
     <p class="about-text">
-        Welcome to our nutritional information platform, where we aim to help companies evaluate their food products' eligibility for the <strong>Nøkkelhull</strong> symbol – a trusted indicator of healthier food choices.
-        By providing an easy way for companies to input detailed nutritional data, we ensure they can quickly assess if their products meet the specific nutritional criteria set for "Nøkkelhull" certification.
+        Welcome to our nutritional information platform. We empower companies and consumers to make healthier choices through transparency and accessible nutrition data.
     </p>
 
-    <h4 class="about-section-title"><i class="about-icon fas fa-info-circle"></i>What is the Nøkkelhull Symbol?</h4>
+    <!-- Feature Highlights Section -->
+    <div class="features">
+        <div class="feature-item">
+            <i class="feature-icon fas fa-info-circle"></i>
+            <h4>Transparency</h4>
+            <p>Access accurate nutritional information on various products.</p>
+        </div>
+        <div class="feature-item">
+            <i class="feature-icon fas fa-seedling"></i>
+            <h4>Health Focus</h4>
+            <p>Certified products meeting “Nøkkelhull” standards.</p>
+        </div>
+        <div class="feature-item">
+            <i class="feature-icon fas fa-cogs"></i>
+            <h4>Ease of Use</h4>
+            <p>Simple tools for companies and consumers alike.</p>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- What is the Nøkkelhull Symbol? -->
+    <h4 class="about-section-title">What is the Nøkkelhull Symbol?</h4>
     <p class="about-text">
-        The <strong>Nøkkelhull</strong> symbol, widely recognized across Scandinavia, signifies a commitment to healthier nutrition. Products with this label meet standards in categories such as reduced energy (calories), lower fat, adequate protein, balanced carbohydrates, and minimized salt content. 
-        By achieving this label, companies signal their dedication to providing healthier options, and consumers gain a reliable way to make smarter choices when shopping.
+        The <strong>Nøkkelhull</strong> symbol signifies commitment to healthier nutrition. Products with this label meet specific standards for lower calories, reduced fat, balanced nutrients, and minimized salt.
     </p>
 
-    <h4 class="about-section-title"><i class="about-icon fas fa-bullseye"></i>Our Mission</h4>
+    <!-- Mission Statement -->
+    <h4 class="about-section-title">Our Mission</h4>
     <p class="about-text">
-        Our mission is twofold:
+        Our mission is to provide a reliable resource for healthier choices:
     </p>
     <ul class="about-list">
-        <li><strong>For Companies:</strong> We provide a streamlined tool for companies to enter and review their food products' nutritional values, helping them assess if they qualify for the Nøkkelhull label.</li>
-        <li><strong>For Consumers:</strong> We offer a comprehensive resource for people to explore nutritional details of products, supporting healthier choices.</li>
+        <li><strong>For Companies:</strong> A streamlined tool for evaluating nutritional data and eligibility for the Nøkkelhull label.</li>
+        <li><strong>For Consumers:</strong> An easy way to access detailed nutritional information and make informed decisions.</li>
     </ul>
 
-    <h4 class="about-section-title"><i class="about-icon fas fa-tasks"></i>How It Works</h4>
-    <p class="about-text">
-        Companies can use our platform to:
-    </p>
-    <ol class="about-list">
-        <li><strong>Add new food products</strong> with complete nutritional information.</li>
-        <li><strong>Evaluate eligibility</strong> for the Nøkkelhull label based on provided criteria.</li>
-        <li><strong>Update and manage</strong> product information to stay aligned with nutritional standards.</li>
-    </ol>
+    <div class="divider"></div>
 
+    <!-- How It Works Section -->
+    <h4 class="about-section-title">How It Works</h4>
     <p class="about-text">
-        Consumers can browse our website to:
+        Companies can:
     </p>
-    <ol class="about-list">
-        <li><strong>Search for products</strong> they wish to learn more about.</li>
-        <li><strong>Check nutritional details</strong> like calories, fat, protein, carbohydrates, and salt content to make informed decisions.</li>
-    </ol>
-
-    <h4 class="about-section-title"><i class="about-icon fas fa-shield-alt"></i>Our Commitment to Transparency</h4>
+    <ul class="about-list">
+        <li>Add and manage product information.</li>
+        <li>Evaluate eligibility for the Nøkkelhull label.</li>
+    </ul>
     <p class="about-text">
-        We believe in the importance of transparency in food nutrition. By allowing companies to share their nutritional information and helping consumers access it freely, we aim to foster a community focused on better health and well-being.
+        Consumers can:
+    </p>
+    <ul class="about-list">
+        <li>Search products and view nutritional information.</li>
+        <li>Filter products based on nutritional needs.</li>
+    </ul>
+
+    <!-- CTA Section -->
+    <a href="/explore" class="cta-button">Explore Our Platform</a>
+
+    <div class="divider"></div>
+
+    <!-- Commitment Section -->
+    <h4 class="about-section-title">Our Commitment to Transparency</h4>
+    <p class="about-text">
+        We believe in transparency in food nutrition. By connecting companies with consumers, we support a healthier, well-informed community.
     </p>
 
+    <!-- Conclusion Statement -->
     <p class="text-center-strong">Let’s build a healthier future, one product at a time.</p>
 </div>
 
-
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+

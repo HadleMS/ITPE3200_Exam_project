@@ -1,48 +1,133 @@
 @model ItemsViewModel
 
-<h1 style="font-size: 24px; margin-bottom: 20px;">Nutritional Information of Grocery Items (@Model.CurrentViewName View)</h1>
+<h1 class="page-title">Nutritional Information of Grocery Items</h1>
+<p class="subtitle">(Table View)</p>
 <a href="/Item/Grid" title="Grid View">
-    <img src="/images/grid-view.png" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
+    <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
 </a>
 
 <style>
-    /* Styling for the table */
+
+.page-title {
+    font-size: 28px;
+    color: #333; /* Mørk grå for et mer moderne utseende */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #666; /* Lysere grå for undertekst */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+    /* Styling for tabellen */
     table {
         width: 100%;
-        border-collapse: collapse; /* Collapses borders */
-        margin-top: 20px; /* Space above the table */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
-        border-radius: 8px; /* Rounded corners */
-        overflow: hidden; /* Ensures rounded corners look good */
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
     }
 
+    /* Juster bredde for spesifikk kolonne */
+th.energy-column {
+    min-width: 170px; 
+}
+
     th {
-        background-color: #4CAF50; /* Green background for header */
-        color: white; /* White text */
-        padding: 12px; /* Padding for cells */
-        text-align: left; /* Left align text */
-        font-weight: bold; /* Bold text */
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
     }
 
     td {
-        border: 1px solid #ddd; /* Light gray border */
-        padding: 12px; /* Padding for cells */
-        transition: background-color 0.3s; /* Smooth transition for hover */
+        border: 1px solid #ddd;
+        padding: 12px;
+        transition: background-color 0.3s;
     }
 
     tr:hover {
-        background-color: #f1f1f1; /* Light gray background on hover */
+        background-color: #f1f1f1;
     }
 
     tr:nth-child(even) {
-        background-color: #f9f9f9; /* Slightly darker background for even rows */
+        background-color: #f9f9f9;
     }
 
-    .action-icons img {
-        width: 20px; /* Size of action icons */
+    .action-links a {
+        font-weight: bold;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+/* Styling for action links container */
+.action-links {
+    display: flex;
+    gap: 12px; /* Avstand mellom knappene */
+}
+
+/* Update link styling */
+.action-links a.update-link {
+    color: #28a745; /* Grønn farge for update */
+    text-decoration: none;
+    border: 1px solid #28a745;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-right: 12px; /* Økt margin for å gi mer plass mellom knappene */
+    display: inline-block;
+}
+
+.action-links a.update-link:hover {
+    color: white;
+    background-color: #28a745;
+}
+
+/* Delete link styling */
+.action-links a.delete-link {
+    color: #dc3545; /* Rød farge for delete */
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.action-links a.delete-link:hover {
+    color: white;
+    background-color: #dc3545;
+}
+
+
+    .keyhole-icon {
+        width: 30px; /* Size of keyhole icon */
         height: auto;
-        vertical-align: middle; /* Align icons vertically */
-        margin-left: 5px; /* Space between icons */
+        vertical-align: middle;
+    }
+
+    /* Styling for the 'Create New Item' button */
+    .create-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .create-button:hover {
+        background-color: #45a049;
     }
         html {
     overflow-y: scroll;
@@ -56,4 +141,61 @@ main {
 
 </style>
 
-<partial name="_ItemTable" model="Model.Items" />
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Food group</th>
+            <th class="energy-column">Energy per 100g</th>
+            <th>Fat per 100g</th>
+            <th>Protein per 100g</th>
+            <th>Carbohydrates per 100g</th>
+            <th>Salt per 100g</th>
+            <th>Image</th>
+            <th>Keyhole</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ItemId</td>
+                <td>@Html.ActionLink(item.Name, "Details", new { id = item.ItemId })</td>
+                <td>@item.Food_Group</td>
+                <td>@item.Energi_Kcal</td>
+                <td>@item.Fett</td>
+                <td>@item.Protein</td>
+                <td>@item.Karbohydrat</td>
+                <td>@item.Salt</td>
+                <td>
+                    <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px;" />
+                </td>
+                <td>
+                    @if (item.HasGreenKeyhole)
+                    {
+                        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" />
+                    }
+                </td>
+               <td class="action-links">
+                   <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
+                   <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
+</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Create New Item Button -->
+<a href="/Item/Create" class="create-button">Create New Item</a>
+
+
+
+
+
+
+
+
+

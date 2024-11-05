@@ -3,7 +3,15 @@
 <h3 class="my-5">@Model.Name</h3>
 
 <div class="row gx-5">
-    <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid col-5" />
+    <div class="col-5 position-relative">
+        <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
+
+        <!-- Vis nøkkelhullsmerket hvis HasGreenKeyhole er true -->
+        @if (Model.HasGreenKeyhole)
+        {
+            <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
+        }
+    </div>
 
     <div class="col-7">
         <!-- Næringsinnhold Tabell -->
@@ -36,6 +44,15 @@
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
+    }
+
+    /* Stil for nøkkelhullsmerke */
+    .keyhole-icon {
+        width: 30px;
+        height: auto;
+        position: absolute;
+        bottom: 40px;
+        right: 100px; 
     }
 
     /* Stil for summary i subtil knappestil */
@@ -91,3 +108,4 @@
         color: #333;
     }
 </style>
+

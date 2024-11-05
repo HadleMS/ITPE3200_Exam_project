@@ -1,0 +1,54 @@
+2024-11-04 16:21:01.736 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 16:21:01.956 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 16:21:01.961 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 16:21:01.962 +01:00 [INF] Hosting environment: Development
+2024-11-04 16:21:01.962 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 16:21:03.224 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 16:21:03.289 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:03.300 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 16:21:03.309 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 16:21:03.387 +01:00 [INF] Executed ViewResult - view Index executed in 79.0051ms.
+2024-11-04 16:21:03.389 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 87.4344ms
+2024-11-04 16:21:03.389 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:03.392 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 170.4308ms
+2024-11-04 16:21:10.028 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 16:21:10.034 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:10.034 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 16:21:10.036 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 16:21:10.041 +01:00 [INF] Executed ViewResult - view Index executed in 6.1951ms.
+2024-11-04 16:21:10.042 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 7.0968ms
+2024-11-04 16:21:10.042 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:10.042 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 14.0114ms
+2024-11-04 16:21:10.926 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Grid - null null
+2024-11-04 16:21:10.943 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 16:21:10.949 +01:00 [INF] Route matched with {action = "Grid", controller = "Item", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Grid() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 16:21:11.095 +01:00 [INF] Executing ViewResult, running view Grid.
+2024-11-04 16:21:11.101 +01:00 [INF] Executed ViewResult - view Grid executed in 6.2738ms.
+2024-11-04 16:21:11.101 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Grid (MyShop) in 151.6404ms
+2024-11-04 16:21:11.101 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Grid (MyShop)'
+2024-11-04 16:21:11.137 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Grid - 200 null text/html; charset=utf-8 210.6787ms
+2024-11-04 16:21:11.978 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Customer/Table - null null
+2024-11-04 16:21:11.981 +01:00 [INF] Executing endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-11-04 16:21:11.986 +01:00 [INF] Route matched with {action = "Table", controller = "Customer", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Table() on controller MyShop.Controllers.CustomerController (MyShop).
+2024-11-04 16:21:12.054 +01:00 [INF] Executing ViewResult, running view Table.
+2024-11-04 16:21:12.059 +01:00 [INF] Executed ViewResult - view Table executed in 5.7519ms.
+2024-11-04 16:21:12.060 +01:00 [INF] Executed action MyShop.Controllers.CustomerController.Table (MyShop) in 73.29ms
+2024-11-04 16:21:12.060 +01:00 [INF] Executed endpoint 'MyShop.Controllers.CustomerController.Table (MyShop)'
+2024-11-04 16:21:12.061 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Customer/Table - 200 null text/html; charset=utf-8 82.7174ms
+2024-11-04 16:21:14.113 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 16:21:14.114 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:14.114 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 16:21:14.115 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 16:21:14.116 +01:00 [INF] Executed ViewResult - view Index executed in 1.445ms.
+2024-11-04 16:21:14.116 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 1.6312ms
+2024-11-04 16:21:14.116 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:21:14.116 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 3.2653ms
+2024-11-04 16:22:10.777 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 16:22:10.778 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:22:10.778 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 16:22:10.779 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 16:22:10.781 +01:00 [INF] Executed ViewResult - view Index executed in 2.5158ms.
+2024-11-04 16:22:10.781 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 2.7529ms
+2024-11-04 16:22:10.781 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 16:22:10.781 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 4.6322ms
+2024-11-04 16:23:07.091 +01:00 [INF] Application is shutting down...

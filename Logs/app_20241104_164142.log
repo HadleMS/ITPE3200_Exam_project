@@ -74,4 +74,7 @@
 2024-11-04 16:41:49.902 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 3.8679ms
 2024-11-04 16:41:49.902 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
 2024-11-04 16:41:49.902 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 5.3105ms
+<<<<<<< Updated upstream
 2024-11-04 16:47:19.842 +01:00 [INF] Application is shutting down...
+=======
+>>>>>>> Stashed changes

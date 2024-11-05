@@ -1,0 +1,25 @@
+2024-11-04 15:52:22.068 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 15:52:22.300 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 15:52:22.304 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 15:52:22.305 +01:00 [INF] Hosting environment: Development
+2024-11-04 15:52:22.305 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 15:52:23.983 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 15:52:24.030 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 15:52:24.038 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 15:52:24.043 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 15:52:24.104 +01:00 [INF] Executed ViewResult - view Index executed in 61.2883ms.
+2024-11-04 15:52:24.106 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 67.1515ms
+2024-11-04 15:52:24.106 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 15:52:24.109 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 126.5366ms
+2024-11-04 15:52:26.086 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/Item/Create - null null
+2024-11-04 15:52:26.102 +01:00 [INF] Executing endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 15:52:26.105 +01:00 [INF] Route matched with {action = "Create", controller = "Item", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller MyShop.Controllers.ItemController (MyShop).
+2024-11-04 15:52:26.107 +01:00 [INF] Executing ViewResult, running view Create.
+2024-11-04 15:52:26.165 +01:00 [INF] Executed ViewResult - view Create executed in 58.5632ms.
+2024-11-04 15:52:26.165 +01:00 [INF] Executed action MyShop.Controllers.ItemController.Create (MyShop) in 59.9061ms
+2024-11-04 15:52:26.165 +01:00 [INF] Executed endpoint 'MyShop.Controllers.ItemController.Create (MyShop)'
+2024-11-04 15:52:26.166 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/Item/Create - 200 null text/html; charset=utf-8 79.1934ms
+2024-11-04 15:53:23.989 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/js/bootstrap.js.map - null null
+2024-11-04 15:53:24.006 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/js/bootstrap.js.map - 404 0 null 17.1994ms
+2024-11-04 15:53:24.008 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/js/bootstrap.js.map, Response status code: 404
+2024-11-04 15:56:16.808 +01:00 [INF] Application is shutting down...

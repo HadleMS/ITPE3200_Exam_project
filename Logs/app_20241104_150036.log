@@ -1,0 +1,17 @@
+2024-11-04 15:00:37.498 +01:00 [INF] User profile is available. Using 'C:\Users\Hadle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-04 15:00:37.723 +01:00 [INF] Now listening on: http://localhost:5017
+2024-11-04 15:00:37.727 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-04 15:00:37.727 +01:00 [INF] Hosting environment: Development
+2024-11-04 15:00:37.727 +01:00 [INF] Content root path: C:\ITPE3200\ITPE3200_Exam_project-main\ITPE3200_Exam_project-main\ITPE3200_Exam_project
+2024-11-04 15:00:39.157 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/ - null null
+2024-11-04 15:00:39.196 +01:00 [INF] Executing endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 15:00:39.205 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MyShop.Controllers.HomeController (MyShop).
+2024-11-04 15:00:39.211 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-04 15:00:39.282 +01:00 [INF] Executed ViewResult - view Index executed in 70.9465ms.
+2024-11-04 15:00:39.283 +01:00 [INF] Executed action MyShop.Controllers.HomeController.Index (MyShop) in 77.2237ms
+2024-11-04 15:00:39.283 +01:00 [INF] Executed endpoint 'MyShop.Controllers.HomeController.Index (MyShop)'
+2024-11-04 15:00:39.286 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/ - 200 null text/html; charset=utf-8 130.7731ms
+2024-11-04 15:00:39.306 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5017/css/site.css - null null
+2024-11-04 15:00:39.310 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5017/css/site.css - 404 0 null 4.0313ms
+2024-11-04 15:00:39.311 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5017/css/site.css, Response status code: 404
+2024-11-04 15:01:15.550 +01:00 [INF] Application is shutting down...

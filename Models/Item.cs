@@ -48,6 +48,9 @@ namespace MyShop.Models
         [Display(Name = "ImageUrl")]
         public string ImageUrl { get; set; } = string.Empty;
 
+        public bool HasGreenKeyhole { get; set; }
+
+
        
         public virtual List<OrderItem>? OrderItems { get; set; }
     }

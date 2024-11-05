@@ -1,25 +1,93 @@
 @model Item
 
-<!-- Display the name of the item as a header -->
-<h3 class="my-5">
-    @Model.Name
-</h3>
+<h3 class="my-5">@Model.Name</h3>
 
 <div class="row gx-5">
-    <!-- Display the image of the item -->
-    <img alt="@Model.Name" src="@Model.ImageUrl" class="img-fluid col-5" />
-    
-    <!-- Display the item's details -->
-    <div class="col-7">
-        <h5>@Model.Food_Group</h5>
-        <h5>@Model.Energi_Kcal</h5>
-        <h5>@Model.Fett</h5>
-        <h5>@Model.Protein</h5>
-        <h5>@Model.Karbohydrat</h5>
-        <h5>@Model.Salt</h5>
+    <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid col-5" />
 
-        <!-- Links to navigate back to Table or Grid view -->
+    <div class="col-7">
+        <!-- Næringsinnhold Tabell -->
+        <details class="nutrition-details">
+            <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
+            <div class="nutrition-table-container">
+                <table>
+                    <tr><td>Type:</td><td>@Model.Food_Group</td></tr>
+                    <tr><td>Energi:</td><td>@Model.Energi_Kcal</td></tr>
+                    <tr><td>Fett:</td><td>@Model.Fett</td></tr>
+                    <tr><td>Protein:</td><td>@Model.Protein</td></tr>
+                    <tr><td>Karbohydrat:</td><td>@Model.Karbohydrat</td></tr>
+                    <tr><td>Salt:</td><td>@Model.Salt</td></tr>
+                </table>
+            </div>
+        </details>
+
+        <!-- Navigasjonslenker -->
         <p><a href="/Item/Table">Back to Table View</a></p>
         <p><a href="/Item/Grid">Back to Grid View</a></p>
     </div>
 </div>
+
+<style>
+    .product-image {
+        max-width: 100%;
+        max-height: 400px;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    /* Stil for summary i subtil knappestil */
+    .summary-subtle {
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 10px;
+        color: #333;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Justering av pilen */
+    .summary-subtle::after {
+        content: "▼";
+        font-size: 0.9rem;
+        color: #666;
+        transform: rotate(0deg);
+        transition: transform 0.2s ease;
+    }
+
+    /* Roter pilen når den er åpen */
+    details[open] .summary-subtle::after {
+        transform: rotate(180deg);
+    }
+
+    /* Stil for næringstabellen */
+    .nutrition-table-container {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+    details table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    details td {
+        padding: 8px;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    details td:first-child {
+        font-weight: bold;
+        color: #333;
+    }
+</style>

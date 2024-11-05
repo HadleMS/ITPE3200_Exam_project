@@ -1,5 +1,12 @@
-.DS_Store
-**/bin
-**/obj
-**/node_modules
-**/build
+# Standard .NET-utviklingsfiler
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.log
+*.vs/

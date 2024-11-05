@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.min-vh-100 {
+    height: 100vh;
+    display: flex;
+    border-left: 1px solid #e0e0e0;
+}
+
+/* Venstre seksjon med gradient og skygge */
+.left-section {
+    background: linear-gradient(135deg, #00cc99, #009978);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forbedret lesbarhet */
+.left-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.left-section p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Justert bilde */
+.left-section img {
+    max-width: 70%;
+    margin-top: 10px;
+    max-height: 50vh;
+}
+
+/* Høyre seksjon med myk bakgrunnsfarge */
+.right-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+/* Input-felt styling med animasjon for fokus */
+.form-control {
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 20px 12px 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Overgang for jevn fokusendring */
+}
+
+/* Animasjon på SVG-ikon i input-felt */
+.form-group.position-relative:focus-within .icon svg path {
+    fill: #ff66b2; /* Endre farge ved fokus */
+    transform: scale(1.1); /* Gjør ikonet litt større ved fokus */
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    pointer-events: none; /* Hindrer interaksjon med ikonet */
+}
+
+/* Knapp med hover-animasjon */
+.btn-primary {
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 10px 30px; /* Reduser bredde ved å øke padding mindre */
+    max-width: 200px; /* Sett en maksimal bredde for knappen */
+    width: 100%; /* Gjør at den skaleres i sin beholder */
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Sentrumrer knappen i forhold til beholderen */
+}
+
+.btn-primary:hover {
+    background-color: #ff4da6;
+}
+
+/* Link styling for "Forgot Password?" */
+.forgot-password {
+    color: #555;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* "Sign Up"-knapp hover-effekt */
+.btn-outline-light:hover {
+    background-color: white;
+    color: #00cc99;
+}
+
+/* Tilleggsjusteringer for små skjermer */
+@media (max-height: 700px) {
+    .left-section img {
+        max-height: 40vh;
+    }
+    .left-section h2, .left-section p {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        padding: 8px 0;
+    }
+}

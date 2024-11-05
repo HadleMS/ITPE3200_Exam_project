@@ -7,55 +7,84 @@
 
 <style>
     .custom-image-size {
-        width: 100%;  /* Use full width of the container */
-        height: auto; /* maintain aspect ratio */
-        object-fit: contain; /* Ensure the image fits*/
-        max-height: 200px; /* keep a consistent grid */
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 200px;
     }
 
     .card {
-        border: none; /* Remove border */
-        border-radius: 10px; /* rounded corners */
-        transition: transform 0.3s, box-shadow 0.3s; /* hover effects */
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-        transform: translateY(-5px); /* Lift card on hover */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* shadow */
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .card-body {
-        padding: 1.5rem; /* Add padding */
-        text-align: center; /* Center text inside the card */
+        padding: 1.5rem;
+        text-align: center;
+        position: relative;
     }
 
     .card-title {
-        font-size: 1.25rem; /* title slightly larger */
-        font-weight: bold; /* Bold title */
-        color: #333; /* Dark color for better readability */
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
     }
 
     .card-text {
-        color: #666; /* Lighter color for text */
-        font-size: 0.9rem; /* Slightly smaller font for descriptions */
-        margin: 0.5rem 0; /* Space between paragraphs */
+        color: #666;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
     }
-    
-</style>
 
+    .card a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card a:hover {
+        color: #333;
+    }
+
+    /* Stil for nøkkelhullsmerke */
+    .keyhole-icon {
+        width: 30px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+</style>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model.Items)
     {
         <div class="col">
-            <div class="card">  
-                <img src="@item.ImageUrl" class="img-fluid custom-image-size" alt="@item.Name" />
+            <div class="card">
+                <!-- Gjør bildet og tittelen klikkbare for å gå til detaljsiden -->
+                <a href="@Url.Action("Details", "Item", new { Id = item.ItemId })">
+                    <img src="@item.ImageUrl" class="img-fluid custom-image-size" alt="@item.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                    </div>
+                </a>
                 <div class="card-body">
-                    <h5 class="card-title">@item.Name</h5>
                     <p class="card-text">Some nutritional information here</p>
                 </div>
+
+                <!-- Vis nøkkelhullsmerket hvis HasGreenKeyhole er true -->
+                @if (item.HasGreenKeyhole)
+                {
+                    <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
+                }
             </div>
         </div>
     }
 </div>
+
 

@@ -34,7 +34,9 @@ public static class DBInit
                     Protein = "3,4 g ",
                     Karbohydrat = "4,5 g ",
                     Salt = "0,1 g ",
+                    HasGreenKeyhole = false,
                     ImageUrl = "/images/helmelk.jpg"
+
                 },
                 new Item
                 {
@@ -45,6 +47,7 @@ public static class DBInit
                     Protein = "18 g ",
                     Karbohydrat = "0 g ",
                     Salt = "0,8 g ",
+                    HasGreenKeyhole = false,
                     ImageUrl = "/images/kjøttdeig.jpg"
                 },
                 new Item
@@ -56,6 +59,7 @@ public static class DBInit
                     Protein = "18 g ",
                     Karbohydrat = "0 g ",
                     Salt = "0,2 g ",
+                    HasGreenKeyhole = true,
                     ImageUrl = "/images/kylling.jpg"
                 },
                 new Item
@@ -67,6 +71,7 @@ public static class DBInit
                     Protein = "3,5 g ",
                     Karbohydrat = "4,5 g ",
                     Salt = "0,1 g ",
+                    HasGreenKeyhole = true,
                     ImageUrl = "/images/lettmelk.jpg"
                 },
                 new Item
@@ -78,6 +83,7 @@ public static class DBInit
                     Protein = "24 g ",
                     Karbohydrat = "14 g ",
                     Salt = "1,2 g ",
+                    HasGreenKeyhole = false,
                     ImageUrl = "/images/peanøtter.jpg"
                 },
                 new Item
@@ -89,6 +95,7 @@ public static class DBInit
                     Protein = "1,2 g ",
                     Karbohydrat = "3,9 g ",
                     Salt = "0,3 g ",
+                    HasGreenKeyhole = true,
                     ImageUrl = "/images/polpa.jpg"
                 },
              

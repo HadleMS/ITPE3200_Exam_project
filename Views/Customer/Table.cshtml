@@ -1,173 +1,157 @@
-@{
-    ViewData["Title"] = "About Us";
-}
-
 <style>
-    .about-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
+    /* Header styling */
     .about-header {
-        font-size: 2.5rem;
-        font-weight: bold;
+        text-align: center;
+        margin-top: 7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-subtitle {
         color: #39a554;
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
-
-    .about-section-title {
-        font-size: 1.5rem;
-        color: #343a40;
-        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        display: block;
         margin-bottom: 0.5rem;
-        text-align: center;
+        letter-spacing: 0.05rem;
+        font-style: italic;
     }
 
-    .about-text {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #555;
-        margin-bottom: 1rem;
-        text-align: center;
+    .about-main-title {
+        background: linear-gradient(to right, #39a554, #66bb6a);
+        -webkit-background-clip: text;
+        color: #4f4f4f;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        font-family: 'Georgia', serif;
     }
 
+    /* Feature section styling */
     .features {
         display: flex;
         justify-content: space-around;
         text-align: center;
-        margin-top: 2rem;
+        gap: 3rem;
+        margin-top: 8rem;
     }
 
     .feature-item {
         flex: 1;
-        padding: 1rem;
+        max-width: 320px;
+        padding: 2rem 0; /* Fjernet bakgrunn og skygge */
     }
 
     .feature-icon {
-        font-size: 2rem;
+        font-size: 2.7rem;
         color: #39a554;
+        margin-bottom: 1rem;
     }
 
+    .feature-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #39a554, #66bb6a);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+   .feature-description {
+    font-size: 0.95rem; /* Justert fontstørrelse */
+    color: #666; /* Lysere tekstfarge */
+    font-style: italic; /* Gjør teksten kursiv for et lett utseende */
+    line-height: 1.7; /* Økt linjeavstand for bedre lesbarhet */
+    font-weight: 300; /* Tynnere fontvekt for lettere utseende */
+    padding: 0 1rem; /* Litt innrykk */
+}
+
+
+    /* Divider */
+    .divider {
+        width: 100%;
+        height: 1px;
+        background-color: #ddd;
+        margin: 3rem 0;
+    }
+
+   
+    /* CTA button */
     .cta-button {
         display: inline-block;
-        margin: 2rem auto 0;
-        padding: 1rem 2rem;
-        background-color: #39a554;
-        color: white;
+        padding: 0.8rem 2.5rem; /* Mindre padding for å redusere størrelsen */
+        background-color: #39a554; /* Grønn bakgrunnsfarge */
+        color: white; /* Hvit tekstfarge */
+        font-size: 1rem; /* Justert tekststørrelse */
         text-decoration: none;
         font-weight: bold;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        text-align: center;
+        border-radius: 30px; /* Rundere kanter */
+        transition: all 0.3s ease;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtil skygge for dybde */
+        text-align: center; /* Sentraliserer teksten */
+        cursor: pointer; /* Gjør det tydelig at det er en klikkbar knapp */
     }
 
     .cta-button:hover {
-        background-color: #218838;
+        background-color: #34a049;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Litt kraftigere skygge ved hover */
+        transform: scale(1.02); /* Liten oppskaleringsanimasjon ved hover */
     }
 
-    .team-section {
-        margin-top: 2rem;
-        text-align: center;
+    /* Lysere linjeeffekt på toppen */
+    .cta-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-25deg);
+        transition: all 0.5s ease;
     }
 
-    .divider {
-        height: 1px;
-        background-color: #ddd;
-        margin: 2rem 0;
-    }
-
-    .text-center-strong {
-        text-align: center;
-        font-weight: bold;
-        color: #343a40;
-        margin-top: 2rem;
+    .cta-button:hover::before {
+        left: 125%; /* Glider-effekt ved hover */
     }
 </style>
 
-<div class="about-container">
-    <!-- Header -->
-    <h2 class="about-header">About Our Platform</h2>
-
-    <!-- Summary Section -->
-    <p class="about-text">
-        Welcome to our nutritional information platform. We empower companies and consumers to make healthier choices through transparency and accessible nutrition data.
-    </p>
-
-    <!-- Feature Highlights Section -->
-    <div class="features">
-        <div class="feature-item">
-            <i class="feature-icon fas fa-info-circle"></i>
-            <h4>Transparency</h4>
-            <p>Access accurate nutritional information on various products.</p>
-        </div>
-        <div class="feature-item">
-            <i class="feature-icon fas fa-seedling"></i>
-            <h4>Health Focus</h4>
-            <p>Certified products meeting “Nøkkelhull” standards.</p>
-        </div>
-        <div class="feature-item">
-            <i class="feature-icon fas fa-cogs"></i>
-            <h4>Ease of Use</h4>
-            <p>Simple tools for companies and consumers alike.</p>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- What is the Nøkkelhull Symbol? -->
-    <h4 class="about-section-title">What is the Nøkkelhull Symbol?</h4>
-    <p class="about-text">
-        The <strong>Nøkkelhull</strong> symbol signifies commitment to healthier nutrition. Products with this label meet specific standards for lower calories, reduced fat, balanced nutrients, and minimized salt.
-    </p>
-
-    <!-- Mission Statement -->
-    <h4 class="about-section-title">Our Mission</h4>
-    <p class="about-text">
-        Our mission is to provide a reliable resource for healthier choices:
-    </p>
-    <ul class="about-list">
-        <li><strong>For Companies:</strong> A streamlined tool for evaluating nutritional data and eligibility for the Nøkkelhull label.</li>
-        <li><strong>For Consumers:</strong> An easy way to access detailed nutritional information and make informed decisions.</li>
-    </ul>
-
-    <div class="divider"></div>
-
-    <!-- How It Works Section -->
-    <h4 class="about-section-title">How It Works</h4>
-    <p class="about-text">
-        Companies can:
-    </p>
-    <ul class="about-list">
-        <li>Add and manage product information.</li>
-        <li>Evaluate eligibility for the Nøkkelhull label.</li>
-    </ul>
-    <p class="about-text">
-        Consumers can:
-    </p>
-    <ul class="about-list">
-        <li>Search products and view nutritional information.</li>
-        <li>Filter products based on nutritional needs.</li>
-    </ul>
-
-    <!-- CTA Section -->
-    <a href="/explore" class="cta-button">Explore Our Platform</a>
-
-    <div class="divider"></div>
-
-    <!-- Commitment Section -->
-    <h4 class="about-section-title">Our Commitment to Transparency</h4>
-    <p class="about-text">
-        We believe in transparency in food nutrition. By connecting companies with consumers, we support a healthier, well-informed community.
-    </p>
-
-    <!-- Conclusion Statement -->
-    <p class="text-center-strong">Let’s build a healthier future, one product at a time.</p>
+<div class="about-header">
+    <span class="about-subtitle">Empowering</span>
+    <h2 class="about-main-title">Healthier Choices</h2>
 </div>
 
+<!-- Features section with icons and titles -->
+<div class="features">
+    <div class="feature-item">
+        <i class="feature-icon fas fa-info-circle"></i>
+        <h4 class="feature-title">Transparency</h4>
+        <p class="feature-description">Access accurate and up-to-date nutritional information on a wide range of products, empowering users to make informed choices with ease.</p>
+    </div>
+    <div class="feature-item">
+        <i class="feature-icon fas fa-seedling"></i>
+        <h4 class="feature-title">Health Focus</h4>
+        <p class="feature-description">Certified products that meet "Nøkkelhull" standards promote healthier options, focusing on balanced nutrition and reduced levels of calories, fat, and salt.</p>
+    </div>
+    <div class="feature-item">
+        <i class="feature-icon fas fa-cogs"></i>
+        <h4 class="feature-title">Ease of Use</h4>
+        <p class="feature-description">Our platform provides intuitive tools and resources, making it simple for both companies and consumers to navigate nutritional data and make better dietary decisions.</p>
+    </div>
+</div>
+
+<!-- Divider section -->
+<div class="divider"></div>
+
+<div style="text-align: center; margin-top: 3rem;">
+    <a href="/explore" class="cta-button">Explore Our Platform</a>
+</div>
+
+<!-- Font Awesome for icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
 

@@ -1,18 +1,42 @@
 @model ItemsViewModel
 
 <h1 class="page-title">Nutritional Information of Grocery Items</h1>
-<a href="/Item/Grid" title="Grid View">
-    <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
-</a>
+
+<!-- Button Container for Table View -->
+<div class="button-container">
+    <a href="/Item/Grid" title="Grid View" class="view-switch-button">
+        <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
+    </a>
+</div>
 
 <style>
+    /* Header styling */
     .page-title {
         font-size: 28px;
-        color: #333;
+        color: #333; /* Dark gray for a modern look */
         text-align: center;
         margin-top: 20px;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         font-weight: bold;
+    }
+
+    /* Button container styling */
+    .button-container {
+        display: flex;
+        justify-content: flex-start; /* Align buttons to the left */
+        margin-bottom: 20px;
+    }
+
+    /* Styling for View Switch Button */
+    .view-switch-button {
+        display: inline-block;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px; /* Space between buttons */
+    }
+       .view-switch-button:hover {
+        background-color: whitesmoke;
     }
     table {
         width: 100%;
@@ -26,7 +50,7 @@
         min-width: 170px; 
     }
     th {
-        background-color: #4CAF50;
+        background-color: #2f4f4f;
         color: white;
         padding: 12px;
         text-align: left;
@@ -103,6 +127,12 @@
         min-height: 100vh;
         padding-bottom: 2rem;
     }
+    
+    /* Create New Item Button */
+    .create-button-container {
+        text-align: center;
+        margin-top: 25px;
+    }
 </style>
 
 <table>
@@ -158,7 +188,6 @@
 </table>
 
 <!-- Create New Item Button -->
-@if (User.Identity?.IsAuthenticated == true)
-{
+<div class="create-button-container">
     <a href="/Item/Create" class="create-button">Create New Item</a>
-}
+</div>

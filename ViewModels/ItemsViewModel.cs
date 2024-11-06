@@ -1,23 +1,26 @@
 using MyShop.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MyShop.ViewModels
 {
-    // ViewModel to pass item data and view information to the view
     public class ItemsViewModel
     {
-        
-        public IEnumerable<Item> Items;
-        
-        
-        public string? CurrentViewName;
+        public IEnumerable<Item> Items { get; set; } = Enumerable.Empty<Item>(); // Initialize as an empty collection
+        public string? CurrentViewName { get; set; }
+        public int CurrentPage { get; set; } = 1;
+        public int TotalPages { get; set; } = 1;
 
-        // Constructor to initialize the ViewModel with items and the current view name
-        public ItemsViewModel(IEnumerable<Item> items, string? currentViewName)
+        // Parameterless constructor
+        public ItemsViewModel() { }
+
+        // Constructor with parameters
+        public ItemsViewModel(IEnumerable<Item> items, string? currentViewName, int currentPage = 1, int totalPages = 1)
         {
-            Items = items; // Assigns the passed items to the ViewModel
-            CurrentViewName = currentViewName; // Sets the current view name
+            Items = items;
+            CurrentViewName = currentViewName;
+            CurrentPage = currentPage;
+            TotalPages = totalPages;
         }
     }
 }
-
-

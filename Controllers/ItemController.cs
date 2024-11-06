@@ -34,21 +34,34 @@ namespace MyShop.Controllers
         }
 
         // Action to fetch and display items in grid layout
-        public async Task<IActionResult> Grid()
-        {
-            // Fetch all items asynchronously
-            var items = await _itemRepository.GetAll();
+        public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
+{
+    var items = await _itemRepository.GetAll();
 
-            // If no items are found, log the error and return a NotFound response
-            if (items == null)
-            {
-                _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
-                return NotFound("Item list not found");
-            }
-            // If items are found, create a ViewModel for "Grid" layout and return it
-            var itemsViewModel = new ItemsViewModel(items, "Grid");
-            return View(itemsViewModel);
-        }
+    if (items == null)
+    {
+        _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
+        return NotFound("Item list not found");
+    }
+
+    // Calculate pagination details
+    var totalItems = items.Count();
+    var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+    
+    // Get items for the current page
+    var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+    // Create and pass the paginated ViewModel
+    var viewModel = new ItemsViewModel
+    {
+        Items = pagedItems,
+        TotalPages = totalPages,
+        CurrentPage = page
+    };
+
+    return View(viewModel);
+}
+
 
         // Action to fetch and display the details of a specific item by its ID
         public async Task<IActionResult> Details(int id)

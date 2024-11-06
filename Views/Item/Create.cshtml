@@ -1,74 +1,84 @@
 @model MyShop.Models.Item
 
-
-
-<!-- Header for creating a new item -->
 <h2>Create New Item</h2>
 
-<!-- Form for creating a new item, using the "Create" action in the controller, with multipart form data for file uploads -->
-<form asp-action="Create" enctype="multipart/form-data">
-    <!-- Displays a summary of validation errors -->
+<form asp-action="Create" enctype="multipart/form-data" id="itemForm">
     <div asp-validation-summary="All" class="text-danger"></div>
 
-    <!-- Input field for the Name property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Name"></label><span class="text-danger">*</span>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Food_Group property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Food_Group"></label><span class="text-danger">*</span>
         <input asp-for="Food_Group" class="form-control" />
         <span asp-validation-for="Food_Group" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Energi_Kcal property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Energi_Kcal"></label><span class="text-danger">*</span>
-        <input asp-for="Energi_Kcal" class="form-control" />
+        <input asp-for="Energi_Kcal" class="form-control" id="EnergiInput" />
         <span asp-validation-for="Energi_Kcal" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Fett property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Fett"></label><span class="text-danger">*</span>
-        <input asp-for="Fett" class="form-control" />
+        <input asp-for="Fett" class="form-control" id="FettInput" />
         <span asp-validation-for="Fett" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Protein property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Protein"></label><span class="text-danger">*</span>
-        <input asp-for="Protein" class="form-control" />
+        <input asp-for="Protein" class="form-control" id="ProteinInput" />
         <span asp-validation-for="Protein" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Karbohydrat property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Karbohydrat"></label><span class="text-danger">*</span>
-        <input asp-for="Karbohydrat" class="form-control" />
+        <input asp-for="Karbohydrat" class="form-control" id="KarbohydratInput" />
         <span asp-validation-for="Karbohydrat" class="text-danger"></span>
     </div>
 
-    <!-- Input field for the Salt property, with validation and error display -->
     <div class="form-group">
         <label asp-for="Salt"></label><span class="text-danger">*</span>
-        <input asp-for="Salt" class="form-control" />
+        <input asp-for="Salt" class="form-control" id="SaltInput" />
         <span asp-validation-for="Salt" class="text-danger"></span>
     </div>
-    
-    <!-- File upload for Image property -->
+
     <div class="form-group">
         <label for="ImageFile">Image</label><span class="text-danger">*</span>
         <input type="file" asp-for="ImageFile" class="form-control" />
         <span asp-validation-for="ImageFile" class="text-danger"></span>
     </div>
 
-    <!-- Submit button to create the item -->
     <button type="submit" class="btn btn-primary">Create</button>
-
-    <!-- Button to navigate back to the Table view -->
     <a asp-action="Table" class="btn btn-secondary">Back to Table View</a>
 </form>
+
+<script>
+    document.getElementById("itemForm").addEventListener("submit", function(event) {
+        const energiInput = document.getElementById("EnergiInput");
+        const fettInput = document.getElementById("FettInput");
+        const proteinInput = document.getElementById("ProteinInput");
+        const karbohydratInput = document.getElementById("KarbohydratInput");
+        const saltInput = document.getElementById("SaltInput");
+
+        if (energiInput.value && !energiInput.value.includes("kj")) {
+            energiInput.value += " kj";
+        }
+        if (fettInput.value && !fettInput.value.includes("g")) {
+            fettInput.value += " g";
+        }
+        if (proteinInput.value && !proteinInput.value.includes("g")) {
+            proteinInput.value += " g";
+        }
+        if (karbohydratInput.value && !karbohydratInput.value.includes("g")) {
+            karbohydratInput.value += " g";
+        }
+        if (saltInput.value && !saltInput.value.includes("g")) {
+            saltInput.value += " g";
+        }
+    });
+</script>

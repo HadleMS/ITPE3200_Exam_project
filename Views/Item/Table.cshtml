@@ -1,7 +1,6 @@
 @model ItemsViewModel
 
 <h1 class="page-title">Nutritional Information of Grocery Items</h1>
-<p class="subtitle">(Table View)</p>
 <a href="/Item/Grid" title="Grid View">
     <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
 </a>
@@ -16,15 +15,6 @@
     margin-bottom: 5px;
     font-weight: bold;
 }
-
-.subtitle {
-    font-size: 16px;
-    color: #666; /* Lysere grå for undertekst */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
 
     /* Styling for tabellen */
     table {
@@ -169,15 +159,17 @@ main {
                 <td>@item.Protein</td>
                 <td>@item.Karbohydrat</td>
                 <td>@item.Salt</td>
-                <td>
-                    <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px;" />
+               <td>
+                <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
                 </td>
+
                 <td>
-                    @if (item.HasGreenKeyhole)
-                    {
-                        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" />
-                    }
-                </td>
+    @if (item.HasGreenKeyhole)
+    {
+        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" style="display: block; margin: 0 auto;" />
+    }
+</td>
+
                <td class="action-links">
                    <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
                    <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>

@@ -1,10 +1,10 @@
-@model Item
+@model MyShop.Models.Item
 
 <!-- Header for updating an item -->
 <h2>Update Item</h2>
 
-<!-- Form for updating an item -->
-<form asp-action="Update">
+<!-- Form for updating an item, using enctype="multipart/form-data" for file uploads -->
+<form asp-action="Update" enctype="multipart/form-data">
     <input type="hidden" asp-for="ItemId" />
 
     <!-- Input field for the Name property with validation -->
@@ -56,11 +56,11 @@
         <span asp-validation-for="Salt" class="text-danger"></span>
     </div>
 
-    <!-- Input field for ImageUrl with validation -->
+    <!-- File upload for Image property -->
     <div class="form-group">
-        <label asp-for="ImageUrl"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        <label for="ImageFile">Image</label><span class="text-danger">*</span>
+        <input type="file" asp-for="ImageFile" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
     </div>
 
     <!-- Button to submit the form and save changes -->
@@ -69,4 +69,3 @@
     <!-- Button to cancel and return to the Table view -->
     <a asp-action="Table" class="btn btn-secondary">Cancel</a>
 </form>
-

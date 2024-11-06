@@ -1,10 +1,12 @@
-@model Item
+@model MyShop.Models.Item
+
+
 
 <!-- Header for creating a new item -->
 <h2>Create New Item</h2>
 
-<!-- Form for creating a new item, using the "Create" action in the controller -->
-<form asp-action="Create">
+<!-- Form for creating a new item, using the "Create" action in the controller, with multipart form data for file uploads -->
+<form asp-action="Create" enctype="multipart/form-data">
     <!-- Displays a summary of validation errors -->
     <div asp-validation-summary="All" class="text-danger"></div>
 
@@ -57,11 +59,11 @@
         <span asp-validation-for="Salt" class="text-danger"></span>
     </div>
     
-    <!-- Input field for the ImageUrl property, with validation and error display -->
+    <!-- File upload for Image property -->
     <div class="form-group">
-        <label asp-for="ImageUrl"></label><span class="text-danger">*</span>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        <label for="ImageFile">Image</label><span class="text-danger">*</span>
+        <input type="file" asp-for="ImageFile" class="form-control" />
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
     </div>
 
     <!-- Submit button to create the item -->

@@ -18,7 +18,7 @@ html, body {
 
 /* Venstre seksjon med gradient og skygge */
 .left-section {
-    background: linear-gradient(135deg, #00cc99, #009978);
+    background-color:#00C896 ;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -48,12 +48,6 @@ html, body {
     max-width: 70%;
     margin-top: 10px;
     max-height: 50vh;
-}
-
-/* Høyre seksjon med myk bakgrunnsfarge */
-.right-section {
-    background-color: #f9f9f9;
-    padding: 2rem;
 }
 
 /* Input-felt styling med animasjon for fokus */

@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Http;
+using MyShop.Attributes;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace MyShop.Models
 {
@@ -45,15 +49,16 @@ namespace MyShop.Models
 
         // Validation for ImageUrl 
         [RegularExpression(@"[a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "ImageUrl must be letters and between 2 to 20 characters.")]
-        [Display(Name = "ImageUrl")]
+         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; } = string.Empty;
 
         public bool HasGreenKeyhole { get; set; }
 
-
-       
         public virtual List<OrderItem>? OrderItems { get; set; }
+
+        // Property to handle file upload, not mapped to the database
+        [NotMapped]
+        [AllowedFileExtensions(new string[] { ".jpg", ".jpeg", ".png",}, ErrorMessage = "Only image files (.jpg, .jpeg, .png) are allowed.")]
+        public IFormFile? ImageFile { get; set; }
     }
 }
-
-

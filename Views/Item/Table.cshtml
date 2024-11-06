@@ -6,17 +6,14 @@
 </a>
 
 <style>
-
-.page-title {
-    font-size: 28px;
-    color: #333; /* Mørk grå for et mer moderne utseende */
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-    /* Styling for tabellen */
+    .page-title {
+        font-size: 28px;
+        color: #333;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
     table {
         width: 100%;
         border-collapse: collapse;
@@ -25,12 +22,9 @@
         border-radius: 8px;
         overflow: hidden;
     }
-
-    /* Juster bredde for spesifikk kolonne */
-th.energy-column {
-    min-width: 170px; 
-}
-
+    th.energy-column {
+        min-width: 170px; 
+    }
     th {
         background-color: #4CAF50;
         color: white;
@@ -38,73 +32,56 @@ th.energy-column {
         text-align: left;
         font-weight: bold;
     }
-
     td {
         border: 1px solid #ddd;
         padding: 12px;
         transition: background-color 0.3s;
     }
-
     tr:hover {
         background-color: #f1f1f1;
     }
-
     tr:nth-child(even) {
         background-color: #f9f9f9;
     }
-
+    .action-links {
+        display: flex;
+        gap: 12px;
+    }
     .action-links a {
         font-weight: bold;
         text-decoration: none;
         padding: 5px 10px;
         border-radius: 4px;
     }
-
-/* Styling for action links container */
-.action-links {
-    display: flex;
-    gap: 12px; /* Avstand mellom knappene */
-}
-
-/* Update link styling */
-.action-links a.update-link {
-    color: #28a745; /* Grønn farge for update */
-    text-decoration: none;
-    border: 1px solid #28a745;
-    padding: 4px 8px;
-    border-radius: 5px;
-    margin-right: 12px; /* Økt margin for å gi mer plass mellom knappene */
-    display: inline-block;
-}
-
-.action-links a.update-link:hover {
-    color: white;
-    background-color: #28a745;
-}
-
-/* Delete link styling */
-.action-links a.delete-link {
-    color: #dc3545; /* Rød farge for delete */
-    text-decoration: none;
-    border: 1px solid #dc3545;
-    padding: 4px 8px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.action-links a.delete-link:hover {
-    color: white;
-    background-color: #dc3545;
-}
-
-
+    .update-link {
+        color: #28a745;
+        text-decoration: none;
+        border: 1px solid #28a745;
+        padding: 4px 8px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .update-link:hover {
+        color: white;
+        background-color: #28a745;
+    }
+    .delete-link {
+        color: #dc3545;
+        text-decoration: none;
+        border: 1px solid #dc3545;
+        padding: 4px 8px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .delete-link:hover {
+        color: white;
+        background-color: #dc3545;
+    }
     .keyhole-icon {
-        width: 30px; /* Size of keyhole icon */
+        width: 30px;
         height: auto;
         vertical-align: middle;
     }
-
-    /* Styling for the 'Create New Item' button */
     .create-button {
         display: inline-block;
         padding: 10px 20px;
@@ -115,20 +92,17 @@ th.energy-column {
         margin-top: 20px;
         font-weight: bold;
     }
-
     .create-button:hover {
         background-color: #45a049;
     }
-        html {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
-main {
-    min-height: 100vh; /* Adjust to fit the height of your content */
-    padding-bottom: 2rem; /* Add some space at the bottom for consistency */
-}
-
+    html {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    main {
+        min-height: 100vh;
+        padding-bottom: 2rem;
+    }
 </style>
 
 <table>
@@ -144,7 +118,10 @@ main {
             <th>Salt per 100g</th>
             <th>Image</th>
             <th>Keyhole</th>
-            <th>Actions</th>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <th>Actions</th>
+            }
         </tr>
     </thead>
     <tbody>
@@ -159,35 +136,29 @@ main {
                 <td>@item.Protein</td>
                 <td>@item.Karbohydrat</td>
                 <td>@item.Salt</td>
-               <td>
-                <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
-                </td>
-
                 <td>
-    @if (item.HasGreenKeyhole)
-    {
-        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" style="display: block; margin: 0 auto;" />
-    }
-</td>
-
-               <td class="action-links">
-                   <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
-                   <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
-</td>
-
+                    <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
+                </td>
+                <td>
+                    @if (item.HasGreenKeyhole)
+                    {
+                        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" style="display: block; margin: 0 auto;" />
+                    }
+                </td>
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <td class="action-links">
+                        <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
+                        <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
+                    </td>
+                }
             </tr>
         }
     </tbody>
 </table>
 
 <!-- Create New Item Button -->
-<a href="/Item/Create" class="create-button">Create New Item</a>
-
-
-
-
-
-
-
-
-
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <a href="/Item/Create" class="create-button">Create New Item</a>
+}

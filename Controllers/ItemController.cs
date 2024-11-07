@@ -4,6 +4,7 @@ using MyShop.DAL;
 using MyShop.Models;
 using MyShop.ViewModels;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
@@ -35,49 +36,45 @@ namespace MyShop.Controllers
 
         // Action to fetch and display items in grid layout
         public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
-{
-    var items = await _itemRepository.GetAll();
+        {
+            var items = await _itemRepository.GetAll();
 
-    if (items == null)
-    {
-        _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
-        return NotFound("Item list not found");
-    }
+            if (items == null)
+            {
+                _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
+                return NotFound("Item list not found");
+            }
 
-    // Calculate pagination details
-    var totalItems = items.Count();
-    var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
-    
-    // Get items for the current page
-    var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            // Calculate pagination details
+            var totalItems = items.Count();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+            
+            // Get items for the current page
+            var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-    // Create and pass the paginated ViewModel
-    var viewModel = new ItemsViewModel
-    {
-        Items = pagedItems,
-        TotalPages = totalPages,
-        CurrentPage = page
-    };
+            // Create and pass the paginated ViewModel
+            var viewModel = new ItemsViewModel
+            {
+                Items = pagedItems,
+                TotalPages = totalPages,
+                CurrentPage = page
+            };
 
-    return View(viewModel);
-}
-
+            return View(viewModel);
+        }
 
         // Action to fetch and display the details of a specific item by its ID
         public async Task<IActionResult> Details(int id)
         {
-            // Fetch item by ID asynchronously
             var item = await _itemRepository.GetItemById(id);
             
-            // If item is not found, log the error with the item ID and return NotFound response
             if (item == null)
             {
-                _logger.LogError("[ItemController] Item not found for the ItemId {ItemId:0000}", id);
                 return NotFound("Item not found for the ItemId");
             }
 
-            // If the item is found, return the item to the view
-            return View(item);
+            // Return the partial view for AJAX requests
+            return PartialView("Details", item);
         }
 
         // Action to return the form for creating a new item (GET request)

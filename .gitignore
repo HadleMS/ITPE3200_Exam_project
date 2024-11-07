@@ -12,3 +12,5 @@
 *.csproj.user
 *.log
 *.vs/
+bin/
+obj/

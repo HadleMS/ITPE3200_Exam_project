@@ -35,9 +35,11 @@
         border-radius: 5px;
         margin-right: 10px; /* Space between buttons */
     }
-       .view-switch-button:hover {
+
+    .view-switch-button:hover {
         background-color: whitesmoke;
     }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -46,9 +48,11 @@
         border-radius: 8px;
         overflow: hidden;
     }
+
     th.energy-column {
         min-width: 170px; 
     }
+
     th {
         background-color: #2f4f4f;
         color: white;
@@ -56,27 +60,34 @@
         text-align: left;
         font-weight: bold;
     }
+
     td {
         border: 1px solid #ddd;
         padding: 12px;
         transition: background-color 0.3s;
+        cursor: pointer; /* Change cursor to pointer */
     }
+
     tr:hover {
         background-color: #f1f1f1;
     }
+
     tr:nth-child(even) {
         background-color: #f9f9f9;
     }
+
     .action-links {
         display: flex;
         gap: 12px;
     }
+
     .action-links a {
         font-weight: bold;
         text-decoration: none;
         padding: 5px 10px;
         border-radius: 4px;
     }
+
     .update-link {
         color: #28a745;
         text-decoration: none;
@@ -85,10 +96,12 @@
         border-radius: 5px;
         display: inline-block;
     }
+
     .update-link:hover {
         color: white;
         background-color: #28a745;
     }
+
     .delete-link {
         color: #dc3545;
         text-decoration: none;
@@ -97,15 +110,18 @@
         border-radius: 5px;
         display: inline-block;
     }
+
     .delete-link:hover {
         color: white;
         background-color: #dc3545;
     }
+
     .keyhole-icon {
         width: 30px;
         height: auto;
         vertical-align: middle;
     }
+
     .create-button {
         display: inline-block;
         padding: 10px 20px;
@@ -116,22 +132,56 @@
         margin-top: 20px;
         font-weight: bold;
     }
+
     .create-button:hover {
         background-color: #45a049;
     }
+
     html {
         overflow-y: scroll;
         scroll-behavior: smooth;
     }
+
     main {
         min-height: 100vh;
         padding-bottom: 2rem;
     }
-    
+
     /* Create New Item Button */
     .create-button-container {
         text-align: center;
         margin-top: 25px;
+    }
+
+    /* Modal styles */
+    .modal {
+        display: none; /* Hidden by default */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: hidden; /* Disable all scroll */
+        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus */
+        padding-top: 150px; /* Space from the top */
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: auto; /* Center the modal */
+        padding: 30px; /* Increased padding for a spacious feel */
+        border: none; /* No border */
+        width: 80%; /* Wider width for larger screens */
+        max-width: 800px; /* Increased maximum width for better manageability */
+        height: 620px; /* Increased height for all modals */
+        border-radius: 12px; /* Rounded corners for a modern look */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+        transition: all 0.3s ease; /* Smooth transition for all properties */
+        overflow-y: auto; /* Enable vertical scrolling if content is too tall */
+        overflow-x: hidden; /* Disable horizontal scrolling */
     }
 </style>
 
@@ -157,9 +207,9 @@
     <tbody>
         @foreach (var item in Model.Items)
         {
-            <tr>
+            <tr class="open-modal" data-item-id="@item.ItemId"> <!-- Added class and data attribute for the modal -->
                 <td>@item.ItemId</td>
-                <td>@Html.ActionLink(item.Name, "Details", new { id = item.ItemId })</td>
+                <td>@item.Name</td>
                 <td>@item.Food_Group</td>
                 <td>@item.Energi_Kcal</td>
                 <td>@item.Fett</td>
@@ -191,3 +241,52 @@
 <div class="create-button-container">
     <a href="/Item/Create" class="create-button">Create New Item</a>
 </div>
+
+<!-- Modal -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("itemModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Inserted JavaScript for handling modal links
+    var modalLinks = document.querySelectorAll('.open-modal'); // Select all rows with the class 'open-modal'
+    modalLinks.forEach(link => {
+        link.onclick = function() {
+            var itemId = this.getAttribute('data-item-id');
+            fetch(`/Item/Details/${itemId}`) // Ensure this points to the correct action
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text(); // This should return the partial view HTML
+                })
+                .then(data => {
+                    document.getElementById("modalBody").innerHTML = data; // Load partial view content into the modal
+                    modal.style.display = "block"; // Display the modal
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+    });
+
+    // Close the modal when the close button is clicked
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

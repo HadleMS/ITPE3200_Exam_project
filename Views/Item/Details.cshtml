@@ -1,37 +1,32 @@
-@model Item
+@model MyShop.Models.Item
 
-<h3 class="my-5">@Model.Name</h3>
-
-<div class="row gx-5">
-    <div class="col-5 position-relative">
-        <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
-
-        <!-- Vis nøkkelhullsmerket hvis HasGreenKeyhole er true -->
+<div>
+    <h3 class="my-5 d-flex align-items-center justify-content-between">
+        @Model.Name
         @if (Model.HasGreenKeyhole)
         {
             <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
         }
-    </div>
-
-    <div class="col-7">
-        <!-- Næringsinnhold Tabell -->
-        <details class="nutrition-details">
-            <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
-            <div class="nutrition-table-container">
-                <table>
-                    <tr><td>Type:</td><td>@Model.Food_Group</td></tr>
-                    <tr><td>Energi:</td><td>@Model.Energi_Kcal</td></tr>
-                    <tr><td>Fett:</td><td>@Model.Fett</td></tr>
-                    <tr><td>Protein:</td><td>@Model.Protein</td></tr>
-                    <tr><td>Karbohydrat:</td><td>@Model.Karbohydrat</td></tr>
-                    <tr><td>Salt:</td><td>@Model.Salt</td></tr>
-                </table>
-            </div>
-        </details>
-
-        <!-- Navigasjonslenker -->
-        <p><a href="/Item/Table">Back to Table View</a></p>
-        <p><a href="/Item/Grid">Back to Grid View</a></p>
+    </h3>
+    <div class="row gx-5">
+        <div class="col-5 position-relative">
+            <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
+        </div>
+        <div class="col-7">
+            <details class="nutrition-details">
+                <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
+                <div class="nutrition-table-container">
+                    <table>
+                        <tr><td>Type:</td><td>@Model.Food_Group</td></tr>
+                        <tr><td>Energi:</td><td>@Model.Energi_Kcal</td></tr>
+                        <tr><td>Fett:</td><td>@Model.Fett</td></tr>
+                        <tr><td>Protein:</td><td>@Model.Protein</td></tr>
+                        <tr><td>Karbohydrat:</td><td>@Model.Karbohydrat</td></tr>
+                        <tr><td>Salt:</td><td>@Model.Salt</td></tr>
+                    </table>
+                </div>
+            </details>
+        </div>
     </div>
 </div>
 
@@ -46,16 +41,14 @@
         margin-bottom: 20px;
     }
 
-    /* Stil for nøkkelhullsmerke */
+    /* Style for nøkkelhullsmerke */
     .keyhole-icon {
         width: 30px;
         height: auto;
-        position: absolute;
-        bottom: 40px;
-        right: 100px; 
+        margin-left: 10px; /* Add space between the name and the icon */
     }
 
-    /* Stil for summary i subtil knappestil */
+    /* Style for summary in subtle button style */
     .summary-subtle {
         font-weight: bold;
         font-size: 1.1rem;
@@ -67,9 +60,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: background-color 0.2s;
     }
 
-    /* Justering av pilen */
+    /* Hover effect for summary */
+    .summary-subtle:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Arrow adjustment */
     .summary-subtle::after {
         content: "▼";
         font-size: 0.9rem;
@@ -78,12 +77,12 @@
         transition: transform 0.2s ease;
     }
 
-    /* Roter pilen når den er åpen */
+    /* Rotate the arrow when open */
     details[open] .summary-subtle::after {
         transform: rotate(180deg);
     }
 
-    /* Stil for næringstabellen */
+    /* Style for the nutrition table */
     .nutrition-table-container {
         background-color: #f9f9f9;
         padding: 15px;
@@ -98,7 +97,7 @@
     }
 
     details td {
-        padding: 8px;
+        padding: 10px; /* Increased padding for better readability */
         font-size: 1rem;
         color: #555;
     }
@@ -107,5 +106,19 @@
         font-weight: bold;
         color: #333;
     }
-</style>
 
+    details tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray background for even rows */
+    }
+
+    /* Modal styles */
+    .modal-content {
+        background-color: #fff;
+        border-radius: 12px; /* Rounded corners */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+        padding: 20px;
+        transition: transform 0.2s; /* Smooth scaling effect */
+    }
+
+
+</style>

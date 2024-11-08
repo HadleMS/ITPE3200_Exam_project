@@ -3,6 +3,7 @@
 **/obj
 **/node_modules
 **/build
+ItemDatabase*
 *.dll
 *.pdb
 *.exe
@@ -12,5 +13,3 @@
 *.csproj.user
 *.log
 *.vs/
-bin/
-obj/

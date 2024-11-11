@@ -1,0 +1,93 @@
+@model ItemsViewModel
+
+<!-- Button Container with Create New Item and View Switch Buttons -->
+<div class="button-container">
+    <div class="left-buttons">
+        <button id="gridButton" class="view-switch-button active" onclick="toggleView('grid')">
+            <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
+        </button>
+        <button id="tableButton" class="view-switch-button" onclick="toggleView('table')">
+            <img src="/images/table.png" alt="Table View" style="width: 30px; height: auto; vertical-align: middle;" />
+        </button>
+    </div>
+    <div class="right-buttons">
+        <a href="/Item/Create" class="create-button">Create New Item</a>
+    </div>
+</div>
+
+<!-- Stretch the partial view to full width -->
+<div class="full-width-container">
+    <partial name="Grid" model="Model" />
+</div>
+
+<style>
+    /* Full width container to ensure the content stretches to the full page width */
+    .full-width-container {
+        width: 100%;
+        margin: 0;  /* No margin to the left or right */
+        padding: 0;  /* No padding */
+    }
+
+    /* Button container styling */
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .create-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .create-button:hover {
+        background-color: #45a049;
+    }
+
+    /* View switch button styling */
+    .view-switch-button.active {
+        background-color: #e0e0e0;
+    }
+
+    .view-switch-button {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+        border: 1px solid #ccc;
+    }
+
+    .view-switch-button:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* "View More" button styling */
+    .btn-secondary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-secondary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    
+
+
+</style>

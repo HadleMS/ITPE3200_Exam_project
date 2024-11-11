@@ -1,13 +1,6 @@
 @model ItemsViewModel
 
-<h1 class="page-title">A Visual Display of Nutritional Products</h1>
 
-<!-- Button Container for Table View -->
-<div class="button-container">
-    <a href="/Item/Table" title="Table View" class="view-switch-button">
-        <img src="/images/table.png" alt="Table View" style="width: 30px; height: auto; vertical-align: middle;" />
-    </a>
-</div>
 
 <style>
     /* Header styling */
@@ -20,39 +13,25 @@
         font-weight: bold;
     }
 
-    /* Button container styling */
-    .button-container {
-        display: flex;
-        justify-content: flex-start; /* Align buttons to the left */
-        margin-bottom: 20px;
-    }
-
-    /* Styling for View Switch Button */
-    .view-switch-button {
-        display: inline-block;
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        margin-right: 10px; /* Space between buttons */
-        transition: background-color 0.3s;
-    }
-
-    .view-switch-button:hover {
-        background-color: #f1f1f1; /* Slightly darker on hover */
-    }
-
-    /* Grid layout adjustments */
-    .row-cols-md-3 {
-        row-gap: 1.5rem;
+    /* Grid container styling */
+    #itemsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid */
+        gap: 20px; /* Space between grid items */
+        margin-top: 20px;
     }
 
     /* Card styling */
     .card {
         border: 1px solid #ddd;
-        border-radius: 10px;
-        transition: transform 0.2s, box-shadow 0.2s;
+        border-radius: 12px;
         overflow: hidden;
-        background-color: #fff; /* White background for cards */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .card:hover {
@@ -60,33 +39,31 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    /* Image styling within the card */
     .custom-image-size {
         width: 100%;
-        height: auto;
-        object-fit: contain;
-        max-height: 200px;
+        height: 200px;
+        object-fit: cover;
         transition: transform 0.2s;
     }
 
     /* Card body styling */
     .card-body {
-        padding: 1.25rem;
-        text-align: center;
+        padding: 15px;
         background-color: #fafafa;
+        width: 100%;
     }
 
     .card-title {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         font-weight: bold;
         color: #333;
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
     }
 
     .card-text {
         color: #666;
         font-size: 0.9rem;
-        margin-top: 0.5rem;
+        margin-top: 5px;
     }
 
     .card a {
@@ -98,69 +75,34 @@
         color: #4CAF50;
     }
 
-    /* Keyhole icon */
+    /* Keyhole icon styling */
     .keyhole-icon {
-        width: 30px;
+        width: 20px; /* Adjusted size */
         height: auto;
         position: absolute;
         bottom: 10px;
         right: 10px;
     }
 
-    /* Pagination Controls */
-    .pagination-controls {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    /* Button styling */
     .btn-secondary {
-        background-color: #6c757d;
-        border-color: #6c757d;
-        color: #fff;
-        padding: 0.5rem 1.25rem;
+        background-color: #007bff; /* Bootstrap primary color */
+        border: none;
+        color: white;
+        padding: 12px 30px; /* Increased padding for better appearance */
         border-radius: 5px;
         font-weight: bold;
-        transition: background-color 0.2s;
+        transition: background-color 0.3s, transform 0.2s;
+        cursor: pointer; /* Pointer cursor for better UX */
+        font-size: 1rem; /* Font size */
     }
 
     .btn-secondary:hover {
-        background-color: #5a6268;
-        border-color: #545b62;
+        background-color: #0056b3; /* Darker blue for hover effect */
+        transform: scale(1.05); /* Slight scale effect on hover */
     }
 
-    /* Create New Item Button */
-    .create-button-container {
-        text-align: center;
-        margin-top: 25px;
-    }
-
-    .create-button {
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.2s;
-    }
-
-    .create-button:hover {
-        background-color: #45a049;
-    }
-
-    /* General styling */
-    html {
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
-
-    main {
-        min-height: 100vh;
-        padding-bottom: 2rem;
-    }
-
-  /* Modal styles */
+    /* Modal styling */
+     /* Modal styles */
 .modal {
     display: none; /* Hidden by default */
       justify-content: center; /* Center horizontally */
@@ -225,97 +167,121 @@
     align-items: center;
 }
 
+.custom-image-size {
+    height: 200px; /* Set the height you want */
+    width: 100%; /* Makes sure the width adjusts to the container */
+    object-fit: contain; /* Ensures the entire image is visible */
+}
 
 </style>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    @foreach (var item in Model.Items)
-    {
-        <div class="col">
-            <div class="card">
-                <a href="javascript:void(0);" class="open-modal" data-item-id="@item.ItemId">
-                    <img src="@item.ImageUrl" class="img-fluid custom-image-size" alt="@item.Name" />
-                </a>
-                <div class="card-body">
-                    <a href="javascript:void(0);" class="open-modal" data-item-id="@item.ItemId">
-                        <h5 class="card-title">@item.Name</h5>
-                    </a>
-                    <p class="card-text">Some nutritional information here</p>
-                </div>
-                @if (item.HasGreenKeyhole)
-                {
-                    <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
-                }
-            </div>
-        </div>
-    }
-</div>
-
-<!-- Pagination Controls -->
-<div class="pagination-controls text-center mt-4">
-    @if (Model.CurrentPage > 1)
-    {
-        <a href="@Url.Action("Grid", new { page = Model.CurrentPage - 1 })" class="btn btn-secondary">Previous</a>
-    }
-
-    <span class="px-3">Page @Model.CurrentPage of @Model.TotalPages</span>
-
-    @if (Model.CurrentPage < Model.TotalPages)
-    {
-        <a href="@Url.Action("Grid", new { page = Model.CurrentPage + 1 })" class="btn btn-secondary">Next</a>
-    }
-</div>
-
-<!-- Create New Item Button -->
-<div class="create-button-container">
-    <a href="/Item/Create" class="create-button">Create New Item</a>
-</div>
-
-<!-- Modal -->
-<div id="itemModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modalBody">
-            <!-- Dynamic content will be loaded here -->
-        </div>
+<!-- Content wrapper for dynamically loading grid -->
+<div id="contentWrapper">
+    <div id="itemsContainer">
+        <!-- Initial items will load here dynamically -->
     </div>
 </div>
 
+
+
+
+<!-- Modal for displaying item details -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<!-- "View More" Button (for grid view only) -->
+<div id="viewMoreContainer" style="text-align: center; margin-top: 20px;">
+    <button id="viewMoreButton" class="btn-secondary" onclick="loadMoreItems()">View More</button>
+</div>
+
 <script>
-    var modal = document.getElementById("itemModal");
-    var span = document.getElementsByClassName("close")[0];
+    let currentPage = 1;
+    const pageSize = 6;
 
-    // Inserted JavaScript for handling modal links
-    var modalLinks = document.querySelectorAll('.open-modal');
-    modalLinks.forEach(link => {
-        link.onclick = function() {
-            var itemId = this.getAttribute('data-item-id');
-            fetch(`/Item/Details/${itemId}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text(); // This should return the partial view HTML
-                })
-                .then(data => {
-                    document.getElementById("modalBody").innerHTML = data; // Load partial view content into the modal
-                    modal.style.display = "block"; // Display the modal
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                });
+    async function toggleView(view) {
+        const gridButton = document.getElementById('gridButton');
+        const tableButton = document.getElementById('tableButton');
+        const contentWrapper = document.getElementById('contentWrapper');
+        const viewMoreContainer = document.getElementById('viewMoreContainer');
+
+        // Reset itemsContainer on view change
+        contentWrapper.innerHTML = view === 'grid' ? `<div id="itemsContainer"></div>` : '';
+        currentPage = 1;
+
+        // Toggle active button style and show "View More" button only for grid view
+        if (view === 'grid') {
+            gridButton.classList.add('active');
+            tableButton.classList.remove('active');
+            viewMoreContainer.style.display = 'block';
+            await loadMoreItems(true); // Initial load for grid
+        } else if (view === 'table') {
+            tableButton.classList.add('active');
+            gridButton.classList.remove('active');
+            viewMoreContainer.style.display = 'none';
+            const tableResponse = await fetch('/Item/Table', { headers: { "X-Requested-With": "XMLHttpRequest" } });
+            contentWrapper.innerHTML = await tableResponse.text();
         }
-    });
-
-    // Close the modal when the close button is clicked
-    span.onclick = function() {
-        modal.style.display = "none";
+        initializeModals();
     }
 
-    // Close the modal when clicking outside of it
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
+    async function loadMoreItems(isInitialLoad = false) {
+        if (isInitialLoad) {
+            currentPage = 1;
+            document.getElementById("itemsContainer").innerHTML = '';
+        } else {
+            currentPage++;
+        }
+
+        const response = await fetch(`/Item/Grid?page=${currentPage}&pageSize=${pageSize}`, { headers: { "X-Requested-With": "XMLHttpRequest" } });
+        
+        if (response.ok) {
+            const data = await response.text();
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(data, "text/html");
+            const newItems = htmlDoc.querySelectorAll(".col");
+
+            newItems.forEach(item => document.getElementById("itemsContainer").appendChild(item));
+
+            if (newItems.length < pageSize) {
+                document.getElementById("viewMoreContainer").style.display = 'none'; // Hide button if no more items
+            }
+
+            initializeModals();
+        } else {
+            console.error('Error loading more items:', response.statusText);
         }
     }
+
+    function initializeModals() {
+        const modal = document.getElementById("itemModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        document.querySelectorAll('.open-modal').forEach(link => {
+            link.onclick = function () {
+                const itemId = this.getAttribute('data-item-id');
+                fetch(`/Item/Details/${itemId}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("modalBody").innerHTML = data;
+                        modal.style.display = "block";
+                    })
+                    .catch(error => console.error('Error loading item details:', error));
+            };
+        });
+
+        span.onclick = function () { modal.style.display = "none"; };
+        window.onclick = function (event) {
+            if (event.target === modal) { modal.style.display = "none"; }
+        };
+    }
+
+    // Initial load of the grid view with modals set up
+    toggleView('grid');
+    
+    
+    
 </script>

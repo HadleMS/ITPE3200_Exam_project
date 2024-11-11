@@ -1,30 +1,16 @@
 @model ItemsViewModel
-
-<h1 class="page-title">Nutritional Information of Grocery Items</h1>
-
-<!-- Button Container for Table View -->
-<div class="button-container">
-    <a href="/Item/Grid" title="Grid View" class="view-switch-button">
-        <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
-    </a>
-</div>
-
+@{
+    Layout = null;
+}
 <style>
     /* Header styling */
     .page-title {
         font-size: 28px;
-        color: #333; /* Dark gray for a modern look */
+        color: #333;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
         font-weight: bold;
-    }
-
-    /* Button container styling */
-    .button-container {
-        display: flex;
-        justify-content: flex-start; /* Align buttons to the left */
-        margin-bottom: 20px;
     }
 
     /* Styling for View Switch Button */
@@ -33,7 +19,7 @@
         background-color: white;
         padding: 10px;
         border-radius: 5px;
-        margin-right: 10px; /* Space between buttons */
+        margin-right: 10px;
     }
 
     .view-switch-button:hover {
@@ -50,7 +36,7 @@
     }
 
     th.energy-column {
-        min-width: 170px; 
+        min-width: 170px;
     }
 
     th {
@@ -65,7 +51,8 @@
         border: 1px solid #ddd;
         padding: 12px;
         transition: background-color 0.3s;
-        cursor: pointer; /* Change cursor to pointer */
+        text-align: center;
+        vertical-align: middle;
     }
 
     tr:hover {
@@ -117,9 +104,10 @@
     }
 
     .keyhole-icon {
-        width: 30px;
+        width: 25px;
         height: auto;
-        vertical-align: middle;
+        display: inline-block;
+        margin: 0 auto;
     }
 
     .create-button {
@@ -146,49 +134,48 @@
         min-height: 100vh;
         padding-bottom: 2rem;
     }
-
-    /* Create New Item Button */
-    .create-button-container {
-        text-align: center;
-        margin-top: 25px;
-    }
-
     /* Modal styles */
-    .modal {
-        display: none; /* Hidden by default */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        position: fixed; /* Stay in place */
-        z-index: 1000; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: hidden; /* Disable all scroll */
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus */
-        padding-top: 150px; /* Space from the top */
-    }
+.modal {
+    display: none; /* Hidden by default */
+      justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Disable all scroll */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus */
+    padding-top: 150px; /* Space from the top */
+}
 
-    .modal-content {
-        background-color: #fff;
-        margin: auto; /* Center the modal */
-        padding: 30px; /* Increased padding for a spacious feel */
-        border: none; /* No border */
-        width: 80%; /* Wider width for larger screens */
-        max-width: 800px; /* Increased maximum width for better manageability */
-        height: 620px; /* Increased height for all modals */
-        border-radius: 12px; /* Rounded corners for a modern look */
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
-        transition: all 0.3s ease; /* Smooth transition for all properties */
-        overflow-y: auto; /* Enable vertical scrolling if content is too tall */
-        overflow-x: hidden; /* Disable horizontal scrolling */
+.modal-content {
+    background-color: #fff;
+    margin: auto; /* Center the modal */
+    padding: 30px; /* Increased padding for a spacious feel */
+    border: none; /* No border */
+    width: 80%; /* Wider width for larger screens */
+    max-width: 800px; /* Increased maximum width for better manageability */
+    height: 620px; /* Increased height for all modals */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    overflow-y: auto; /* Enable vertical scrolling if content is too tall */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+ .media (min-width: 768px) {
+        .modal-content {
+            width: 500px; /* Fixed width on medium screens */
+            height: auto; /* Allow height to adapt */
+        }
     }
 </style>
 
 <table>
     <thead>
         <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Food group</th>
             <th class="energy-column">Energy per 100g</th>
@@ -208,7 +195,6 @@
         @foreach (var item in Model.Items)
         {
             <tr class="open-modal" data-item-id="@item.ItemId"> <!-- Added class and data attribute for the modal -->
-                <td>@item.ItemId</td>
                 <td>@item.Name</td>
                 <td>@item.Food_Group</td>
                 <td>@item.Energi_Kcal</td>
@@ -222,7 +208,7 @@
                 <td>
                     @if (item.HasGreenKeyhole)
                     {
-                        <img src="~/images/green_keyhole.jpg" alt="Keyhole" class="keyhole-icon" style="display: block; margin: 0 auto;" />
+                        <img src="~/images/green_keyhole.jpg" alt="Keyhole"  style="max-width: 25px; max-height: 25px; display: block; margin: 0 auto;" />
                     }
                 </td>
                 @if (User.Identity?.IsAuthenticated == true)
@@ -237,10 +223,7 @@
     </tbody>
 </table>
 
-<!-- Create New Item Button -->
-<div class="create-button-container">
-    <a href="/Item/Create" class="create-button">Create New Item</a>
-</div>
+
 
 <!-- Modal -->
 <div id="itemModal" class="modal">
@@ -251,42 +234,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    var modal = document.getElementById("itemModal");
-    var span = document.getElementsByClassName("close")[0];
-
-    // Inserted JavaScript for handling modal links
-    var modalLinks = document.querySelectorAll('.open-modal'); // Select all rows with the class 'open-modal'
-    modalLinks.forEach(link => {
-        link.onclick = function() {
-            var itemId = this.getAttribute('data-item-id');
-            fetch(`/Item/Details/${itemId}`) // Ensure this points to the correct action
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text(); // This should return the partial view HTML
-                })
-                .then(data => {
-                    document.getElementById("modalBody").innerHTML = data; // Load partial view content into the modal
-                    modal.style.display = "block"; // Display the modal
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                });
-        }
-    });
-
-    // Close the modal when the close button is clicked
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Close the modal when clicking outside of it
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>

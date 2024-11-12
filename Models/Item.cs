@@ -54,7 +54,6 @@ namespace MyShop.Models
 
         public bool HasGreenKeyhole { get; set; }
 
-        public virtual List<OrderItem>? OrderItems { get; set; }
 
         // Property to handle file upload, not mapped to the database
         [NotMapped]

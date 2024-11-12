@@ -1,61 +1,63 @@
 @model MyShop.Models.Item
 
+@{
+    ViewData["Title"] = "Create New Item";
+}
+
+<link href="~/css/Create.css" rel="stylesheet" />
+
 <h2>Create New Item</h2>
 
-<form asp-action="Create" enctype="multipart/form-data" id="itemForm">
-    <div asp-validation-summary="All" class="text-danger"></div>
+<!-- Sentralisert form-container -->
+<div class="form-container">
+    <form asp-action="Create" enctype="multipart/form-data" id="itemForm">
+        <div asp-validation-summary="All" class="text-danger"></div>
 
-    <div class="form-group">
-        <label asp-for="Name"></label><span class="text-danger">*</span>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Name" class="form-control" placeholder="Name" /> 
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Food_Group"></label><span class="text-danger">*</span>
-        <input asp-for="Food_Group" class="form-control" />
-        <span asp-validation-for="Food_Group" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Food_Group" class="form-control" placeholder="Food Group" /> 
+            <span asp-validation-for="Food_Group" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Energi_Kcal"></label><span class="text-danger">*</span>
-        <input asp-for="Energi_Kcal" class="form-control" id="EnergiInput" />
-        <span asp-validation-for="Energi_Kcal" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Energi_Kcal" class="form-control" placeholder="Energy per 100g" /> 
+            <span asp-validation-for="Energi_Kcal" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Fett"></label><span class="text-danger">*</span>
-        <input asp-for="Fett" class="form-control" id="FettInput" />
-        <span asp-validation-for="Fett" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Fett" class="form-control" placeholder="Fat per 100g" /> 
+            <span asp-validation-for="Fett" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Protein"></label><span class="text-danger">*</span>
-        <input asp-for="Protein" class="form-control" id="ProteinInput" />
-        <span asp-validation-for="Protein" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Protein" class="form-control" placeholder="Protein per 100g" /> 
+            <span asp-validation-for="Protein" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Karbohydrat"></label><span class="text-danger">*</span>
-        <input asp-for="Karbohydrat" class="form-control" id="KarbohydratInput" />
-        <span asp-validation-for="Karbohydrat" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Karbohydrat" class="form-control" placeholder="Carbohydrates per 100g" /> 
+            <span asp-validation-for="Karbohydrat" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Salt"></label><span class="text-danger">*</span>
-        <input asp-for="Salt" class="form-control" id="SaltInput" />
-        <span asp-validation-for="Salt" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input asp-for="Salt" class="form-control" placeholder="Salt per 100g" /> 
+            <span asp-validation-for="Salt" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="ImageFile">Image</label><span class="text-danger">*</span>
-        <input type="file" asp-for="ImageFile" class="form-control" />
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-    </div>
+        <div class="form-group">
+            <input type="file" asp-for="ImageFile" class="form-control" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
 
-    <button type="submit" class="btn btn-primary mt-4">Create</button>
-    <a asp-action="Products" class="btn btn-secondary mt-4">Back to Table View</a>
-</form>
+        <button type="submit" class="btn btn-success mt-4">Create</button>
+        <a asp-action="Table" class="btn btn-outline-success mt-4">Back to Table View</a>
+    </form>
+</div>
+
 
 <script>
     document.getElementById("itemForm").addEventListener("submit", function(event) {
@@ -73,7 +75,7 @@
         }
         if (proteinInput.value && !proteinInput.value.includes("g")) {
             proteinInput.value += " g";
-        }Ø
+        }
         if (karbohydratInput.value && !karbohydratInput.value.includes("g")) {
             karbohydratInput.value += " g";
         }

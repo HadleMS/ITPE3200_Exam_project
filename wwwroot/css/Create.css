@@ -6,6 +6,17 @@ body {
     background-color: #f4f4f4;
 }
 
+
+/* Styling av overskriften inni skjemaet */
+.form-container h2 {
+    font-size: 28px; /* Større skrift */
+    font-weight: bold; /* Tykkere tekst */
+    color: #198754; /* Helsefokusert grønnfarge */
+    margin-bottom: 20px; /* Avstand til skjemaet */
+    text-align: center; /* Sentralisering av tekst */
+}   
+
+
 /* Sentralisering og styling av form-container */
 .form-container {
     display: flex;

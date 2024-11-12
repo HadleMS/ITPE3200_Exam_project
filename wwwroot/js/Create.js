@@ -1,9 +1,9 @@
 document.getElementById("itemForm").addEventListener("submit", function(event) {
-    const energiInput = document.getElementById("EnergiInput");
-    const fettInput = document.getElementById("FettInput");
-    const proteinInput = document.getElementById("ProteinInput");
-    const karbohydratInput = document.getElementById("KarbohydratInput");
-    const saltInput = document.getElementById("SaltInput");
+    const energiInput = document.getElementById("Energi_Kcal");
+    const fettInput = document.getElementById("Fett");
+    const proteinInput = document.getElementById("Protein");
+    const karbohydratInput = document.getElementById("Karbohydrat");
+    const saltInput = document.getElementById("Salt");
 
     if (energiInput.value && !energiInput.value.includes("kj")) {
         energiInput.value += " kj";

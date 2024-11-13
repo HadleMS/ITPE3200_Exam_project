@@ -10,12 +10,6 @@ namespace MyShop.Controllers
             // Returns a View
             return View();
         }
-
-        public IActionResult About()
-        {
-
-            return View();
-        }
     }
 
      

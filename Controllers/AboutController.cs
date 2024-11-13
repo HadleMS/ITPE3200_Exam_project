@@ -5,7 +5,7 @@ namespace MyShop.Controllers
     public class AboutController : Controller
     {
        
-        public IActionResult About()
+        public IActionResult Index()
         {
             // Returns a View
             return View();

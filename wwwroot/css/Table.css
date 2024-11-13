@@ -30,11 +30,6 @@ table {
     border-radius: 8px;
     overflow: hidden;
 }
-
-th.energy-column {
-    min-width: 170px;
-}
-
 th {
     background-color: #2f4f4f;
     color: white;

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Http;
-using MyShop.Attributes;
+using Exam.Attributes;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace MyShop.Models
+namespace Exam.Models
 {
    
     public class Item

@@ -1,8 +1,8 @@
-using MyShop.Models;
+using Exam.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyShop.ViewModels
+namespace Exam.ViewModels
 {
     public class ItemsViewModel
     {

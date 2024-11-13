@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyShop.Models;
+using Exam.Models;
 
-namespace MyShop.DAL;
+namespace Exam.DAL;
 
 // Implementation of the IItemRepository interface
 public class ItemRepository : IItemRepository

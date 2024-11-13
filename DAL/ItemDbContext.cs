@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MyShop.Models;
+using Exam.Models;
 
-namespace MyShop.DAL;
+namespace Exam.DAL;
 
 public class ItemDbContext : IdentityDbContext
 {

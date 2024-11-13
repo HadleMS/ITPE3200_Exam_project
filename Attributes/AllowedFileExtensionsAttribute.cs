@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Linq;
 
-namespace MyShop.Attributes
+namespace Exam.Attributes
 {
     public class AllowedFileExtensionsAttribute : ValidationAttribute
     {

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MyShop.DAL;
+using Exam.DAL;
 using Serilog;
 using Serilog.Events;
 using Microsoft.AspNetCore.Identity;

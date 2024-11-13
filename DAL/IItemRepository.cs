@@ -1,6 +1,6 @@
-﻿using MyShop.Models;
+﻿using Exam.Models;
 
-namespace MyShop.DAL;
+namespace Exam.DAL;
 
 public interface IItemRepository
 {

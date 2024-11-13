@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyShop.DAL;
-using MyShop.Models;
-using MyShop.ViewModels;
+using Exam.DAL;
+using Exam.Models;
+using Exam.ViewModels;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace MyShop.Controllers
+namespace Exam.Controllers
 {
    public class ItemController : Controller
     {

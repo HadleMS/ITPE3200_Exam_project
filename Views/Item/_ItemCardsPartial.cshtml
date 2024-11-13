@@ -1,4 +1,10 @@
 @model ItemsViewModel
+@{
+    double EnergiToKcal(double energi)
+    {
+        return Math.Round(energi/4.184);
+    }
+}
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model.Items)
@@ -9,7 +15,7 @@
                     <img src="@item.ImageUrl" class="img-fluid custom-image-size card-img-top" alt="@item.Name" />
                     <div class="card-body">
                         <h5 class="card-title">@item.Name</h5>
-                        <p class="card-text">Some nutritional information here</p>
+                        <p class="card-text">@EnergiToKcal(item.Energi_Kj) kcal</p>
                     </div>
                     @if (item.HasGreenKeyhole)
                     {

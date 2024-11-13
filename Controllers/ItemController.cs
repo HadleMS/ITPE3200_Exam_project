@@ -20,11 +20,7 @@ namespace MyShop.Controllers
             _itemRepository = itemRepository;
             _logger = logger;
         }
-          public IActionResult About()
-        {
-        return View();
-        }
-
+         
         // Action to display Products.cshtml
         public IActionResult Products()
         {

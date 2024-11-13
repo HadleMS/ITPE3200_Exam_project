@@ -22,32 +22,32 @@ namespace MyShop.Models
         [Display(Name = "Food Group")]
         public string Food_Group { get; set; } = string.Empty;
 
-        // Validation for Energi_Kcal 
-        [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "Energy per 100g must be numbers or letters and between 2 to 20 characters.")]
+        // Validation for Energi_Kj 
+        [RegularExpression(@"[0-9., \-]{2,20}", ErrorMessage = "Energy per 100g must be numbers and between 2 to 20 characters.")]
         [Display(Name = "Energy per 100g")]
-        public string Energi_Kcal { get; set; } = string.Empty;
+        public double Energi_Kj { get; set; } = 0;
 
         // Validation for Fett 
-        [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "Fat per 100g must be numbers or letters and between 2 to 20 characters.")]
+        [RegularExpression(@"[0-9., \-]{2,20}", ErrorMessage = "Fat per 100g must be numbers and between 2 to 20 characters.")]
         [Display(Name = "Fat per 100g")]
-        public string Fett { get; set; } = string.Empty;
+        public double Fett { get; set; } = 0;
 
         // Validation for Protein 
-        [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "Protein per 100g must be numbers or letters and between 2 to 20 characters.")]
+        [RegularExpression(@"[0-9., \-]{2,20}", ErrorMessage = "Protein per 100g must be numbers and between 2 to 20 characters.")]
         [Display(Name = "Protein per 100g")]
-        public string Protein { get; set; } = string.Empty;
+        public double Protein { get; set; } = 0;
 
         // Validation for Karbohydrat 
-        [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "Carbohydrates per 100g must be numbers or letters and between 2 to 20 characters.")]
+        [RegularExpression(@"[0-9., \-]{2,20}", ErrorMessage = "Carbohydrates per 100g must be numbers and between 2 to 20 characters.")]
         [Display(Name = "Carbohydrates per 100g")]
-        public string Karbohydrat { get; set; } = string.Empty;
+        public double Karbohydrat { get; set; } = 0;
 
         // Validation for Salt 
-        [RegularExpression(@"[0-9a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "Salt per 100g must be numbers or letters and between 2 to 20 characters.")]
+        [RegularExpression(@"[0-9., \-]{2,20}", ErrorMessage = "Salt per 100g must be numbers and between 2 to 20 characters.")]
         [Display(Name = "Salt per 100g")]
-        public string Salt { get; set; } = string.Empty;
+        public double Salt { get; set; } = 0;
 
-        // Validation for ImageUrl 
+        // Validation for ImageUrl
         [RegularExpression(@"[a-zA-ZæøåÆØÅ., \-]{2,20}", ErrorMessage = "ImageUrl must be letters and between 2 to 20 characters.")]
          [Display(Name = "Image URL")]
         public string ImageUrl { get; set; } = string.Empty;

@@ -1,53 +1,64 @@
 @model IEnumerable<Item>
 
-<!-- Container for the table displaying item details -->
-<div class="container">
-    <table class='table table-striped'>
-        <!-- Table headers for item properties -->
+
+<table>
+    <thead>
         <tr>
-            <th>Id</th>
             <th>Name</th>
             <th>Food group</th>
-            <th>Energy per 100g</th>
+            <th class="energy-column">Energy per 100g</th>
             <th>Fat per 100g</th>
             <th>Protein per 100g</th>
             <th>Carbohydrates per 100g</th>
             <th>Salt per 100g</th>
             <th>Image</th>
-            <th>Actions</th>
+            <th>Keyhole</th>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <th>Actions</th>
+            }
         </tr>
-
-        <!-- Loop through each item in the model and display its properties in the table rows -->
+    </thead>
+    <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.ItemId</td>
-                
-                <!-- Link to the item's details page -->
-                <td>
-                    <a asp-controller="Item"
-                        asp-action="Details"
-                        asp-route-id="@item.ItemId">@item.Name</a>
-                </td>
+            <tr class="open-modal" data-item-id="@item.ItemId"> <!-- Added class and data attribute for the modal -->
+                <td>@item.Name</td>
                 <td>@item.Food_Group</td>
-                <td>@item.Energi_Kcal</td>
-                <td>@item.Fett</td>
-                <td>@item.Protein</td>
-                <td>@item.Karbohydrat</td>
-                <td>@item.Salt</td>
-                
-                <!-- Display the item image with a maximum size -->
+                <td>@item.Energi_Kj kj</td>
+                <td>@item.Fett g</td>
+                <td>@item.Protein g</td>
+                <td>@item.Karbohydrat g</td>
+                <td>@item.Salt g</td>
                 <td>
-                    <img src="@item.ImageUrl" alt="Item Image" style="max-width: 80px; max-height: 80px;" />
+                    <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
                 </td>
-                
-                <!-- Links to update or delete the item -->
                 <td>
-                    <a asp-action="Update" asp-route-id="@item.ItemId">Update</a>
-                    <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+                    @if (item.HasGreenKeyhole)
+                    {
+                        <img src="~/images/green_keyhole.jpg" alt="Keyhole"  style="max-width: 25px; max-height: 25px; display: block; margin: 0 auto;" />
+                    }
                 </td>
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <td class="action-links">
+                        <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
+                        <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
+                    </td>
+                }
             </tr>
         }
-    </table> 
-</div>
+    </tbody>
+</table>
 
+
+
+<!-- Modal -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+</div>

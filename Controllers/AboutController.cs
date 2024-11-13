@@ -2,25 +2,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MyShop.Controllers
 {
-    public class HomeController : Controller
+    public class AboutController : Controller
     {
        
-        public IActionResult Index()
+        public IActionResult About()
         {
             // Returns a View
             return View();
         }
-
-        public IActionResult About()
-        {
-
-            return View();
-        }
     }
-
-     
 }
-
 
 
 

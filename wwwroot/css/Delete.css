@@ -1,0 +1,49 @@
+/* Generell styling for hele siden */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Styling av overskriften inni skjemaet */
+.form-container h2 {
+    font-size: 28px; /* Større skrift */
+    font-weight: bold; /* Tykkere tekst */
+    color: #198754; /* Helsefokusert grønnfarge */
+    margin-bottom: 20px; /* Avstand til skjemaet */
+    text-align: center; /* Sentralisering av tekst */
+}   
+
+
+/* Sentralisering og styling av form-container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #fff; /* Bakgrunnsfarge for skjemaet */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Bredde på skjemaet */
+    margin: 50px auto;
+}
+/* Styling for each row (dt and dd) to have a border at the bottom */
+.dl-horizontal dt,
+.dl-horizontal dd {
+    border-bottom: 1px solid #ddd;  /* Light gray border */
+    padding-bottom: 10px; /* Space between content and line */
+    margin-bottom: 10px; /* Space between rows */
+}
+
+/* Optional: styling for the label (dt) to make it bold */
+.dl-horizontal dt {
+    font-weight: bold;
+}
+
+.small-image {
+    max-width: auto;  /* Sett ønsket bredde */
+    height: 70px;      /* Behold proporsjonene */
+}

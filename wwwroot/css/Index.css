@@ -1,5 +1,5 @@
-   /* Custom styles for the home page */
-   body {
+/* Custom styles for the home page */
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f8f9fa;
     color: #343a40;
@@ -30,17 +30,44 @@
 
 h1 {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 800;
     color: #39a554;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; /* Adjusts space below the heading */
+    line-height: 1.5; /* Adds more space between lines in the heading */
+    letter-spacing: 0.01rem;
+    position: relative;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
+h1 span {
+    position: relative;
+    display: inline-block;
+}
+
+h1 span::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Justerer høyden på streken */
+    left: 0;
+    width: 100%;
+    height: 6px; /* Øker tykkelsen på linjen */
+    background-color: #4caf50; /* Fargen på den buede streken */
+    border-radius: 50px; /* Øker kurvingen på linjen */
+}
+
+/* Subtitle styling */
 p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    margin-top: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem; /* Adds space between the heading and the paragraph */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Lys skygge for underteksten */
 }
 
+/* Features Section */
 .features-section {
     margin-top: 4rem;
     text-align: center;
@@ -68,11 +95,17 @@ p {
     align-items: center;
     text-align: center;
     background-color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #e0e0e0;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: 220px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.feature-item:hover {
+    transform: translateY(-10px); /* Lifts the card on hover */
+    
 }
 
 .features-icon {
@@ -96,6 +129,7 @@ p {
     min-height: 60px; /* Ensures consistent description alignment */
 }
 
+/* Button styling */
 .small-button {
     display: inline-block;
     padding: 0.6rem 1.2rem;
@@ -116,4 +150,21 @@ p {
     color: white;
     transform: translateY(-4px); /* Button moves up slightly on hover */
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .homepage-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .homepage-text {
+        padding-right: 0;
+        min-width: 100%;
+    }
+    .feature-item {
+        width: 100%; /* Makes feature items more mobile-friendly */
+    }
+}
+
+
 

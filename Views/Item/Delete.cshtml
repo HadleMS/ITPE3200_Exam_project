@@ -1,42 +1,38 @@
 ﻿@model Item
 
-<!-- Header for deleting an item -->
-<h2>Delete Item</h2>
+<link href="~/css/Delete.css" rel="stylesheet" />
 
-<!-- Confirmation message -->
-<h3>Are you sure you want to delete this item?</h3>
-
-<div>
-    <h4>Item</h4>
+<!-- Form container for centering -->
+<div class="form-container">
+    <h2>Delete Item</h2>
     <hr />
-    <dl class="row">
+
+    <!-- Definition list with horizontal layout -->
+    <dl class="dl-horizontal row">
         <!-- Displaying the item's properties using the Model -->
-        <dt class="col-sm-2">Item Id</dt>
-        <dd class="col-sm-10">@Model.ItemId</dd>
+        <dt class="col-sm-6">Name</dt>
+        <dd class="col-sm-6">@Model.Name</dd>
 
-        <dt class="col-sm-2">Name</dt>
-        <dd class="col-sm-10">@Model.Name</dd>
+        <dt class="col-sm-6">Food group</dt>
+        <dd class="col-sm-6">@Model.Food_Group</dd>
 
-        <dt class="col-sm-2">Food group</dt>
-        <dd class="col-sm-10">@Model.Food_Group</dd>
+        <dt class="col-sm-6">Energy per 100g</dt>
+        <dd class="col-sm-6">@Model.Energi_Kj kj</dd>
 
-        <dt class="col-sm-2">Energi per 100g</dt>
-        <dd class="col-sm-10">@Model.Energi_Kj kj</dd>
+        <dt class="col-sm-6">Fat per 100g</dt>
+        <dd class="col-sm-6">@Model.Fett g</dd>
 
-        <dt class="col-sm-2">Fett per 100g</dt>
-        <dd class="col-sm-10">@Model.Fett g</dd>
+        <dt class="col-sm-6">Protein per 100g</dt>
+        <dd class="col-sm-6">@Model.Protein g</dd>
 
-        <dt class="col-sm-2">Protein per 100g</dt>
-        <dd class="col-sm-10">@Model.Protein g</dd>
+        <dt class="col-sm-6">Carbohydrates per 100g</dt>
+        <dd class="col-sm-6">@Model.Karbohydrat g</dd>
 
-        <dt class="col-sm-2">Karbohydrat per 100g</dt>
-        <dd class="col-sm-10">@Model.Karbohydrat g</dd>
+        <dt class="col-sm-6">Salt per 100g</dt>
+        <dd class="col-sm-6">@Model.Salt g</dd>
 
-        <dt class="col-sm-2">Salt per 100g</dt>
-        <dd class="col-sm-10">@Model.Salt g</dd>
-       
-        <dt class="col-sm-2">Image URL</dt>
-        <dd class="col-sm-10">@Model.ImageUrl</dd>
+        <dt class="col-sm-6">Image</dt>
+        <dd class="col-sm-6"> <img src="@Model.ImageUrl" alt="Item image" class="small-image"/></dd>
     </dl>
 
     <!-- Form for confirming deletion, posts to the DeleteConfirmed action with the item ID -->
@@ -44,6 +40,6 @@
         <!-- Delete button -->
         <button type="submit" class="btn btn-danger">Delete</button>
         <!-- Cancel button to go back to the Table view -->
-        <a asp-action="Table" class="btn btn-secondary">Cancel</a>
+        <a asp-action="Products" class="btn btn-secondary">Cancel</a>
     </form>
 </div>

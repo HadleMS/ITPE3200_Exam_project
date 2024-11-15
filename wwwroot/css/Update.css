@@ -6,6 +6,17 @@ body {
     background-color: #f4f4f4;
 }
 
+
+/* Styling av overskriften inni skjemaet */
+.form-container h2 {
+    font-size: 28px; /* Større skrift */
+    font-weight: bold; /* Tykkere tekst */
+    color: #198754; /* Helsefokusert grønnfarge */
+    margin-bottom: 20px; /* Avstand til skjemaet */
+    text-align: center; /* Sentralisering av tekst */
+}   
+
+
 /* Sentralisering og styling av form-container */
 .form-container {
     display: flex;
@@ -20,15 +31,10 @@ body {
     margin: 50px auto;
 }
 
-/* Input-felt med labels */ 
+/* Input-felt (uten labels utenfor feltene) */ 
 .form-group {
     width: 100%;
     margin-bottom: 20px;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .form-group input {
@@ -50,35 +56,27 @@ button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #007bff;
+    background-color: #4caf50;
     color: white;
     border-radius: 5px;
     border: none;
     font-size: 16px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
 
-/* Tilbakestill knapp (Cancel) */
+/* Tilbakestill knapp (Back to Table View) */
 a {
     display: inline-block;
     width: 100%;
     text-align: center;
     padding: 12px;
     margin-top: 10px;
-    background-color: #6c757d;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
 }
 
-a:hover {
-    background-color: #5a6268;
-}
 
 /* Valideringstekst for inputfeltene */
 .text-danger {

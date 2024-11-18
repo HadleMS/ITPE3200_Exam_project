@@ -10,41 +10,38 @@
     <title>@ViewData["Title"] - My Shop</title>
     <link href="~/css/Index.css" rel="stylesheet" asp-append-version="true" />
 </head>
-<div class="container">
-    <div class="homepage-container">
-        <div class="homepage-text">
-            <h1>Your Nutrition <span>Journey</span> Starts Here!</h1>
-            <p>Stay on top of your health with simple, insightful tracking.</p>
+
+<div class="main-content">
+    <div class="gradient-background"></div>
+    <div class="container">
+        <div class="homepage-container">
+            <div class="homepage-text">
+       <h1>Your Nutrition<br>
+        Journey Starts Here!</h1>
+                <p>Stay on top of your health with simple, <br>
+                    insightful tracking.</p>
+            </div>
+            <partial name="_Carousel" />
         </div>
-       <partial name="_Carousel" />
     </div>
 
-    <section class="features-section">
-        <div class="features-card">
-            <div class="feature-item">
-                <div class="features-icon">
-                    <i class="fas fa-apple-alt"></i>
-                </div>
-                <h4>Add New Foods</h4>
-                <p>Track food items and ensure they meet health standards.</p>
-                <a asp-controller="Item" asp-action="Create" class="small-button">Get Started</a>
-            </div>
-            <div class="feature-item">
-                <div class="features-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h4>Nutritional Info</h4>
-                <p>View nutritional info to make informed choices and maintain balance.</p>
-                <a asp-controller="Item" asp-action="Products" class="small-button">Learn More</a>
-            </div>
-            <div class="feature-item">
-                <div class="features-icon">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h4>Eat Healthy</h4>
-                <p>View nutritional info to make informed choices and maintain balance.</p>
-                <a asp-controller="About" class="small-button">Find Out How</a>
-            </div>
+   <section class="features-section">
+    <div class="features-card">
+        <div class="feature-item">
+            <h4>Add New Foods</h4>
+            <p>Track food items and ensure they meet health standards.</p>
+            <a asp-controller="Item" asp-action="Create" class="small-button">Get Started</a>
         </div>
-    </section>
+        <div class="feature-item">
+            <h4>Nutritional Info</h4>
+            <p>View nutritional info to make informed choices and maintain balance.</p>
+            <a asp-controller="Item" asp-action="Products" class="small-button">Learn More</a>
+        </div>
+        <div class="feature-item">
+            <h4>Eat Healthy</h4>
+            <p>View nutritional info to make informed choices and maintain balance.</p>
+            <a asp-controller="About" class="small-button">Find Out How</a>
+        </div>
+    </div>
+</section>
 </div>

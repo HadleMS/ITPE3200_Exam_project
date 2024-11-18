@@ -1,31 +1,39 @@
 ﻿@page
 @model EmailModel
+
 @{
     ViewData["Title"] = "Manage Email";
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
 
 <link rel="stylesheet" href="~/css/Account.css">
+ <!-- Status Message plassert utenfor hele boksen -->
+
+<div class="d-flex justify-content-center mb-3">
+    <partial name="_StatusMessage" for="StatusMessage" />
+</div>
 
 <div class="form-wrapper">
-    <partial name="_StatusMessage" for="StatusMessage" />
     <div class="row">
         <div class="col-md-6 custom-width">
-            <form id="email-form" method="post" class="text-center w-100" style="max-width: 400px;">
+            <!-- Skjema for å oppdatere e-post -->
+            <form id="email-form" method="post" asp-page-handler="UpdateEmail" class="text-center w-100" style="max-width: 400px;">
                 <h2>Change Email</h2>
+
+                <!-- Valideringsoppsummering -->
                 <div asp-validation-summary="All" class="text-danger" role="alert"></div>
-                
-                <!-- Current Email -->
+
+                <!-- Nåværende e-post -->
                 @if (Model.IsEmailConfirmed)
                 {
                     <div class="form-group mb-4 position-relative input-group">
                         <span class="icon position-absolute">
-                            <!-- SVG icon for email -->
+                            <!-- SVG ikon for e-post -->
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#888"/>
                             </svg>
                         </span>
-                        <input asp-for="Email" class="form-control pl-5" placeholder="Please enter your email." disabled />
+                        <input asp-for="Email" class="form-control pl-5" placeholder="Your current email" disabled />
                         <div class="input-group-append">
                             <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
                         </div>
@@ -36,29 +44,29 @@
                 {
                     <div class="form-group mb-4 position-relative">
                         <span class="icon position-absolute">
-                            <!-- SVG icon for email -->
+                            <!-- SVG ikon for e-post -->
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#888"/>
                             </svg>
                         </span>
-                        <input asp-for="Email" class="form-control pl-5" placeholder="Please enter your email." disabled />
-                        <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
+                        <input asp-for="Email" class="form-control pl-5" placeholder="Your current email" disabled />
                     </div>
                 }
 
-                <!-- New Email -->
+                <!-- Ny e-post -->
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
-                        <!-- SVG icon for new email -->
+                        <!-- SVG ikon for ny e-post -->
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#888"/>
                         </svg>
                     </span>
-                    <input asp-for="Input.NewEmail" class="form-control pl-5" autocomplete="email" aria-required="true" placeholder="Please enter new email." />
+                    <input asp-for="Input.NewEmail" class="form-control pl-5" autocomplete="email" aria-required="true" placeholder="Enter new email" />
                     <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
                 </div>
 
-                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change email</button>
+                <!-- Oppdateringsknapp -->
+                <button id="update-email-button" type="submit" class="w-100 btn btn-lg btn-primary">Update Email</button>
             </form>
         </div>
     </div>

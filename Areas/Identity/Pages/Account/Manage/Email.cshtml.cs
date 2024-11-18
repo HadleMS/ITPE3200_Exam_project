@@ -19,54 +19,27 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly IEmailSender _emailSender;
+
 
         public EmailModel(
             UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
-            IEmailSender emailSender)
+            SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _emailSender = emailSender;
         }
-
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public string Email { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public bool IsEmailConfirmed { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         [TempData]
         public string StatusMessage { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         [BindProperty]
         public InputModel Input { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public class InputModel
         {
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
             [Required]
             [EmailAddress]
             [Display(Name = "New email")]
@@ -98,73 +71,57 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             return Page();
         }
 
-        public async Task<IActionResult> OnPostChangeEmailAsync()
+        public async Task<IActionResult> OnPostUpdateEmailAsync()
         {
+            // Hent brukeren basert på pålogget identitet
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
+            // Valider modellen (sjekker at NewEmail er fylt inn og gyldig)
             if (!ModelState.IsValid)
             {
-                await LoadAsync(user);
+                await LoadAsync(user); // Laster eksisterende data hvis noe feiler
                 return Page();
             }
 
-            var email = await _userManager.GetEmailAsync(user);
-            if (Input.NewEmail != email)
+            // Sjekk om e-posten faktisk skal endres
+            var currentEmail = await _userManager.GetEmailAsync(user);
+            if (Input.NewEmail == currentEmail)
             {
-                var userId = await _userManager.GetUserIdAsync(user);
-                var code = await _userManager.GenerateChangeEmailTokenAsync(user, Input.NewEmail);
-                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                var callbackUrl = Url.Page(
-                    "/Account/ConfirmEmailChange",
-                    pageHandler: null,
-                    values: new { area = "Identity", userId = userId, email = Input.NewEmail, code = code },
-                    protocol: Request.Scheme);
-                await _emailSender.SendEmailAsync(
-                    Input.NewEmail,
-                    "Confirm your email",
-                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                StatusMessage = "Confirmation link to change email sent. Please check your email.";
-                return RedirectToPage();
+                StatusMessage = "Your new email is the same as your current email.";
+                return RedirectToPage(); // Tilbake til samme side
             }
 
-            StatusMessage = "Your email is unchanged.";
-            return RedirectToPage();
-        }
-
-        public async Task<IActionResult> OnPostSendVerificationEmailAsync()
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            // Oppdater e-posten direkte
+            var setEmailResult = await _userManager.SetEmailAsync(user, Input.NewEmail);
+            if (!setEmailResult.Succeeded)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                await LoadAsync(user);
+                foreach (var error in setEmailResult.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                await LoadAsync(user); // Last inn data igjen i tilfelle feil
                 return Page();
             }
 
-            var userId = await _userManager.GetUserIdAsync(user);
-            var email = await _userManager.GetEmailAsync(user);
-            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-            var callbackUrl = Url.Page(
-                "/Account/ConfirmEmail",
-                pageHandler: null,
-                values: new { area = "Identity", userId = userId, code = code },
-                protocol: Request.Scheme);
-            await _emailSender.SendEmailAsync(
-                email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+            // Oppdater brukernavn hvis det er satt til e-posten
+            var setUserNameResult = await _userManager.SetUserNameAsync(user, Input.NewEmail);
+            if (!setUserNameResult.Succeeded)
+            {
+                foreach (var error in setUserNameResult.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                await LoadAsync(user); // Last inn data igjen i tilfelle feil
+                return Page();
+            }
 
-            StatusMessage = "Verification email sent. Please check your email.";
+            // Re-autentiser brukeren etter endringen
+            await _signInManager.RefreshSignInAsync(user);
+            StatusMessage = "Your email has been updated successfully.";
             return RedirectToPage();
         }
     }

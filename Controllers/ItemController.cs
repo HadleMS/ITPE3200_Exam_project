@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Exam.DAL;
 using Exam.Models;
 using Exam.ViewModels;
+using Exam.Utilities;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Exam.Controllers
 {
-   public class ItemController : Controller
+    public class ItemController : Controller
     {
         private readonly IItemRepository _itemRepository;
         private readonly ILogger<ItemController> _logger;
@@ -20,7 +21,7 @@ namespace Exam.Controllers
             _itemRepository = itemRepository;
             _logger = logger;
         }
-         
+
         // Action to display Products.cshtml
         public IActionResult Products()
         {
@@ -28,7 +29,7 @@ namespace Exam.Controllers
         }
 
         // Action to display items in grid layout with pagination
-         public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
+        public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
         {
             var items = await _itemRepository.GetAll();
             if (items == null)
@@ -72,7 +73,7 @@ namespace Exam.Controllers
                 Items = items
             };
 
-            return PartialView("Table", viewModel); 
+            return PartialView("Table", viewModel);
         }
 
         // Action to display items in table layout
@@ -108,34 +109,46 @@ namespace Exam.Controllers
         {
             return View();
         }
+        
 
-        // Action to handle the form submission for creating a new item (POST request)
+        // New Create method to check eligibility and save the item
         [HttpPost]
-        [Authorize]
-        public async Task<IActionResult> Create(Item item, IFormFile ImageFile)
+[Authorize]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Create(Item item, IFormFile ImageFile)
+{
+    if (ModelState.IsValid)
+    {
+        // Handle the file upload if provided
+        if (ImageFile != null && ImageFile.Length > 0)
         {
-            if (ModelState.IsValid)
+            var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                if (ImageFile != null && ImageFile.Length > 0)
-                {
-                    var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await ImageFile.CopyToAsync(stream);
-                    }
-
-                    item.ImageUrl = "/images/" + ImageFile.FileName;
-                }
-
-                bool returnOk = await _itemRepository.Create(item);
-
-                if (returnOk)
-                    return RedirectToAction(nameof(Products));
+                await ImageFile.CopyToAsync(stream);
             }
 
-            _logger.LogWarning("[ItemController] Item creation failed {@item}", item);
-            return View(item);
+            item.ImageUrl = "/images/" + ImageFile.FileName;
         }
+
+        // Check if the item qualifies for the Nøkkelhullet symbol
+        item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
+
+        // Save the item to the repository
+        bool success = await _itemRepository.Create(item);
+        if (success)
+        {
+            // Redirect to the Products view after successful creation
+            return RedirectToAction(nameof(Products));
+        }
+
+        _logger.LogError("[ItemController] Failed to save the item to the repository.");
+    }
+
+    // Return to the Create view with the item to show errors if creation fails
+    return View(item);
+}
+
 
         // Action to return the form for updating an existing item (GET request)
         [HttpGet]
@@ -197,6 +210,4 @@ namespace Exam.Controllers
             return RedirectToAction(nameof(Products));
         }
     }
-    
-    
 }

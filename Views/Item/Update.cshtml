@@ -49,6 +49,12 @@
         </div>
 
         <div class="form-group">
+            <!-- Display existing image if available -->
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <label>Current Image:</label>
+                <img src="@Model.ImageUrl" alt="Current Image" class="img-thumbnail" style="width: 150px; height: auto;" />
+            }
             <input type="file" asp-for="ImageFile" class="form-control" />
             <span asp-validation-for="ImageFile" class="text-danger"></span>
         </div>

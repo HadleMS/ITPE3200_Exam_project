@@ -164,21 +164,50 @@ public async Task<IActionResult> Create(Item item, IFormFile ImageFile)
             return View(item);
         }
 
-        // Action to handle the form submission for updating an existing item (POST request)
-        [HttpPost]
-        [Authorize]
-        public async Task<IActionResult> Update(Item item)
+     [HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Update(Item item, IFormFile ImageFile)
+{
+    if (ModelState.IsValid)
+    {
+        // Check if the user uploaded a new image
+        if (ImageFile != null && ImageFile.Length > 0)
         {
-            if (ModelState.IsValid)
+            // Delete the old image if it exists (optional)
+            if (!string.IsNullOrEmpty(item.ImageUrl))
             {
-                bool returnOk = await _itemRepository.Update(item);
-                if (returnOk)
-                    return RedirectToAction(nameof(Products));
+                var oldImagePath = Path.Combine("wwwroot", item.ImageUrl.TrimStart('/'));
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
             }
 
-            _logger.LogWarning("[ItemController] Item update failed {@item}", item);
-            return View(item);
+            // Save the new image
+            var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await ImageFile.CopyToAsync(stream);
+            }
+            item.ImageUrl = "/images/" + ImageFile.FileName; // Update the item with the new image path
         }
+
+        // Re-check if the item qualifies for the Nøkkelhullet symbol after updating
+        item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
+
+        // Update the item in the repository
+        bool success = await _itemRepository.Update(item);
+        if (success)
+        {
+            return RedirectToAction(nameof(Products)); // Redirect to the Products view after update
+        }
+
+        _logger.LogError("[ItemController] Failed to update the item.");
+    }
+
+    return View(item); // Return to the Update view with the item if update fails
+}
+
 
         // Action to display the confirmation page for deleting an item
         [HttpGet]

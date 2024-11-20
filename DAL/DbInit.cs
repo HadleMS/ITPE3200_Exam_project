@@ -116,7 +116,7 @@ public static class DBInit
                 new Item
                 {
                     Name = "Kremgo",
-                    Food_Group = "Creamcheese",
+                    Food_Group = "Dairy",
                     Energi_Kj = 1063,
                     Fett = 24,
                     Protein = 6.7,
@@ -128,7 +128,7 @@ public static class DBInit
                 new Item
                 {
                     Name = "Kokt skinke",
-                    Food_Group = "Toppings",
+                    Food_Group = "Meat",
                     Energi_Kj = 415,
                     Fett = 1.8,
                     Protein = 19,

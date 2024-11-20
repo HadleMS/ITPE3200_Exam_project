@@ -18,8 +18,17 @@
         </div>
 
         <div class="form-group">
-            <input asp-for="Food_Group" class="form-control" placeholder="Food Group" />
-            <span asp-validation-for="Food_Group" class="text-danger"></span>
+        <select asp-for="Food_Group" class="form-control">
+            <option value="">Select Food Group</option>
+            <option value="dairy">Dairy</option>
+            <option value="meat">Meat</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="nuts">Nuts</option>
+            <option value="sauce">Sauce</option>
+            <option value="berries">Berries</option>
+            <option value="beverages">Beverages</option>
+        </select>
+        <span asp-validation-for="Food_Group" class="text-danger"></span>
         </div>
 
         <div class="form-group">
@@ -80,3 +89,15 @@
         </p>
     </div>
 }
+<script>
+    document.getElementById("itemForm").addEventListener("submit", function(event) {
+        const inputs = document.querySelectorAll("input[type='text'], input[type='number']");
+
+        inputs.forEach(input => {
+            if (input.value) {
+                // Replace commas with periods
+                input.value = input.value.replace(',', '.');
+            }
+        });
+    });
+</script>

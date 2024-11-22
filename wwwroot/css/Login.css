@@ -13,12 +13,11 @@ html, body {
 .min-vh-100 {
     height: 100vh;
     display: flex;
-    border-left: 1px solid #e0e0e0;
 }
 
-/* Venstre seksjon med gradient og skygge */
+/* Optional: Limit the circle to stop under content */
 .left-section {
-    background-color:#00C896 ;
+    position: relative;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -27,10 +26,24 @@ html, body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    z-index: 2; /* Ensure the text stays above the background */
 }
 
-/* Forbedret lesbarhet */
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    max-height: 60%; /* Set max-height to 60% or adjust accordingly */
+    background-color: #00C896;
+    border-radius: 50%;
+    z-index: -1; /* Ensure the circle is behind the text */
+    transform: translateX(-50%);
+}
+
+/* Improved readability for heading and paragraph */
 .left-section h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -43,11 +56,11 @@ html, body {
     line-height: 1.5;
 }
 
-/* Justert bilde */
+/* Adjusted image inside the left section */
 .left-section img {
     max-width: 70%;
     margin-top: 10px;
-    max-height: 50vh;
+    max-height: 50vh; /* Adjust image size */
 }
 
 /* Input-felt styling med animasjon for fokus */
@@ -113,4 +126,18 @@ html, body {
     .btn-primary {
         padding: 8px 0;
     }
+}
+/* Background circle - placed behind everything */
+.container:before {
+    content: "";
+    position: absolute;
+    height: 1500px;
+    width: 1500px;
+    top: 25%;
+    right: 45%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #01ff9e 0%, #048654 100%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: -2; /* Placing the circle behind everything else */
 }

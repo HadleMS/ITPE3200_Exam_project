@@ -1,6 +1,6 @@
 
 let currentPage = 1;
-const pageSize = 6;
+const pageSize = 9;
 
 async function toggleView(view) {
     const gridButton = document.getElementById('gridButton');

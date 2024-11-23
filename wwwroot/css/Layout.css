@@ -6,7 +6,7 @@
 
         .navbar {
             background-color: #2f4f4f; /* Rich dark teal */
-            border-bottom: 2px solid #34c759; /* Highlight green border */
+            border-bottom: 2px solid #2f4f4f; /* Highlight green border */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             padding: 1rem 1.5rem;
         }
@@ -25,7 +25,7 @@
             transition: color 0.3s ease;
         }
         .navbar-brand:hover {
-            color: #34c759;
+            color: #2f4f4f;
         }
 
         /* Brand Logo */
@@ -54,13 +54,13 @@
         /* Link Hover Effect */
         .navbar-nav .nav-link:hover {
             color: #ffffff;
-            background-color: #34c759;
+            background-color: #2f4f4f;
         }
 
         /* Active Link */
         .navbar-nav .nav-link.active {
             color: #ffffff;
-            background-color: #34c759;
+            background-color: #2f4f4f;
         }
 
         /* Toggler Button for Mobile */
@@ -74,7 +74,7 @@
 
         .dropdown-menu {
             background-color: #2f4f4f;
-            border: 1px solid #34c759;
+            border: 1px solid #2f4f4f;
             border-radius: 8px;
             margin-top: 10px;
             padding: 0;
@@ -97,7 +97,7 @@
         /* Hover effect */
         .dropdown-item:hover {
             color: #ffffff;
-            background-color: #34c759;
+            background-color: #2f4f4f;
             padding-left: 25px; /* Subtle padding shift for hover effect */
         }
         

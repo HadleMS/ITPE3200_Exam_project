@@ -58,3 +58,45 @@ body {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
+/* Right-side Circle - Adjusted Background */
+.left-section {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: none;
+    z-index: 2; /* Ensure the text stays above the background */
+}
+
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0; /* Changed to right */
+    width: 50vw;
+    max-height: 60%; 
+    background-color: #00C896;
+    border-radius: 50%;
+    z-index: -1; /* Ensure the circle is behind the text */
+    transform: translateX(50%);
+}
+
+/* Background circle - placed behind everything */
+.container:before {
+    content: "";
+    position: absolute;
+    height: 1500px;
+    width: 1500px;
+    top: 30%;
+    left: 50%; 
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #01ff9e 0%, #048654 100%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: -2; /* Placing the circle behind everything else */
+}

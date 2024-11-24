@@ -1,21 +1,64 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-}
-
-* {
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: 
+        radial-gradient(circle at 0% 0%, rgba(200, 255, 200, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(180, 255, 180, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(220, 255, 220, 0.2) 0%, transparent 40%),
+        white;
+    color: #343a40;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.min-vh-100 {
-    height: 100vh;
-    display: flex;
+/* Input-felt styling */
+.form-control {
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 20px 12px 45px; /* Rom for ikonet */
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
 }
 
-/* Optional: Limit the circle to stop under content */
+/* Ikon-styling */
+.icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    pointer-events: none; /* Hindrer interaksjon med ikonet */
+}
+
+/* Animasjon på SVG-ikon i input-felt */
+.form-group.position-relative:focus-within .icon svg path {
+    fill: #ff66b2; /* Endre farge ved fokus */
+    transform: scale(1.1); /* Gjør ikonet litt større ved fokus */
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+/* Knapp med hover-animasjon */
+.btn-primary {
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 10px 30px;
+    max-width: 200px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.btn-primary:hover {
+    background-color: #ff4da6;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* Right-side Circle - Adjusted Background */
 .left-section {
     position: relative;
     color: white;
@@ -34,110 +77,61 @@ html, body {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0; /* Changed to right */
     width: 50vw;
-    max-height: 60%; /* Set max-height to 60% or adjust accordingly */
+    max-height: 60%; 
     background-color: #00C896;
     border-radius: 50%;
     z-index: -1; /* Ensure the circle is behind the text */
-    transform: translateX(-50%);
+    transform: translateX(50%);
 }
 
-/* Improved readability for heading and paragraph */
-.left-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-
-.left-section p {
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-/* Adjusted image inside the left section */
-.left-section img {
-    max-width: 70%;
-    margin-top: 10px;
-    max-height: 50vh; /* Adjust image size */
-}
-
-/* Input-felt styling med animasjon for fokus */
-.form-control {
-    border-radius: 30px;
-    background-color: #f0f0f0;
-    border: none;
-    padding: 12px 20px 12px 50px;
-    font-size: 1rem;
-    transition: all 0.3s ease; /* Overgang for jevn fokusendring */
-}
-
-/* Animasjon på SVG-ikon i input-felt */
-.form-group.position-relative:focus-within .icon svg path {
-    fill: #ff66b2; /* Endre farge ved fokus */
-    transform: scale(1.1); /* Gjør ikonet litt større ved fokus */
-    transition: fill 0.3s ease, transform 0.3s ease;
-}
-
-.icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: #888;
-    pointer-events: none; /* Hindrer interaksjon med ikonet */
-}
-
-/* Knapp med hover-animasjon */
-.btn-primary {
-    background-color: #ff66b2;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    padding: 10px 30px;
-    max-width: 200px;
-    width: 100%;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-}
-
-.btn-primary:hover {
-    background-color: #ff4da6;
-    transform: scale(1.1); /* Øk knappens størrelse til 110% */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Legg til en sterkere skygge */
-}
-
-/* "Sign Up"-knapp hover-effekt */
-.btn-outline-light:hover {
-    background-color: white;
-    color: #00cc99;
-}
-
-/* Tilleggsjusteringer for små skjermer */
-@media (max-height: 700px) {
-    .left-section img {
-        max-height: 40vh;
-    }
-    .left-section h2, .left-section p {
-        font-size: 1.5rem;
-    }
-    .btn-primary {
-        padding: 8px 0;
-    }
-}
 /* Background circle - placed behind everything */
 .container:before {
     content: "";
     position: absolute;
     height: 1500px;
     width: 1500px;
-    top: 25%;
-    right: 45%;
+    top: 30%;
+    right: 50%;
     transform: translateY(-50%);
     background-image: linear-gradient(-45deg, #01ff9e 0%, #048654 100%);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: -2; /* Placing the circle behind everything else */
+}
+/* Styling the heading */
+.left-section h2 {
+    font-size: 2.5rem; /* Larger for emphasis */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Ensure it contrasts well with the background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+/* Styling the paragraph */
+.left-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0; /* Light color for better visibility */
+    line-height: 1.6;
+    max-width: 80%; /* Restrict width for better readability */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+}
+
+/* Styling the Sign Up button */
+.left-section .btn-outline-light {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.left-section .btn-outline-light:hover {
+    background-color: white;
+    color: #00c896; /* Matches the background accent color */
+    transform: scale(1.1); /* Slight zoom effect */
 }

@@ -25,7 +25,7 @@
             transition: color 0.3s ease;
         }
         .navbar-brand:hover {
-            color: #2f4f4f;
+            color: #4CAF50;
         }
 
         /* Brand Logo */
@@ -122,5 +122,73 @@
             animation: dropdownSlide 0.3s ease forwards;
         }
             /* Bakgrunnsfarge for hele siden */
- 
             
+ /* Footer Container */
+.footer {
+    background-color: #2f4f4f; /* Dark teal background */
+    color: #ffffff; /* White text for contrast */
+    padding: 1.5rem 1rem; /* Balanced padding */
+    border-top: 2px solid #2f4f4f; /* Green accent border */
+    font-size: 1rem; /* Consistent font size */
+}
+
+/* Footer Content Container (Flexbox Layout) */
+.footer .container {
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: space-between; /* Space between sections */
+    align-items: center; /* Vertically align all items on the same line */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 2rem; /* Add space between sections */
+}
+
+/* Footer Contact Info (Center Section) */
+.footer-contact-info {
+    display: flex; /* Horizontal layout for items */
+    justify-content: center; /* Center-align items */
+    align-items: center; /* Vertically align items on the same line */
+    gap: 2rem; /* Space between contact items */
+    font-size: 0.875rem; /* Match the link font size */
+    color: #d0f0c0; /* Light green text */
+    margin: 0; /* Reset default margins */
+    padding: 0; /* Reset default padding */
+    list-style: none; /* Remove bullet points */
+    flex-grow: 2; /* Occupy center space */
+}
+
+.footer-contact-item {
+    white-space: nowrap; /* Prevent wrapping */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-contact-item:hover {
+    color: #ffffff; /* White hover effect */
+}
+
+/* Footer Copyright Section (Right) */
+.footer .footer-bottom-text {
+    font-size: 0.75rem; /* Smaller font size for copyright */
+    color: #d0f0c0; /* Light green color */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: right; /* Align to the right */
+    flex-grow: 1; /* Allow this section to balance the layout */
+    align-items: center; /* Align vertically with other sections */
+    display: flex; /* Ensure proper vertical alignment */
+    justify-content: flex-end; /* Push content to the far right */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 767px) {
+    .footer .container {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .footer-contact-info {
+        flex-direction: column; /* Stack contact items vertically */
+        margin-bottom: 1rem; /* Add spacing below contact info */
+    }
+
+    .footer-bottom-text {
+        margin-left: 0; /* Reset alignment */
+    }
+}

@@ -52,7 +52,7 @@ namespace Exam.Tests
        public async Task Grid_ReturnsNotFound_WhenRepositoryReturnsNull()
        {
            // Arrange
-           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync((List<Item>)null);
+           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync((List<Item>?)null);
 
            // Act
            var result = await _controller.Grid();
@@ -83,22 +83,21 @@ namespace Exam.Tests
        [Fact]
        public async Task Grid_ReturnsPartialView_WhenAjaxRequest()
        {
-           // Arrange
-           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync(_testItems);
-           _controller.ControllerContext = new ControllerContext
-           {
-               HttpContext = new DefaultHttpContext()
-           };
-           _controller.Request.Headers["X-Requested-With"] = "XMLHttpRequest";
-
-           // Act
-           var result = await _controller.Grid();
-
-           // Assert
-           Assert.IsType<PartialViewResult>(result);
-           var partialView = result as PartialViewResult;
-           Assert.Equal("_ItemCardsPartial", partialView.ViewName);
-       }
+        // Arrange
+        _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync(_testItems);
+        _controller.ControllerContext = new ControllerContext
+        {
+            HttpContext = new DefaultHttpContext()
+            };
+            _controller.Request.Headers["X-Requested-With"] = "XMLHttpRequest";
+            // Act
+            var result = await _controller.Grid();
+            // Assert
+            var partialView = result as PartialViewResult;
+            // Ensure partialView is not null before accessing ViewName
+            Assert.NotNull(partialView);  // Ensure partialView is not null
+            Assert.Equal("_ItemCardsPartial", partialView.ViewName);  // Now safe to access ViewName
+            }
 
        [Fact]
        public async Task Grid_ReturnsCorrectItems_ForLastPage()

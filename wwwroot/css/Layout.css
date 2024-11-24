@@ -1,7 +1,7 @@
 
         /* Ultimate Navbar Styling */
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif !important;
         }
 
         .navbar {

@@ -8,17 +8,12 @@
 
 <link rel="stylesheet" href="~/css/Account.css">
  <!-- Status Message plassert utenfor hele boksen -->
-
-<div class="d-flex justify-content-center mb-3">
-    <partial name="_StatusMessage" for="StatusMessage" />
-</div>
-
 <div class="form-wrapper">
     <div class="row">
         <div class="col-md-6 custom-width">
             <!-- Skjema for å oppdatere e-post -->
             <form id="email-form" method="post" asp-page-handler="UpdateEmail" class="text-center w-100" style="max-width: 400px;">
-                <h2>Change Email</h2>
+                <h2 style="margin-bottom: 20px">Change Email</h2>
 
                 <!-- Valideringsoppsummering -->
                 <div asp-validation-summary="All" class="text-danger" role="alert"></div>
@@ -61,12 +56,13 @@
                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#888"/>
                         </svg>
                     </span>
-                    <input asp-for="Input.NewEmail" class="form-control pl-5" autocomplete="email" aria-required="true" placeholder="Enter new email" />
+                    <input style="width: 325px" asp-for="Input.NewEmail" class="form-control pl-5" autocomplete="email" aria-required="true" placeholder="Enter new email" />
                     <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
                 </div>
 
                 <!-- Oppdateringsknapp -->
                 <button id="update-email-button" type="submit" class="w-100 btn btn-lg btn-primary">Update Email</button>
+                <partial name="_StatusMessage" for="StatusMessage" />
             </form>
         </div>
     </div>

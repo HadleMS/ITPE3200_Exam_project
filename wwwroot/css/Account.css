@@ -25,6 +25,7 @@ body {
 .custom-width {
     max-width: 1000px;
     width: 100%;
+    padding: 40px 130px;
 }
 
 /* Input-felt styling */
@@ -43,7 +44,7 @@ body {
 .icon {
     position: absolute;
     left: 15px;
-    top: 50%;
+    top: 23px;
     transform: translateY(-50%);
     font-size: 1.2rem;
     color: #888;

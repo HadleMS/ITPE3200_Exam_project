@@ -6,12 +6,11 @@
 }
 <link rel="stylesheet" href="~/css/Account.css">
 
-<partial name="_StatusMessage" for="StatusMessage" />
 <div class="form-wrapper">
     <div class="row">
         <div class="col-md-6 custom-width">
             <form id="profile-form" method="post" class="text-center w-100" style="max-width: 400px;">
-                <h2>Profile</h2>
+                <h2 style="margin-bottom: 20px">Profile</h2>
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
                 <!-- Username -->
@@ -22,7 +21,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
                     </span>
-                    <input asp-for="Username" class="form-control pl-5" placeholder="Please choose your username." disabled />
+                    <input style="width: 325px" asp-for="Username" class="form-control pl-5" placeholder="Please choose your username." disabled />
                 </div>
 
                 <!-- Full Name -->
@@ -74,6 +73,7 @@
                 </div>
 
                 <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+                <partial name="_StatusMessage" for="StatusMessage" />
             </form>
         </div>
     </div>

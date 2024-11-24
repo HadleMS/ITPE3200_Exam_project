@@ -26,7 +26,7 @@ body {
 .icon {
     position: absolute;
     left: 15px;
-    top: 50%;
+    top: 23px;
     transform: translateY(-50%);
     font-size: 1.2rem;
     color: #888;
@@ -73,33 +73,36 @@ body {
     z-index: 2; /* Ensure the text stays above the background */
 }
 
-.left-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0; /* Changed to right */
-    width: 50vw;
-    max-height: 60%; 
-    background-color: #00C896;
-    border-radius: 50%;
-    z-index: -1; /* Ensure the circle is behind the text */
-    transform: translateX(50%);
+@media only screen and (min-width: 1000px) {
+    /* Background circle - placed behind everything */
+    .container:before {
+        content: "";
+        position: absolute;
+        height: 1500px;
+        width: 1500px;
+        top: 30%;
+        right: 50%;
+        transform: translateY(-50%);
+        background-image: linear-gradient(-45deg, #01ff9e 0%, #048654 100%);
+        transition: 1.8s ease-in-out;
+        border-radius: 50%;
+        z-index: -2; /* Placing the circle behind everything else */
+    }
+
+    .left-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0; /* Changed to right */
+        width: 50vw;
+        max-height: 60%; 
+        background-color: #00C896;
+        border-radius: 50%;
+        z-index: -1; /* Ensure the circle is behind the text */
+        transform: translateX(50%);
+    }
 }
 
-/* Background circle - placed behind everything */
-.container:before {
-    content: "";
-    position: absolute;
-    height: 1500px;
-    width: 1500px;
-    top: 30%;
-    right: 50%;
-    transform: translateY(-50%);
-    background-image: linear-gradient(-45deg, #01ff9e 0%, #048654 100%);
-    transition: 1.8s ease-in-out;
-    border-radius: 50%;
-    z-index: -2; /* Placing the circle behind everything else */
-}
 /* Styling the heading */
 .left-section h2 {
     font-size: 2.5rem; /* Larger for emphasis */

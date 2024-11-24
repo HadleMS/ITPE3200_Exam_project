@@ -74,9 +74,6 @@
 .keyhole-icon {
     width: 20px; /* Adjusted size */
     height: auto;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
 }
 
 .btn-secondary {
@@ -142,9 +139,6 @@ margin-bottom: 20px;
 .keyhole-icon {
 width: 30px;
 height: auto;
-position: absolute;
-bottom: 40px;
-right: 100px; 
 }
 
 /* Summary subtle style */

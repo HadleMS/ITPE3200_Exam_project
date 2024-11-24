@@ -1,25 +1,24 @@
-﻿@{
-    // Determine the layout dynamically or use the default Identity layout
-    Layout = ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout != null
-        ? parentLayout.ToString()
-        : "/Areas/Identity/Pages/_Layout.cshtml";
+﻿﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout !=  null)
+    {
+        Layout = parentLayout.ToString();
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
 }
 
-<div class="container mt-4">
-    <div class="row">
-        <!-- Navigation Section -->
-        <div style="position: relative" class="col-md-3">
-            <partial name="_ManageNav" />
-        </div>
-        
-        <!-- Content Section -->
-        <div class="col-md-9">
-            @RenderBody()
-        </div>
+<div class="row">
+    <div style="position: relative" class="col-md-3">
+        <partial name="_ManageNav" />
+    </div>
+    <div class="col-md-9">
+        @RenderBody()
     </div>
 </div>
 
+
 @section Scripts {
-    <!-- Allow additional scripts to be injected into this section -->
     @RenderSection("Scripts", required: false)
 }

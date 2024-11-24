@@ -1,151 +1,81 @@
-/* Global Styling for Body */
+/* Bakgrunnsfarge på hele siden */
 body {
-    background-color: #fbfdfb; /* Soft green background for consistency */
+    background-color: #fbfdfb; /* Lys grønn bakgrunn */
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
-
-/* Form Wrapper Styling */
+/* Wrapper for skjemaet */
 .form-wrapper {
     display: flex;
+    max-width: 600px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Endret fra center til flex-start for å flytte boksen opp */
+    margin-top: 100px; /* Flytter boksen litt lenger opp */
     min-height: 100vh;
-    padding: 20px;
-    background-color: #fbfdfb; /* Matches body background */
 }
 
-/* Form Box Styling */
+/* Sentral boks for skjemaet */
 .col-md-6 {
-    background-color: #ffffff; /* White background for form */
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
     text-align: center;
+}
+.custom-width {
+    max-width: 1000px;
     width: 100%;
     padding: 40px 130px;
 }
 
-/* Input Field Styling */
+/* Input-felt styling */
 .form-control {
-    border-radius: 30px; /* Rounded inputs */
-    background-color: #f8f8f8; /* Light gray background for inputs */
-    border: 1px solid #ddd; /* Subtle border */
-    padding: 12px 20px 12px 50px; /* Room for the icon */
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 20px 12px 50px;
     font-size: 1rem;
-    transition: all 0.3s ease; /* Smooth transitions */
-    margin-bottom: 20px; /* Spacing between fields */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Slight inner shadow */
-    width: 100%; /* Ensures it stretches to full width */
-    max-width: 480px; /* Ensures a consistent width across devices */
-    min-width: 400px; /* Guarantees enough space for placeholder text */
+    transition: all 0.3s ease;
+    max-width: 100%; /* Juster til boksens bredde */
+    margin-bottom: 15px; /* Avstand mellom feltene */
 }
 
-.form-control:focus {
-    background-color: #ffffff; /* Highlight field on focus */
-    border: 1px solid #ff66b2; /* Pink border on focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 102, 178, 0.5); /* Glow effect */
-}
-
-/* Placeholder Styling */
-.form-control::placeholder {
-    color: #aaa; /* Soft placeholder text color */
-    font-style: italic;
-}
-
-/* Input Group Styling */
-.input-group .input-group-text {
-    background-color: #d0f0c0; /* Light green background */
-    color: #2f4f4f; /* Dark teal for text */
-    border: none; /* No borders for cleaner look */
-    border-radius: 0 30px 30px 0; /* Match input's rounded corners */
-}
-
-/* Input Icon Styling */
+/* Ikon-posisjonering i input-felt */
 .icon {
     position: absolute;
     left: 15px;
     top: 23px;
     transform: translateY(-50%);
     font-size: 1.2rem;
-    color: #888; /* Neutral gray for icons */
-    pointer-events: none; /* Prevent interaction with icon */
+    color: #888;
 }
 
-/* Icon Animation */
+/* Animasjon på SVG-ikon i input-felt ved fokus */
 .form-group.position-relative:focus-within .icon svg path {
-    fill: #ff66b2; /* Change color on focus */
-    transform: scale(1.1); /* Slight enlargement */
+    fill: #ff66b2; /* Fargeendring ved fokus */
+    transform: scale(1.1); /* Forstørring ved fokus */
     transition: fill 0.3s ease, transform 0.3s ease;
 }
 
-/* Validation Message Styling */
-.text-danger {
-    font-size: 0.85rem;
-    color: #e74c3c; /* Bright red for error messages */
-    text-align: left; /* Align messages to the left */
-    margin-top: -10px;
-    margin-bottom: 10px;
+/* Placeholder-farge */
+.form-control::placeholder {
+    color: #aaa;
 }
 
-/* Submit Button Styling */
+/* Knapputforming */
 .btn-primary {
-    background-color: #ff66b2; /* Vibrant pink */
+    background-color: #ff66b2;
     border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    width: 100%; /* Full-width button */
-    color: #ffffff; /* White text */
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth hover animation */
-    box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.3); /* Soft shadow */
 }
 
 .btn-primary:hover {
-    background-color: #ff4da6; /* Darker pink */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0px 8px 15px rgba(255, 102, 178, 0.5); /* Enhance shadow */
-}
-
-.btn-primary:active {
-    background-color: #e33e94; /* Even darker on click */
-    transform: translateY(1px); /* Press effect */
-    box-shadow: 0px 3px 8px rgba(255, 102, 178, 0.3); /* Reduced shadow */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .col-md-6 {
-        padding: 30px 20px;
-        max-width: 100%;
-    }
-
-    .form-control {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-        min-width: auto; /* Auto-adjust for smaller screens */
-    }
-
-    .btn-primary {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background-color: #ff4da6;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }

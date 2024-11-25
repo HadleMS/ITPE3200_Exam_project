@@ -53,13 +53,13 @@
             @if (!string.IsNullOrEmpty(Model.ImageUrl))
             {
                 <label>Current Image:</label>
-                <img src="@Model.ImageUrl" alt="Current Image" class="img-thumbnail" style="width: 150px; height: auto;" />
+                <img src="@Model.ImageUrl" alt="Current Image" class="img-thumbnail" />
             }
             <input type="file" asp-for="ImageFile" class="form-control" />
             <span asp-validation-for="ImageFile" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn btn-success mt-4">Save Changes</button>
-        <a asp-action="Products" class="btn btn-outline-success mt-4">Back to Products</a>
+        <button type="submit">Save Changes</button>
+        <a asp-action="Products">Back to Products</a>
     </form>
 </div>

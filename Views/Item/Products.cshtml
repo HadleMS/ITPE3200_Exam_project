@@ -1,15 +1,15 @@
 @model ItemsViewModel
 
-<link rel="stylesheet" href="~/css/Products.css">
+<link rel="stylesheet" href="~/css/Products.css?v=1.1">
 
 <!-- Button Container with Create New Item and View Switch Buttons -->
 <div class="button-container">
     <div class="left-buttons">
         <button id="gridButton" class="view-switch-button active" onclick="toggleView('grid')">
-            <img src="/images/grid-view.jpg" alt="Grid View" style="width: 30px; height: auto; vertical-align: middle;" />
+            <img src="/images/grid-view.jpg" alt="Grid View" />
         </button>
         <button id="tableButton" class="view-switch-button" onclick="toggleView('table')">
-            <img src="/images/table.png" alt="Table View" style="width: 30px; height: auto; vertical-align: middle;" />
+            <img src="/images/table.png" alt="Table View" />
         </button>
     </div>
     <div class="right-buttons">
@@ -17,7 +17,22 @@
     </div>
 </div>
 
-<!-- Stretch the partial view to full width -->
+<!-- Full-Width Container for Grid and Table Views -->
 <div class="full-width-container">
-    <partial name="Grid" model="Model" />
+    <!-- Grid View (initially visible) -->
+    <div id="gridView" class="view-container" style="display: block;">
+        @await Html.PartialAsync("Grid", Model)
+    </div>
+
+    <!-- Table View (initially hidden) -->
+    <div id="tableView" class="view-container" style="display: none;">
+        @await Html.PartialAsync("Table", Model)
+    </div>
 </div>
+<!-- "View More" Button (for grid view only) -->
+<div id="viewMoreContainer" style="text-align: center; margin-top: 20px;">
+    <button id="viewMoreButton" class="btn-secondary" onclick="loadMoreItems()">View More</button>
+</div>
+
+    <partial name="Grid" model="Model" />
+    <script src="~/js/Products.js"></script>

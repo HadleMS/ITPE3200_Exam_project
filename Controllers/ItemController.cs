@@ -23,40 +23,56 @@ namespace Exam.Controllers
         }
 
         // Action to display Products.cshtml
-        public IActionResult Products()
-        {
-            return View("Products");
-        }
+      public async Task<IActionResult> Products()
+{
+    var items = await _itemRepository.GetAll(); // Get items from the repository
+    if (items == null)
+    {
+        _logger.LogError("[ItemController] Item list not found.");
+        return NotFound("Item list not found");
+    }
+
+    var viewModel = new ItemsViewModel
+    {
+        Items = items.ToList(), // Ensure that 'Items' is populated correctly
+        TotalPages = (int)Math.Ceiling(items.Count() / (double)6),
+        CurrentPage = 1
+    };
+
+    return View(viewModel); // Pass the populated view model
+}
+
 
         // Action to display items in grid layout with pagination
         public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
-        {
-            var items = await _itemRepository.GetAll();
-            if (items == null)
-            {
-                _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
-                return NotFound("Item list not found");
-            }
+{
+    var items = await _itemRepository.GetAll();
+    if (items == null)
+    {
+        _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
+        return NotFound("Item list not found");
+    }
 
-            var totalItems = items.Count();
-            var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+    var totalItems = items.Count();
+    var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-            var viewModel = new ItemsViewModel
-            {
-                Items = pagedItems,
-                TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize),
-                CurrentPage = page
-            };
+    var viewModel = new ItemsViewModel
+    {
+        Items = pagedItems,
+        TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize),
+        CurrentPage = page
+    };
 
-            // Check for AJAX request to return only the items as partial view
-            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
-            {
-                return PartialView("_ItemCardsPartial", viewModel);
-            }
+    // Check for AJAX request to return only the items as partial view
+    if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+    {
+        return PartialView("_ItemCardsPartial", viewModel);
+    }
 
-            // For full page load
-            return View(viewModel);
-        }
+    // For full page load
+    return View(viewModel);
+}
+
 
         // Partial view action for table view
         public async Task<IActionResult> TablePartial()
@@ -239,4 +255,16 @@ public async Task<IActionResult> Update(Item item, IFormFile ImageFile)
             return RedirectToAction(nameof(Products));
         }
     }
+    public class GridViewModel
+{
+    public IEnumerable<Item> Items { get; set; }
+    public bool ShowViewMore { get; set; }
+
+    public GridViewModel(IEnumerable<Item> items, bool showViewMore)
+    {
+        Items = items;
+        ShowViewMore = showViewMore;
+    }
+}
+
 }

@@ -42,6 +42,12 @@
     border: 1px solid #ccc;
 }
 
+.view-switch-button img {
+    width: 30px; /* Inline style: width: 30px */
+    height: auto; /* Inline style: height: auto */
+    vertical-align: middle; /* Inline style: vertical-align: middle */
+}
+
 .view-switch-button:hover {
     background-color: #f1f1f1;
 }

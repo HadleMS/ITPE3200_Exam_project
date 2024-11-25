@@ -1,45 +1,73 @@
 ﻿@model Item
 
+@{
+    ViewData["Title"] = "Delete Item";
+}
+
 <link href="~/css/Delete.css" rel="stylesheet" />
 
-<!-- Form container for centering -->
+<!-- Centralized form-container -->
 <div class="form-container">
     <h2>Delete Item</h2>
-    <hr />
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.ItemId" method="post" id="deleteForm">
+        <!-- Hidden input for ItemId -->
+        <input type="hidden" asp-for="ItemId" />
 
-    <!-- Definition list with horizontal layout -->
-    <dl class="dl-horizontal row">
-        <!-- Displaying the item's properties using the Model -->
-        <dt class="col-sm-6">Name</dt>
-        <dd class="col-sm-6">@Model.Name</dd>
+        <!-- Display validation summary -->
+        <div asp-validation-summary="All" class="text-danger"></div>
 
-        <dt class="col-sm-6">Food group</dt>
-        <dd class="col-sm-6">@Model.Food_Group</dd>
+        <!-- Display item details -->
+        <div class="form-group">
+            <label>Name</label>
+            <p class="form-control-plaintext">@Model.Name</p>
+        </div>
 
-        <dt class="col-sm-6">Energy per 100g</dt>
-        <dd class="col-sm-6">@Model.Energi_Kj kj</dd>
+        <div class="form-group">
+            <label>Food Group</label>
+            <p class="form-control-plaintext">@Model.Food_Group</p>
+        </div>
 
-        <dt class="col-sm-6">Fat per 100g</dt>
-        <dd class="col-sm-6">@Model.Fett g</dd>
+        <div class="form-group">
+            <label>Energy per 100g</label>
+            <p class="form-control-plaintext">@Model.Energi_Kj kj</p>
+        </div>
 
-        <dt class="col-sm-6">Protein per 100g</dt>
-        <dd class="col-sm-6">@Model.Protein g</dd>
+        <div class="form-group">
+            <label>Fat per 100g</label>
+            <p class="form-control-plaintext">@Model.Fett g</p>
+        </div>
 
-        <dt class="col-sm-6">Carbohydrates per 100g</dt>
-        <dd class="col-sm-6">@Model.Karbohydrat g</dd>
+        <div class="form-group">
+            <label>Protein per 100g</label>
+            <p class="form-control-plaintext">@Model.Protein g</p>
+        </div>
 
-        <dt class="col-sm-6">Salt per 100g</dt>
-        <dd class="col-sm-6">@Model.Salt g</dd>
+        <div class="form-group">
+            <label>Carbohydrates per 100g</label>
+            <p class="form-control-plaintext">@Model.Karbohydrat g</p>
+        </div>
 
-        <dt class="col-sm-6">Image</dt>
-        <dd class="col-sm-6"> <img src="@Model.ImageUrl" alt="Item image" class="small-image"/></dd>
-    </dl>
+        <div class="form-group">
+            <label>Salt per 100g</label>
+            <p class="form-control-plaintext">@Model.Salt g</p>
+        </div>
 
-    <!-- Form for confirming deletion, posts to the DeleteConfirmed action with the item ID -->
-    <form asp-action="DeleteConfirmed" asp-route-id="@Model.ItemId" method="post">
-        <!-- Delete button -->
-        <button type="submit" class="btn btn-danger">Delete</button>
-        <!-- Cancel button to go back to the Table view -->
-        <a asp-action="Products" class="btn btn-secondary">Cancel</a>
+        <div class="form-group">
+            <label>Image</label>
+            <div>
+                <img src="@Model.ImageUrl" alt="Item image" class="img-thumbnail" />
+            </div>
+        </div>
+
+        <!-- Confirmation message -->
+        <div class="alert alert-warning">
+            Are you sure you want to delete this item? This action cannot be undone.
+        </div>
+
+        <!-- Action buttons -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Products" class="btn btn-secondary">Cancel</a>
+        </div>
     </form>
 </div>

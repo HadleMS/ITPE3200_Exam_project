@@ -1,8 +1,9 @@
 @model ItemsViewModel
 
 <link rel="stylesheet" href="~/css/Grid.css">
+
 <!-- Content wrapper for dynamically loading grid -->
-<div style="overflow-x: auto" id="contentWrapper">
+<div id="contentWrapper">
     <div id="itemsContainer">
         <!-- Initial items will load here dynamically -->
     </div>
@@ -17,7 +18,7 @@
 </div>
 
 <!-- "View More" Button (for grid view only) -->
-<div id="viewMoreContainer" style="text-align: center; margin-top: 20px;">
+<div id="viewMoreContainer">
     <button id="viewMoreButton" class="btn-secondary" onclick="loadMoreItems()">View More</button>
 </div>
 

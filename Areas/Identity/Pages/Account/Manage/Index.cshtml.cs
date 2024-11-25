@@ -37,23 +37,19 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
 
        public class InputModel
         {
-            [Required(ErrorMessage = "Phone number is required.")]
             [Phone(ErrorMessage = "Please enter a valid phone number.")]
             [RegularExpression(@"^\+?[1-9]\d{1,14}$", ErrorMessage = "Please enter a valid phone number (e.g., +47 123 45 678 or 123 45 678).")]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
-            [Required(ErrorMessage = "Full name is required.")]
             [StringLength(100, ErrorMessage = "The full name must be at least 2 and at most 100 characters.", MinimumLength = 2)]
             [Display(Name = "Full name")]
             public string FullName { get; set; }
 
-            [Required(ErrorMessage = "Address is required.")]
             [StringLength(200, ErrorMessage = "The address must be at least 5 and at most 200 characters.", MinimumLength = 5)]
             [Display(Name = "Address")]
             public string Address { get; set; }
 
-            [Required(ErrorMessage = "Date of Birth is required.")]
             [DataType(DataType.Date)]
             [Display(Name = "DOB")]
             public DateTime? DOB { get; set; }

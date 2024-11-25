@@ -40,8 +40,9 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Email is required.")]
+            [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+            [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$", ErrorMessage = "The email address format is invalid.")]
             [Display(Name = "New email")]
             public string NewEmail { get; set; }
         }

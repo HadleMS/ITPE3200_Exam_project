@@ -2,120 +2,334 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
-using Microsoft.AspNetCore.Http;
+using Exam.Controllers;
 using Exam.DAL;
 using Exam.Models;
 using Exam.ViewModels;
-using Exam.Controllers;
 
-namespace Exam.Tests 
-{     
-   public class ItemControllerTests     
-   {         
-       private readonly Mock<IItemRepository> _mockRepo;         
-       private readonly Mock<ILogger<ItemController>> _mockLogger;         
-       private readonly ItemController _controller;         
-       private readonly List<Item> _testItems;         
-
-       public ItemControllerTests()     
-       {         
-           _mockRepo = new Mock<IItemRepository>();         
-           _mockLogger = new Mock<ILogger<ItemController>>();                  
-           
-           _testItems = new List<Item>         
-           {             
-               new Item { ItemId = 1, Name = "Item 1" },             
-               new Item { ItemId = 2, Name = "Item 2" },             
-               new Item { ItemId = 3, Name = "Item 3" },             
-               new Item { ItemId = 4, Name = "Item 4" },             
-               new Item { ItemId = 5, Name = "Item 5" },             
-               new Item { ItemId = 6, Name = "Item 6" },             
-               new Item { ItemId = 7, Name = "Item 7" }         
-           };          
-           
-           _mockRepo.Setup(repo => repo.GetAll())                 
-               .ReturnsAsync(_testItems);          
-           
-           _controller = new ItemController(_mockRepo.Object, _mockLogger.Object)         
-           {             
-               ControllerContext = new ControllerContext             
-               {                 
-                   HttpContext = new DefaultHttpContext()             
-               }         
-           };     
-       }
-
-       [Fact]
-       public async Task Grid_ReturnsNotFound_WhenRepositoryReturnsNull()
-       {
-           // Arrange
-           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync((List<Item>?)null);
-
-           // Act
-           var result = await _controller.Grid();
-
-           // Assert
-           Assert.IsType<NotFoundObjectResult>(result);
-       }
-
-       [Fact]
-       public async Task Grid_ReturnsPaginatedItems_WithCorrectPageSize()
-       {
-           // Arrange
-           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync(_testItems);
-           const int page = 1;
-           const int pageSize = 3;
-
-           // Act
-           var result = await _controller.Grid(page, pageSize) as ViewResult;
-           var model = result?.Model as ItemsViewModel;
-
-           // Assert
-           Assert.NotNull(model);
-           Assert.Equal(pageSize, model.Items.Count());
-           Assert.Equal(3, model.TotalPages);
-           Assert.Equal(page, model.CurrentPage);
-       }
-
-       [Fact]
-       public async Task Grid_ReturnsPartialView_WhenAjaxRequest()
-       {
-        // Arrange
-        _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync(_testItems);
-        _controller.ControllerContext = new ControllerContext
+namespace MyShop.Test.Controllers
+{
+    public class ItemControllerTests
+    {
+        [Fact]
+        public async Task TestTable()
         {
-            HttpContext = new DefaultHttpContext()
+            // Arrange
+            var itemList = new List<Item>()
+            {
+                new Item
+                {
+                    Name = "Tine Helmelk",
+                    Food_Group = "Dairy",
+                    Energi_Kj = 264,
+                    Fett = 3.5,
+                    Protein = 3.4,
+                    Karbohydrat = 4.5,
+                    Salt = 0.1,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/helmelk.jpg"
+                },
+                new Item
+                {
+                    Name = "Kjøttdeig",
+                    Food_Group = "Meat",
+                    Energi_Kj = 791,
+                    Fett = 14,
+                    Protein = 18,
+                    Karbohydrat = 0,
+                    Salt = 0.8,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/kjøttdeig.jpg"
+                },
+                new Item
+                {
+                    Name = "Kylling",
+                    Food_Group = "Meat",
+                    Energi_Kj = 632,
+                    Fett = 8.8,
+                    Protein = 18,
+                    Karbohydrat = 0,
+                    Salt = 0.2,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/kylling.jpg"
+                },
+                new Item
+                {
+                    Name = "Tine Lettmelk",
+                    Food_Group = "Dairy",
+                    Energi_Kj = 155,
+                    Fett = 0.5,
+                    Protein = 3.5,
+                    Karbohydrat = 4.5,
+                    Salt = 0.1,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/lettmelk.jpg"
+                },
+                new Item
+                {
+                    Name = "Peanøtter",
+                    Food_Group = "Nuts",
+                    Energi_Kj = 2634,
+                    Fett = 52,
+                    Protein = 24,
+                    Karbohydrat = 14,
+                    Salt = 1.2,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/peanøtter.jpg"
+                },
+                new Item
+                {
+                    Name = "Polpa",
+                    Food_Group = "Sauce",
+                    Energi_Kj = 110,
+                    Fett = 0.2,
+                    Protein = 1.2,
+                    Karbohydrat = 3.9,
+                    Salt = 0.3,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/polpa.jpg"
+                },
+                new Item
+                {
+                    Name = "Blåbær",
+                    Food_Group = "Berries",
+                    Energi_Kj = 181,
+                    Fett = 0.5,
+                    Protein = 0.5,
+                    Karbohydrat = 7.6,
+                    Salt = 0,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/blåbær.jpg"
+                },
+                new Item
+                {
+                    Name = "Brokkoli",
+                    Food_Group = "Vegetables",
+                    Energi_Kj = 180,
+                    Fett = 0.6,
+                    Protein = 4.3,
+                    Karbohydrat = 3.1,
+                    Salt = 0,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/brokkoli.jpg"
+                },
+                new Item
+                {
+                    Name = "Kremgo",
+                    Food_Group = "Dairy",
+                    Energi_Kj = 1063,
+                    Fett = 24,
+                    Protein = 6.7,
+                    Karbohydrat = 2.8,
+                    Salt = 1,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/kremgo.jpg"
+                },
+                new Item
+                {
+                    Name = "Kokt skinke",
+                    Food_Group = "Meat",
+                    Energi_Kj = 415,
+                    Fett = 1.8,
+                    Protein = 19,
+                    Karbohydrat = 1.7,
+                    Salt = 1.9,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/skinke.jpg"
+                }, 
+                new Item
+                {
+                    Name = "Norvegia 26% Skivet",
+                    Food_Group = "Dairy",
+                    Energi_Kj = 1400,
+                    Fett = 26,
+                    Protein = 27,
+                    Karbohydrat = 0.0,
+                    Salt = 1.2,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/norvegia_skivet.jpg"},
+                    
+                new Item
+                {
+                    Name = "Gulrot 400g",
+                    Food_Group = "Vegetables",
+                    Energi_Kj = 150,
+                    Fett = 0.2,
+                    Protein = 0.6,
+                    Karbohydrat = 6.7,
+                    Salt = 0.1,
+                    HasGreenKeyhole = true,
+                    ImageUrl = "/images/gulrot.jpg"
+                },
+            
+                new Item
+                {
+                    Name = "Pepsi Max 1,5l",
+                    Food_Group = "Beverages",
+                    Energi_Kj = 1.7,
+                    Fett = 0.0,
+                    Protein = 0.0,
+                    Karbohydrat = 0.0,
+                    Salt = 0.02,
+                    HasGreenKeyhole = false,
+                    ImageUrl = "/images/pepsi_max.jpg"
+                }
+                
             };
-            _controller.Request.Headers["X-Requested-With"] = "XMLHttpRequest";
+
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.GetAll()).ReturnsAsync(itemList);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
             // Act
-            var result = await _controller.Grid();
+            var result = await controller.Table();
+
             // Assert
-            var partialView = result as PartialViewResult;
-            // Ensure partialView is not null before accessing ViewName
-            Assert.NotNull(partialView);  // Ensure partialView is not null
-            Assert.Equal("_ItemCardsPartial", partialView.ViewName);  // Now safe to access ViewName
-            }
+            var viewResult = Assert.IsType<ViewResult>(result);
+            var itemsViewModel = Assert.IsAssignableFrom<ItemsViewModel>(viewResult.ViewData.Model);
+            Assert.Equal(13, itemsViewModel.Items.Count());
+            Assert.Equal(itemList, itemsViewModel.Items);
+        }
 
-       [Fact]
-       public async Task Grid_ReturnsCorrectItems_ForLastPage()
-       {
-           // Arrange
-           _mockRepo.Setup(repo => repo.GetAll()).ReturnsAsync(_testItems);
-           const int page = 2;
-           const int pageSize = 6;
+        [Fact]
+        public async Task Create_ValidItem_ReturnsRedirectToAction() //Positiv
+        {
+            // Arrange
+            var item = new Item { ItemId = 1, Name = "Test Item" };
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.Create(It.IsAny<Item>())).ReturnsAsync(true);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
 
-           // Act
-           var result = await _controller.Grid(page, pageSize) as ViewResult;
-           var model = result?.Model as ItemsViewModel;
+            // Act
+            var result = await controller.Create(item, null);
 
-           // Assert
-           Assert.NotNull(model);
-           Assert.Single(model.Items);
-           Assert.Equal(2, model.TotalPages);
-           Assert.Equal(page, model.CurrentPage);
-       }
-   }
+            // Assert
+            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Products", redirectResult.ActionName);
+        }
+
+        [Fact]
+        public async Task Create_InvalidItem_ReturnsView() //Negativ
+        {
+            // Arrange
+            var item = new Item { ItemId = 1, Name = "" };
+            var mockItemRepository = new Mock<IItemRepository>();
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+            controller.ModelState.AddModelError("Name", "Required");
+
+            // Act
+            var result = await controller.Create(item, null);
+
+            // Assert
+            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.Equal(item, viewResult.Model);
+        }
+
+        [Fact]
+        public async Task Details_ExistingItem_ReturnsPartialView() //Positiv
+        {
+            // Arrange
+            var item = new Item { ItemId = 1, Name = "Test Item" };
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.GetItemById(1)).ReturnsAsync(item);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
+            // Act
+            var result = await controller.Details(1);
+
+            // Assert
+            var viewResult = Assert.IsType<PartialViewResult>(result);
+            var model = Assert.IsType<Item>(viewResult.Model);
+            Assert.Equal(1, model.ItemId);
+        }
+
+        [Fact]
+        public async Task Details_NonExistingItem_ReturnsNotFound() //Negativ
+        {
+            // Arrange
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.GetItemById(999)).ReturnsAsync((Item)null);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
+            // Act
+            var result = await controller.Details(999);
+
+            // Assert
+            Assert.IsType<NotFoundObjectResult>(result);
+        }
+
+        [Fact]
+        public async Task Update_ValidItem_ReturnsRedirectToAction() //Positiv
+        {
+            // Arrange
+            var item = new Item { ItemId = 1, Name = "Updated Item" };
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.Update(It.IsAny<Item>())).ReturnsAsync(true);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
+            // Act
+            var result = await controller.Update(item, null);
+
+            // Assert
+            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Products", redirectResult.ActionName);
+        }
+
+        [Fact]
+        public async Task Update_InvalidItem_ReturnsView() //Negativ
+        {
+            // Arrange
+            var item = new Item { ItemId = 1 };
+            var mockItemRepository = new Mock<IItemRepository>();
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+            controller.ModelState.AddModelError("Name", "Required");
+
+            // Act
+            var result = await controller.Update(item, null);
+
+            // Assert
+            var viewResult = Assert.IsType<ViewResult>(result);
+            Assert.Equal(item, viewResult.Model);
+        }
+
+        [Fact]
+        public async Task DeleteConfirmed_ValidId_ReturnsRedirectToAction() //Positiv
+        {
+            // Arrange
+            var mockItemRepository = new Mock<IItemRepository>();
+            mockItemRepository.Setup(repo => repo.Delete(1)).ReturnsAsync(true);
+            var mockLogger = new Mock<ILogger<ItemController>>();
+            var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
+            // Act
+            var result = await controller.DeleteConfirmed(1);
+
+            // Assert
+            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Products", redirectResult.ActionName);
+        }
+
+     [Fact]
+public async Task DeleteConfirmed_InvalidId_ReturnsBadRequest() //Negativ
+{
+    // Arrange
+    var mockItemRepository = new Mock<IItemRepository>();
+    mockItemRepository.Setup(repo => repo.Delete(999)).ReturnsAsync(false);
+    var mockLogger = new Mock<ILogger<ItemController>>();
+    var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
+
+    // Act
+    var result = await controller.DeleteConfirmed(999);
+
+    // Assert
+    Assert.IsType<BadRequestObjectResult>(result);
+}
+    }
 }

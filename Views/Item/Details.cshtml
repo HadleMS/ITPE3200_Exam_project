@@ -1,30 +1,30 @@
-@model Exam.Models.Item
-<link rel="stylesheet" href="~/css/Details.css">
 <div>
-    <h3 class="my-5 d-flex align-items-center justify-content-between">
-        @Model.Name
-        @if (Model.HasGreenKeyhole)
-        {
-            <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
-        }
-    </h3>
+    <h3 class="item-header my-5">
+    @Model.Name
+    @if (Model.HasGreenKeyhole)
+    {
+        <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
+    }
+</h3>
+
+
     <div class="row gx-5">
-        <!-- Image and Action Links Section -->
+        <!-- Image Section -->
         <div class="col-md-5 position-relative">
             <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
-
-            <!-- Action links for authenticated users, moved under the image -->
-            @if (User.Identity?.IsAuthenticated == true)
-            {
-                <div class="modal-actions">
-                    <a href="@Url.Action("Update", new { id = Model.ItemId })" class="update-link">Update</a>
-                    <a href="@Url.Action("Delete", new { id = Model.ItemId })" class="delete-link">Delete</a>
-                </div>
-            }
         </div>
 
         <!-- Nutritional Information Section -->
         <div class="col-md-7">
+            <!-- Action Links for Authenticated Users -->
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <div class="static-actions mb-3">
+                    <a href="@Url.Action("Update", new { id = Model.ItemId })" class="update-link">Update</a>
+                    <a href="@Url.Action("Delete", new { id = Model.ItemId })" class="delete-link">Delete</a>
+                </div>
+            }
+
             <!-- Nutritional Information in a dropdown that starts open -->
             <details class="nutrition-details" open>
                 <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>

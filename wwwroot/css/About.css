@@ -91,8 +91,12 @@ body {
         width: 100%;
         height: 1px;
         background-color: #ddd;
-        margin: 3rem 0;
-    }
+        margin: 3rem auto;
+    }  
+     .cta-container {
+        text-align: center;
+        margin-top: 3rem;
+     }
 
     /* CTA button */
     .cta-button {

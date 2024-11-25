@@ -9,11 +9,24 @@
         }
     </h3>
     <div class="row gx-5">
+        <!-- Image and Action Links Section -->
         <div class="col-md-5 position-relative">
             <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
+
+            <!-- Action links for authenticated users, moved under the image -->
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <div class="modal-actions">
+                    <a href="@Url.Action("Update", new { id = Model.ItemId })" class="update-link">Update</a>
+                    <a href="@Url.Action("Delete", new { id = Model.ItemId })" class="delete-link">Delete</a>
+                </div>
+            }
         </div>
+
+        <!-- Nutritional Information Section -->
         <div class="col-md-7">
-            <details class="nutrition-details">
+            <!-- Nutritional Information in a dropdown that starts open -->
+            <details class="nutrition-details" open>
                 <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
                 <div class="nutrition-table-container">
                     <table>
@@ -29,4 +42,3 @@
         </div>
     </div>
 </div>
-

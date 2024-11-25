@@ -88,3 +88,66 @@ details tr:nth-child(even) {
 }
 
 
+.nutrition-details {
+    margin-top: 20px;
+}
+
+.nutrition-details summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nutrition-details .nutrition-table-container {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+
+.update-link {
+    color: #28a745;
+    text-decoration: none;
+    border: 1px solid #28a745;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.update-link:hover {
+    color: white;
+    background-color: #28a745;
+}
+
+.delete-link {
+    color: #dc3545;
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.delete-link:hover {
+    color: white;
+    background-color: #dc3545;
+}
+/* Modal actions placed in the bottom left corner of the image container */
+.modal-actions {
+    position: absolute;   /* Position absolute relative to .col-md-5 */
+    bottom: 20px;         /* 20px from the bottom */
+    left: 20px;           /* 20px from the left */
+    display: flex;
+    flex-direction: row; 
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Styling for update and delete links */
+.update-link, .delete-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}

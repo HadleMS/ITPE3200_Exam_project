@@ -11,6 +11,18 @@ body {
     overflow-x: hidden;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Poppins-font */
+    font-weight: 700; /* Fet tekst */
+    font-size: 2.5rem; /* Størrelse på fonten */
+    text-align: center; /* Sentrer teksten */
+    color: #343a40; /* Mørk grå farge */
+    margin-bottom: 1.5rem; /* Gi litt avstand under */
+}
+
+
 /* Input-felt styling */
 .form-control {
     border-radius: 30px;

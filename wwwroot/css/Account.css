@@ -1,8 +1,7 @@
 /* Bakgrunnsfarge på hele siden */
 body {
-    background-color: #fbfdfb; /* Lys grønn bakgrunn */
+    background-color: #C1FFD5; /* Lys grønn bakgrunn */
     margin: 0;
-    font-family: Arial, sans-serif;
 }
 /* Wrapper for skjemaet */
 .form-wrapper {
@@ -17,6 +16,7 @@ body {
 /* Sentral boks for skjemaet */
 .col-md-6 {
     background-color: #ffffff;
+    font-family: 'Georgia', serif;
     border-radius: 20px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;

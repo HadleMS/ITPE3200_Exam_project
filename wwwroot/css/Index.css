@@ -90,6 +90,7 @@ p {
 }
 
 /* Features Section */
+/* Features Section */
 .features-section {
     display: flex;
     flex-wrap: wrap;
@@ -119,6 +120,7 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     width: 250px;
+    height: 250px; /* Set fixed height */
     transition: all 0.4s ease;
     position: relative;
 }
@@ -139,34 +141,38 @@ p {
 }
 
 .feature-item p {
-    font-size: 0.9rem;  /* Smaller text */
-    margin: 0.8rem 0;  /* Reduced margin */
+    font-size: 0.9rem;
+    margin: 0.8rem 0;
     min-height: 50px;
+    flex-grow: 1; /* Allow paragraph to fill available space */
 }
 
-
+/* Position the button at the bottom */
+.feature-item .small-button {
+    margin-top: auto; /* Push button to bottom */
+}
 
 /* Button styles */
 .small-button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;  /* Reduced padding */
+    padding: 0.6rem 1.2rem;
     background: #39a554;
     color: white !important;
     border-radius: 8px;
-    font-size: 0.9rem;  /* Slightly smaller font */
+    font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none !important;
     text-align: center;
     border: none;
     transition: all 0.3s ease;
-    min-width: 120px;  /* Reduced minimum width */
+    min-width: 120px;
     cursor: pointer;
 }
 
 .small-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(57, 165, 84, 0.3);
-    background: #45b563;  /* Slightly lighter on hover */
+    background: #45b563;
     color: white !important;
     text-decoration: none !important;
 }

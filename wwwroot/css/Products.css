@@ -1,3 +1,39 @@
+body {
+    background-color: #F1FFF6; /* Lys grønn bakgrunn */ 
+}
+/* Generelle tabellinnstillinger */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Sikrer at celler deler kantlinjer */
+    background-color: white; /* Bakgrunnsfarge for tabellen */
+    border: 1px solid #ddd; /* Legger til en lys grå ramme rundt hele tabellen */
+}
+
+/* Header-styling */
+thead th {
+    background-color: #b96f6f; /* Velg ønsket bakgrunnsfarge for headeren */
+    color: white; /* Tekstfarge */
+    font-weight: bold; /* Fet skrift */
+    border: 1px solid #ddd; /* Legger til ramme mellom headercellene */
+    text-align: center; /* Justerer teksten midtstilt */
+}
+
+/* Cellestil (vanlig innhold) */
+td, th {
+    padding: 10px; /* Gjør cellene mer lesbare */
+    border: 1px solid #ddd; /* Gir hver celle en lys grå ramme */
+    text-align: left; /* Venstrejustering for tekst */
+}
+
+/* Stripede rader for bedre lesbarhet */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Lys grå for partallsrader */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white; /* Hvit for oddetallsrader */
+}
+
 /* Full width container to ensure the content stretches to the full page width */
 .full-width-container {
     width: 100%;

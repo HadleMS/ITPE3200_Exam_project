@@ -1,21 +1,60 @@
-.product-image {
-    max-width: 100%;
-    max-height: 400px;
-    width: auto;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+/* Style for hele tabellen */
+table {
+    background-color: #f9f9f9 !important; /* Lys grå bakgrunn for tabellen */
+    border-collapse: collapse; /* Fjern mellomrom mellom cellene */
+    width: 100%;
+}
+
+.item-header {
+    font-weight: bold; /* Gjør teksten fet */
+}
+
+
+/* Style for tabellceller */
+td, th {
+    background-color: #f9f9f9 !important; /* Lys grå bakgrunn for alle celler */
+    padding: 10px; /* Litt ekstra padding for lesbarhet */
+    font-size: 1rem; /* Standard skriftstørrelse */
+    color: #555; /* Tekstfarge */
+    text-align: left; /* Teksten venstrejusteres */
+}
+
+/* Style for første kolonne (f.eks. labels) */
+details td:first-child {
+    font-weight: bold;
+    color: #333; /* Mørkere tekstfarge for tydelighet */
+}
+
+/* Bakgrunnsfarge for partallsrader (stripede rader) */
+details tr:nth-child(even) {
+    background-color: #f2f2f2 !important; /* Litt lysere grå for å skille rader */
+}
+
+/* Nutrition table container */
+.nutrition-table-container {
+    background-color: #f9f9f9 !important; /* Lys grå bakgrunn rundt tabellen */
+    padding: 15px; /* Padding rundt tabellen */
+    border-radius: 8px; /* Runde kanter for en moderne stil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Myk skygge */
+    margin-top: 10px; /* Litt luft over tabellen */
+}
+
+/* Modal styles */
+.modal-content {
+    background-color: #fff; /* Hvit bakgrunn for modal */
+    border-radius: 12px; /* Runde kanter */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Myk skygge */
+    padding: 20px; /* Padding inni modalen */
 }
 
 /* Style for nøkkelhullsmerke */
 .keyhole-icon {
-    width: 30px;
-    height: auto;
-    margin-left: 10px; /* Add space between the name and the icon */
+    width: 30px; /* Ikonets bredde */
+    height: auto; /* Bevarer proporsjonene */
+    margin-left: 10px; /* Avstand mellom navn og ikon */
 }
 
-/* Style for summary in subtle button style */
+/* Style for summary i subtile knappestil */
 .summary-subtle {
     font-weight: bold;
     font-size: 1.1rem;
@@ -30,105 +69,21 @@
     transition: background-color 0.2s;
 }
 
-/* Hover effect for summary */
+/* Hover-effekt for summary */
 .summary-subtle:hover {
     background-color: #f1f1f1;
 }
 
-/* Arrow adjustment */
+/* Roter pilen når "details" er åpnet */
+details[open] .summary-subtle::after {
+    transform: rotate(180deg);
+}
+
+/* Pilstil */
 .summary-subtle::after {
     content: "▼";
     font-size: 0.9rem;
     color: #666;
     transform: rotate(0deg);
     transition: transform 0.2s ease;
-}
-
-/* Rotate the arrow when open */
-details[open] .summary-subtle::after {
-    transform: rotate(180deg);
-}
-
-/* Style for the nutrition table */
-.nutrition-table-container {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-}
-
-details table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-details td {
-    padding: 10px; /* Increased padding for better readability */
-    font-size: 1rem;
-    color: #555;
-}
-
-details td:first-child {
-    font-weight: bold;
-    color: #333;
-}
-
-details tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray background for even rows */
-}
-
-/* Modal styles */
-.modal-content {
-    background-color: #fff;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-    padding: 20px;
-    transition: transform 0.2s; /* Smooth scaling effect */
-}
-
-
-.nutrition-details {
-    margin-top: 20px;
-}
-
-.nutrition-details summary {
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.nutrition-details .nutrition-table-container {
-    padding: 15px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-top: none;
-}
-
-
-.update-link {
-    color: #28a745;
-    text-decoration: none;
-    border: 1px solid #28a745;
-    padding: 4px 8px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.update-link:hover {
-    color: white;
-    background-color: #28a745;
-}
-
-.delete-link {
-    color: #dc3545;
-    text-decoration: none;
-    border: 1px solid #dc3545;
-    padding: 4px 8px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.delete-link:hover {
-    color: white;
-    background-color: #dc3545;
 }

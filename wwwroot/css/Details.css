@@ -41,12 +41,13 @@ details tr:nth-child(even) {
 /* Nutrition table container */
 .nutrition-table-container {
     background-color: #f9f9f9 !important; /* Lys grå bakgrunn rundt tabellen */
-    padding: 15px; /* Padding rundt tabellen */
     border-radius: 8px; /* Runde kanter for en moderne stil */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Myk skygge */
-    margin-top: 0px; /* Fjern tomrom over tabellen */
 }
 
+div.nutrition-details .nutrition-table-container {
+    margin-top: -20px !important; /* Mer spesifikk selektor for å tvinge endringen */
+}
 
 /* Modal styles */
 .modal-content {
@@ -68,8 +69,8 @@ details tr:nth-child(even) {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: -50px;
+    margin-top: -100px;
     color: #333;
     border-bottom: 1px solid #ccc;
     display: flex;

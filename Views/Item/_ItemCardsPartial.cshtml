@@ -2,7 +2,7 @@
 @{
     double EnergiToKcal(double energi)
     {
-        return Math.Round(energi/4.184);
+        return Math.Round(energi / 4.184);
     }
 }
 
@@ -11,7 +11,8 @@
     {
         <div class="col">
             <div class="card">
-                <a href="javascript:void(0);" style="position: relative;" class="open-modal w-100" data-item-id="@item.ItemId">
+                <a href="javascript:void(0);" style="position: relative;" class="open-modal w-100"
+                    data-item-id="@item.ItemId">
                     <img src="@item.ImageUrl" class="img-fluid custom-image-size card-img-top" alt="@item.Name" />
                     <div class="card-body">
                         <h5 class="card-title">@item.Name</h5>
@@ -19,7 +20,8 @@
                     </div>
                     @if (item.HasGreenKeyhole)
                     {
-                        <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" style="position: absolute; top: 15px; right: 15px;" class="keyhole-icon" />
+                        <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke"
+                            style="position: absolute; top: 15px; right: 15px;" class="keyhole-icon" />
                     }
                 </a>
             </div>

@@ -98,7 +98,7 @@ h1 {
     transform: translateX(50%);
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 767px) {
     /* Background circle - placed behind everything */
     .container:before {
         content: "";

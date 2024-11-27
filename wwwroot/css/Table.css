@@ -55,8 +55,8 @@ tr:nth-child(even) {
 }
 
 .action-links {
-    display: flex;
-    gap: 12px;
+    /* display: flex;
+    gap: 12px; */
 }
 
 .action-links a {

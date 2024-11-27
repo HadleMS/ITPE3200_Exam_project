@@ -1,34 +1,23 @@
 <link rel="stylesheet" href="~/css/Details.css">
 
 <div>
-    <h3 class="item-header my-5">
-        @Model.Name
-        @if (Model.HasGreenKeyhole)
-        {
-            <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
-        }
-    </h3>
-
-
     <div class="row gx-5">
         <!-- Image Section -->
         <div class="col-md-5 position-relative">
+            <h3 class="item-header my-3">
+                @Model.Name
+                @if (Model.HasGreenKeyhole)
+                {
+                    <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
+                }
+            </h3>
             <img alt="@Model.Name" src="@Model.ImageUrl" class="product-image img-fluid" />
         </div>
 
         <!-- Nutritional Information Section -->
         <div class="col-md-7">
-            <!-- Action Links for Authenticated Users -->
-            @if (User.Identity?.IsAuthenticated == true)
-            {
-                <div class="static-actions mb-3">
-                    <a href="@Url.Action("Update", new { id = Model.ItemId })" class="update-link">Update</a>
-                    <a href="@Url.Action("Delete", new { id = Model.ItemId })" class="delete-link">Delete</a>
-                </div>
-            }
-
             <!-- Nutritional Information in a dropdown that starts open -->
-            <details class="nutrition-details" style="margin-top: -20px;" open>
+            <details class="nutrition-details" style="margin-top: 25px;" open>
                 <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
                 <div class="nutrition-table-container">
                     <table>
@@ -37,11 +26,11 @@
                             <td>@Model.Food_Group</td>
                         </tr>
                         <tr>
-                            <td>Energi:</td>
+                            <td>Energy:</td>
                             <td>@Model.Energi_Kj kj</td>
                         </tr>
                         <tr>
-                            <td>Fett:</td>
+                            <td>Fat:</td>
                             <td>@Model.Fett g</td>
                         </tr>
                         <tr>
@@ -49,7 +38,7 @@
                             <td>@Model.Protein g</td>
                         </tr>
                         <tr>
-                            <td>Karbohydrat:</td>
+                            <td>Carbohydrates:</td>
                             <td>@Model.Karbohydrat g</td>
                         </tr>
                         <tr>
@@ -59,6 +48,15 @@
                     </table>
                 </div>
             </details>
+
+            <!-- Action Links for Authenticated Users -->
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <div style="text-align: right; margin-top: 20px" class="static-actions mb-3">
+                    <a href="@Url.Action("Update", new { id = Model.ItemId })" class="update-link">Update</a>
+                    <a href="@Url.Action("Delete", new { id = Model.ItemId })" class="delete-link">Delete</a>
+                </div>
+            }
         </div>
     </div>
 </div>

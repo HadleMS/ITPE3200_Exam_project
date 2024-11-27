@@ -120,6 +120,7 @@ body {
 
 /* Footer Styling */
 .footer {
+    overflow: hidden;
     background-color: #2f4f4f;
     color: #ffffff;
     padding: 1.5rem 1rem;

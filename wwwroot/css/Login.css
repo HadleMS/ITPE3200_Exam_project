@@ -85,7 +85,7 @@ h1 {
     z-index: 2; /* Ensure the text stays above the background */
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 767px) {
     /* Background circle - placed behind everything */
     .container:before {
         content: "";

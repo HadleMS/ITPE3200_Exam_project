@@ -23,7 +23,7 @@
         @foreach (var item in Model)
         {
             <tr class="open-modal" data-item-id="@item.ItemId"> <!-- Added class and data attribute for the modal -->
-                <td>@item.Name</td>
+                <td style="font-weight: 700">@item.Name</td>
                 <td>@item.Food_Group</td>
                 <td>@item.Energi_Kj kj</td>
                 <td>@item.Fett g</td>
@@ -44,8 +44,11 @@
                 @if (User.Identity?.IsAuthenticated == true)
                 {
                     <td class="action-links">
-                        <a href="@Url.Action("Update", new { id = item.ItemId })" class="update-link">Update</a>
-                        <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
+                        <div style="display: flex">
+                            <a href="@Url.Action("Update", new { id = item.ItemId })" style="margin-right: 10px"
+                                class="update-link">Update</a>
+                            <a href="@Url.Action("Delete", new { id = item.ItemId })" class="delete-link">Delete</a>
+                        </div>
                     </td>
                 }
             </tr>

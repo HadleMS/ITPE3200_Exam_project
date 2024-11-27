@@ -28,6 +28,12 @@ body {
     padding: 40px 130px;
 }
 
+@media (max-width: 991px) {
+    .custom-width {
+        padding: 40px 90px;
+    }
+}
+
 /* Input-felt styling */
 .form-control {
     border-radius: 30px;

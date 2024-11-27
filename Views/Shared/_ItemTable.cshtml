@@ -31,12 +31,14 @@
                 <td>@item.Karbohydrat g</td>
                 <td>@item.Salt g</td>
                 <td>
-                    <img src="@item.ImageUrl" alt="@item.Name" style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
+                    <img src="@item.ImageUrl" alt="@item.Name"
+                        style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
                 </td>
                 <td>
                     @if (item.HasGreenKeyhole)
                     {
-                        <img src="~/images/green_keyhole.jpg" alt="Keyhole"  style="max-width: 25px; max-height: 25px; display: block; margin: 0 auto;" />
+                        <img src="~/images/green_keyhole.jpg" alt="Keyhole"
+                            style="max-width: 25px; max-height: 25px; display: block; margin: 0 auto;" />
                     }
                 </td>
                 @if (User.Identity?.IsAuthenticated == true)

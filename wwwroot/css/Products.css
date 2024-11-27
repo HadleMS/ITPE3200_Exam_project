@@ -11,7 +11,7 @@ table {
 
 /* Header-styling */
 thead th {
-    background-color: #b96f6f; /* Velg ønsket bakgrunnsfarge for headeren */
+    background-color: #05954F; /* Velg ønsket bakgrunnsfarge for headeren */
     color: white; /* Tekstfarge */
     font-weight: bold; /* Fet skrift */
     border: 1px solid #ddd; /* Legger til ramme mellom headercellene */
@@ -52,17 +52,14 @@ tbody tr:nth-child(odd) {
 .create-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
     font-weight: bold;
+    background-color: #05954F;
 }
 
-.create-button:hover {
-    background-color: #45a049;
-}
 
 /* View switch button styling */
 .view-switch-button.active {

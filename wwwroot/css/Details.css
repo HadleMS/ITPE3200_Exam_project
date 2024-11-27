@@ -1,22 +1,30 @@
-/* Style for hele tabellen */
-table {
-    background-color: #f9f9f9 !important; /* Lys grå bakgrunn for tabellen */
-    border-collapse: collapse; /* Fjern mellomrom mellom cellene */
-    width: 100%;
-}
+/* Generelle tabellinnstillinger */
 
 .item-header {
     font-weight: bold; /* Gjør teksten fet */
+    font-size: 1.8rem; /* Juster fontstørrelse hvis nødvendig */
+    color: #333; /* Valgfritt: Endre tekstfargen */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse !important; /* Sikrer at kantene ikke dobles */
+    background-color: white; /* Hvit bakgrunn for tabellen */
+    border: 2px solid #ccc !important; /* Tydelig ramme rundt hele tabellen */
+}
+
+/* Style for celler */
+td, th {
+    border: 2px solid #ccc !important; /* Tydelige rammer rundt hver celle */
+    padding: 10px; /* Ekstra padding for lesbarhet */
+    text-align: left; /* Venstrejustert tekst */
+    font-size: 1rem; /* Standard skriftstørrelse */
+    color: #555; /* Tekstfarge */
 }
 
 
-/* Style for tabellceller */
-td, th {
-    background-color: #f9f9f9 !important; /* Lys grå bakgrunn for alle celler */
-    padding: 10px; /* Litt ekstra padding for lesbarhet */
-    font-size: 1rem; /* Standard skriftstørrelse */
-    color: #555; /* Tekstfarge */
-    text-align: left; /* Teksten venstrejusteres */
+tbody tr:nth-child(odd) {
+    background-color: white; /* Hvit bakgrunn for oddetallsrader */
 }
 
 /* Style for første kolonne (f.eks. labels) */
@@ -36,8 +44,9 @@ details tr:nth-child(even) {
     padding: 15px; /* Padding rundt tabellen */
     border-radius: 8px; /* Runde kanter for en moderne stil */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Myk skygge */
-    margin-top: 10px; /* Litt luft over tabellen */
+    margin-top: 0px; /* Fjern tomrom over tabellen */
 }
+
 
 /* Modal styles */
 .modal-content {

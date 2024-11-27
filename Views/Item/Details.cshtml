@@ -2,12 +2,12 @@
 
 <div>
     <h3 class="item-header my-5">
-    @Model.Name
-    @if (Model.HasGreenKeyhole)
-    {
-        <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
-    }
-</h3>
+        @Model.Name
+        @if (Model.HasGreenKeyhole)
+        {
+            <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke" class="keyhole-icon" />
+        }
+    </h3>
 
 
     <div class="row gx-5">
@@ -32,12 +32,30 @@
                 <summary class="summary-subtle">Næringsinnhold per 100 gram</summary>
                 <div class="nutrition-table-container">
                     <table>
-                        <tr><td>Type:</td><td>@Model.Food_Group</td></tr>
-                        <tr><td>Energi:</td><td>@Model.Energi_Kj kj</td></tr>
-                        <tr><td>Fett:</td><td>@Model.Fett g</td></tr>
-                        <tr><td>Protein:</td><td>@Model.Protein g</td></tr>
-                        <tr><td>Karbohydrat:</td><td>@Model.Karbohydrat g</td></tr>
-                        <tr><td>Salt:</td><td>@Model.Salt g</td></tr>
+                        <tr>
+                            <td>Type:</td>
+                            <td>@Model.Food_Group</td>
+                        </tr>
+                        <tr>
+                            <td>Energi:</td>
+                            <td>@Model.Energi_Kj kj</td>
+                        </tr>
+                        <tr>
+                            <td>Fett:</td>
+                            <td>@Model.Fett g</td>
+                        </tr>
+                        <tr>
+                            <td>Protein:</td>
+                            <td>@Model.Protein g</td>
+                        </tr>
+                        <tr>
+                            <td>Karbohydrat:</td>
+                            <td>@Model.Karbohydrat g</td>
+                        </tr>
+                        <tr>
+                            <td>Salt:</td>
+                            <td>@Model.Salt g</td>
+                        </tr>
                     </table>
                 </div>
             </details>

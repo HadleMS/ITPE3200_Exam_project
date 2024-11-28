@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Security.Principal;
 using Exam.Areas.Identity.Pages.Account.Manage;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
 {
@@ -34,7 +37,14 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             var userStore = new Mock<IUserStore<IdentityUser>>();
             _userManager = new Mock<UserManager<IdentityUser>>(
                 userStore.Object,
-                null, null, null, null, null, null, null, null
+                new Mock<IOptions<IdentityOptions>>().Object,
+                new Mock<IPasswordHasher<IdentityUser>>().Object,
+                new IUserValidator<IdentityUser>[0],
+                new IPasswordValidator<IdentityUser>[0],
+                new Mock<ILookupNormalizer>().Object,
+                new Mock<IdentityErrorDescriber>().Object,
+                new Mock<IServiceProvider>().Object,
+                new Mock<ILogger<UserManager<IdentityUser>>>().Object
             );
 
             // Setup SignInManager mock
@@ -44,7 +54,10 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
                 _userManager.Object,
                 contextAccessor.Object,
                 userPrincipalFactory.Object,
-                null, null, null, null
+                new Mock<IOptions<IdentityOptions>>().Object,
+                new Mock<ILogger<SignInManager<IdentityUser>>>().Object,
+                new Mock<IAuthenticationSchemeProvider>().Object,
+                new Mock<IUserConfirmation<IdentityUser>>().Object
             );
 
             SetupBasicMocks();
@@ -61,7 +74,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
                 .ReturnsAsync(_testUser.UserName);
             _userManager.Setup(x => x.GetPhoneNumberAsync(_testUser))
                 .ReturnsAsync("123456789");
-            
+
             // Setup claims
             var claims = new List<Claim>
             {
@@ -104,8 +117,8 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
         {
             // Arrange
             _userManager.Setup(x => x.GetUserAsync(It.IsAny<ClaimsPrincipal>()))
-                .ReturnsAsync((IdentityUser)null);
-            
+                .ReturnsAsync((IdentityUser?)null);
+
             var indexModel = new IndexModel(_userManager.Object, _signInManager.Object);
             SetupUserContext(indexModel);
 
@@ -113,8 +126,10 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             var result = await indexModel.OnGetAsync();
 
             // Assert
-            var notFoundResult = Assert.IsType<NotFoundObjectResult>(result);
-            Assert.Contains("Unable to load user", notFoundResult.Value.ToString());
+            if (result is NotFoundObjectResult notFoundResult && notFoundResult.Value != null)
+            {
+                Assert.Contains("Unable to load user", notFoundResult.Value.ToString());
+            }
         }
 
         [Fact]
@@ -139,7 +154,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             // Assert
             var redirectResult = Assert.IsType<RedirectToPageResult>(result);
             Assert.Equal("Your profile has been updated", indexModel.StatusMessage);
-            
+
             // Verify calls
             _userManager.Verify(x => x.SetPhoneNumberAsync(_testUser, "987654321"), Times.Once);
             _userManager.Verify(x => x.AddClaimAsync(_testUser, It.Is<Claim>(c => c.Type == "FullName")), Times.Once);

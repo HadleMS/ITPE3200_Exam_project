@@ -6,6 +6,8 @@ using Moq;
 using Xunit;
 using Exam.Areas.Identity.Pages.Account.Manage;
 using System.Security.Claims;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication;
 
 namespace MyShop.Tests.Identity
 {
@@ -20,15 +22,24 @@ namespace MyShop.Tests.Identity
             var userStore = new Mock<IUserStore<IdentityUser>>();
             _mockUserManager = new Mock<UserManager<IdentityUser>>(
                 userStore.Object,
-                null, null, null, null, null,
-                null, null, null
+                new Mock<IOptions<IdentityOptions>>().Object,
+                new Mock<IPasswordHasher<IdentityUser>>().Object,
+                new IUserValidator<IdentityUser>[0],
+                new IPasswordValidator<IdentityUser>[0],
+                new Mock<ILookupNormalizer>().Object,
+                new Mock<IdentityErrorDescriber>().Object,
+                new Mock<IServiceProvider>().Object,
+                new Mock<ILogger<UserManager<IdentityUser>>>().Object
             );
 
             _mockSignInManager = new Mock<SignInManager<IdentityUser>>(
                 _mockUserManager.Object,
                 new Mock<IHttpContextAccessor>().Object,
                 new Mock<IUserClaimsPrincipalFactory<IdentityUser>>().Object,
-                null, null, null, null
+                new Mock<IOptions<IdentityOptions>>().Object,
+                new Mock<ILogger<SignInManager<IdentityUser>>>().Object,
+                new Mock<IAuthenticationSchemeProvider>().Object,
+                new Mock<IUserConfirmation<IdentityUser>>().Object
             );
 
             _testUser = new IdentityUser

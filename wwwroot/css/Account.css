@@ -3,6 +3,17 @@ body {
     background-color: #d8ffe6; /* Lys grønn bakgrunn */
     margin: 0;
 }
+
+/* Begrens bredden på skjemaet */
+#account-form {
+    max-width: 400px  !important;
+}
+
+/* Juster marginen under overskriften */
+#account-form h2 {
+    margin-bottom: 20px  !important;
+}
+
 /* Wrapper for skjemaet */
 .form-wrapper {
     display: flex;
@@ -44,6 +55,7 @@ body {
     transition: all 0.3s ease;
     max-width: 100%; /* Juster til boksens bredde */
     margin-bottom: 15px; /* Avstand mellom feltene */
+    width: 325px
 }
 
 /* Ikon-posisjonering i input-felt */

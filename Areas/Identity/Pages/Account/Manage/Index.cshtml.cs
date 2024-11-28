@@ -39,8 +39,9 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
         {
             [Required(ErrorMessage = "Phone number is required.")]
             [Phone(ErrorMessage = "Please enter a valid phone number.")]
-            [RegularExpression(@"^\+?[1-9]\d{1,14}$", ErrorMessage = "Please enter a valid phone number (e.g., +47 123 45 678 or 123 45 678).")]
+            [RegularExpression(@"^\+?[1-9]\d{7,14}$", ErrorMessage = "Please enter a valid phone number with at least 8 digits (e.g., +47 12345678 or 12345678).")]
             [Display(Name = "Phone number")]
+
             public string PhoneNumber { get; set; }
 
             [Required(ErrorMessage = "Full name is required.")]
@@ -58,8 +59,6 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             [Display(Name = "DOB")]
             public DateTime? DOB { get; set; }
         }
-
-
         private async Task LoadAsync(IdentityUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);

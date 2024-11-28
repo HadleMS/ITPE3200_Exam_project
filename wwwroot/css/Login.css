@@ -22,7 +22,15 @@ h1 {
     margin-bottom: 1.5rem; /* Gi litt avstand under */
 }
 
+/* Begrens bredden på bildet */
+.image-max-width {
+    max-width: 70%;
+}
 
+/* Begrens bredden på skjemaet */
+.form-max-width {
+    max-width: 400px;
+}
 /* Input-felt styling */
 .form-control {
     border-radius: 30px;

@@ -11,8 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 /* Ensure content stays above the gradient */
 .container {
     position: relative;
@@ -34,8 +32,6 @@ body {
     min-width: 300px;
     animation: fadeInUp 0.8s ease-out;
 }
-
-
 
 /* Typography */
 h1 {
@@ -89,7 +85,6 @@ p {
     margin: 0 auto; /* This will center it if needed */
 }
 
-/* Features Section */
 /* Features Section */
 .features-section {
     display: flex;

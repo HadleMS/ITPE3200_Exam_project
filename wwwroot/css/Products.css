@@ -102,3 +102,38 @@ tbody tr:nth-child(odd) {
     background-color: #0056b3;
     transform: scale(1.05);
 }
+
+.action-links a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.update-link {
+    color: #28a745;
+    text-decoration: none;
+    border: 1px solid #28a745;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.update-link:hover {
+    color: white;
+    background-color: #28a745;
+}
+
+.delete-link {
+    color: #dc3545;
+    text-decoration: none;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.delete-link:hover {
+    color: white;
+    background-color: #dc3545;
+}

@@ -1,72 +1,72 @@
 /* Container Styling */
 .account-nav-container {
-  margin-top: 100px; /* Keep spacing from the top */
-  max-width: 300px; /* Limit the width */
+  margin-top: 100px;
+  max-width: 300px;
   margin-left: auto;
-  margin-right: auto; /* Center the container */
-  padding: 0; /* Remove padding for invisibility */
-  background: none; /* No background color */
-  box-shadow: none; /* Remove shadow */
-  border: none; /* No border */
+  margin-right: auto;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
 }
 
 /* Navigation List Styling */
 .account-nav {
-  list-style: none; /* Remove default list styling */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .account-nav .nav-item {
-  margin-bottom: 15px; /* Space between items */
+  margin-bottom: 15px;
 }
 
 /* Button Styling */
 .account-nav .nav-link {
-  color: #333333; /* Neutral dark color for text */
+  color: #333333;
   font-weight: bold;
   font-size: 1rem;
   padding: 12px 20px;
-  border-radius: 50px; /* Fully rounded buttons */
-  transition: all 0.3s ease; /* Smooth transition */
+  border-radius: 50px;
+  transition: all 0.3s ease;
   text-align: center;
-  background-color: #f0f0f0; /* Light gray background */
-  text-decoration: none; /* Remove underline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #f0f0f0;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  justify-content: center; /* Center align text */
+  justify-content: center;
 }
 
 /* Hover Effect */
 .account-nav .nav-link:hover {
-  background-color: #4caf50; /* Bright green on hover */
-  color: #ffffff; /* White text */
-  transform: translateY(-2px); /* Lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background-color: #4caf50;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Active State */
 .account-nav .nav-link.active {
-  background-color: #2f4f4f; /* Dark teal for active button */
-  color: #ffffff; /* White text for contrast */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button effect */
+  background-color: #2f4f4f;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Focus Effect */
 .account-nav .nav-link:focus {
-  outline: none; /* Remove default outline */
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.7); /* Green glow */
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.7);
 }
 
 /* Responsive Styling */
 @media (max-width: 576px) {
   .account-nav-container {
-    max-width: 100%; /* Full width on small screens */
+    max-width: 100%;
   }
 
   .account-nav .nav-link {
-    font-size: 0.9rem; /* Slightly smaller text */
-    padding: 10px 15px; /* Adjust padding for space */
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 }

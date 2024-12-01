@@ -4,11 +4,12 @@ body {
 }
 
 .navbar {
-  background-color: #2f4f4f; /* Rich dark teal */
-  border-bottom: 2px solid #2f4f4f; /* Highlight green border */
+  background-color: #2f4f4f;
+  border-bottom: 2px solid #2f4f4f;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 1rem 1.5rem;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28208, 240, 192, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
@@ -26,6 +27,7 @@ body {
   gap: 0.5rem;
   transition: color 0.3s ease;
 }
+
 .navbar-brand:hover {
   color: #4caf50;
 }
@@ -52,6 +54,7 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 /* Toggler Button for Mobile */
 .navbar-toggler {
   border: none;
@@ -63,6 +66,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -78,6 +82,7 @@ body {
   border-top: 2px solid #2f4f4f;
   font-size: 1rem;
 }
+
 .footer-contact-info {
   display: flex;
   justify-content: center;
@@ -95,6 +100,7 @@ body {
   color: #ffffff;
 }
 
+/* Responsitivity */
 @media (max-width: 767px) {
   .footer .container {
     flex-direction: column;

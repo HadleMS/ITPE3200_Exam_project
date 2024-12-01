@@ -6,6 +6,7 @@ namespace Exam.Utilities
 
     public static class NokkelhullValidator
     {
+        // Checks whether a given item qualifies for the Nøkkelhullet label based on thresholds for various food groups.
         public static bool IsEligibleForNokkelhull(Item item)
         {
             // Define thresholds based on the Nøkkelhullet regulations

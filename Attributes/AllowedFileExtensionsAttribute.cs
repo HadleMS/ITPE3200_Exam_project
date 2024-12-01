@@ -5,14 +5,19 @@ using System.Linq;
 
 namespace Exam.Attributes
 {
+
+    // Custom validation attribute to restrict uploaded files to specific allowed extensions.
     public class AllowedFileExtensionsAttribute : ValidationAttribute
     {
         private readonly string[] _extensions;
+
+        // Constructor to initialize the allowed extensions.
         public AllowedFileExtensionsAttribute(string[] extensions)
         {
             _extensions = extensions;
         }
 
+        // Override to perform the validation logic for file extensions.
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
             if (value is IFormFile file)

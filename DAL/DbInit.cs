@@ -3,16 +3,21 @@ using Exam.Models;
 
 namespace Exam.DAL;
 
+// Initializes and seeds the database with sample data for the application.
 public static class DBInit
 {
+
+    // Seeds the database with initial data if it is empty.
     public static void Seed(IApplicationBuilder app)
     {
         using var serviceScope = app.ApplicationServices.CreateScope();
         ItemDbContext context = serviceScope.ServiceProvider.GetRequiredService<ItemDbContext>();
 
+        // Ensures the database is deleted and recreated.
         context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
 
+        // Checks if the Items table is empty and seeds it with sample data if necessary.
         if (!context.Items.Any())
         {
             var items = new List<Item>
@@ -136,7 +141,7 @@ public static class DBInit
                     Salt = 1.9,
                     HasGreenKeyhole = true,
                     ImageUrl = "/images/skinke.jpg"
-                }, 
+                },
                 new Item
                 {
                     Name = "Norvegia 26% Skivet",
@@ -148,7 +153,7 @@ public static class DBInit
                     Salt = 1.2,
                     HasGreenKeyhole = false,
                     ImageUrl = "/images/norvegia_skivet.jpg"},
-                    
+
                 new Item
                 {
                     Name = "Gulrot 400g",
@@ -161,7 +166,7 @@ public static class DBInit
                     HasGreenKeyhole = true,
                     ImageUrl = "/images/gulrot.jpg"
                 },
-            
+
                 new Item
                 {
                     Name = "Pepsi Max 1,5l",
@@ -176,6 +181,7 @@ public static class DBInit
                 }
             };
 
+            // Adds the sample data to the database and saves changes.
             context.AddRange(items);
             context.SaveChanges();
         }

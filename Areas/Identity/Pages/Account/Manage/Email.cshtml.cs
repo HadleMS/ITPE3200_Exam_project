@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.WebUtilities;
 
 namespace Exam.Areas.Identity.Pages.Account.Manage
 {
+    // PageModel for managing email changes
     public class EmailModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -38,6 +39,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
         [BindProperty]
         public InputModel Input { get; set; }
 
+        // Input model for handling new email input
         public class InputModel
         {
 
@@ -48,6 +50,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             public string NewEmail { get; set; }
         }
 
+        // Loads the user data for displaying the email and confirmation status
         private async Task LoadAsync(IdentityUser user)
         {
             var email = await _userManager.GetEmailAsync(user);
@@ -61,6 +64,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
         }
 
+        // Handles GET requests to load the email management page
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -73,31 +77,32 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             return Page();
         }
 
+        // Handles POST requests for updating the user's email
         public async Task<IActionResult> OnPostUpdateEmailAsync()
         {
-            // Hent brukeren basert på pålogget identitet
+            // Retrieve the user based on the logged-in identity
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-            // Valider modellen (sjekker at NewEmail er fylt inn og gyldig)
+            // Validate the model (checks if NewEmail is provided and valid)
             if (!ModelState.IsValid)
             {
-                await LoadAsync(user); // Laster eksisterende data hvis noe feiler
+                await LoadAsync(user); // Load existing data if validation fails
                 return Page();
             }
 
-            // Sjekk om e-posten faktisk skal endres
+            // Check if the email is actually being changed
             var currentEmail = await _userManager.GetEmailAsync(user);
             if (Input.NewEmail == currentEmail)
             {
                 StatusMessage = "Your new email is the same as your current email.";
-                return RedirectToPage(); // Tilbake til samme side
+                return RedirectToPage(); // Return to the same page
             }
 
-            // Oppdater e-posten direkte
+            // Update the email directly
             var setEmailResult = await _userManager.SetEmailAsync(user, Input.NewEmail);
             if (!setEmailResult.Succeeded)
             {
@@ -105,11 +110,11 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                await LoadAsync(user); // Last inn data igjen i tilfelle feil
+                await LoadAsync(user); // Reload data in case of errors
                 return Page();
             }
 
-            // Oppdater brukernavn hvis det er satt til e-posten
+            // Update the username if it is set to the email
             var setUserNameResult = await _userManager.SetUserNameAsync(user, Input.NewEmail);
             if (!setUserNameResult.Succeeded)
             {
@@ -117,11 +122,11 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                await LoadAsync(user); // Last inn data igjen i tilfelle feil
+                await LoadAsync(user); // Reload data in case of errors
                 return Page();
             }
 
-            // Re-autentiser brukeren etter endringen
+            // Re-authenticate the user after the change
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your email has been updated successfully.";
             return RedirectToPage();

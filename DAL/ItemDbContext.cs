@@ -4,8 +4,11 @@ using Exam.Models;
 
 namespace Exam.DAL;
 
+// Database context class for managing Item entities and user identities, derived from IdentityDbContext.
 public class ItemDbContext : IdentityDbContext
 {
+
+    // Constructor to configure the database context with the provided options.
     public ItemDbContext(DbContextOptions<ItemDbContext> options) : base(options)
     {
     }

@@ -12,6 +12,8 @@ using System.Security.Claims;
 
 namespace MyShop.Tests.Identity
 {
+
+    // Unit tests for the ChangePasswordModel, verifying the behavior of changing passwords.
     public class ChangePasswordTests
     {
         private readonly Mock<UserManager<IdentityUser>> _mockUserManager;
@@ -20,6 +22,7 @@ namespace MyShop.Tests.Identity
 
         public ChangePasswordTests()
         {
+            // Setting up mocks for UserManager, SignInManager, and ILogger required for testing.
             var userStore = new Mock<IUserStore<IdentityUser>>();
             _mockUserManager = new Mock<UserManager<IdentityUser>>(
                 userStore.Object,
@@ -49,6 +52,7 @@ namespace MyShop.Tests.Identity
             );
         }
 
+        // Tests the successful scenario of changing the password.
         [Fact]
         public async Task OnPostAsync_ValidPassword_ReturnsRedirectResult()
         {
@@ -84,6 +88,7 @@ namespace MyShop.Tests.Identity
             Assert.Equal("Your password has been changed.", model.StatusMessage);
         }
 
+        // Tests the scenario where an invalid old password is provided.
         [Fact]
         public async Task OnPostAsync_InvalidOldPassword_ReturnsPageResult()
         {

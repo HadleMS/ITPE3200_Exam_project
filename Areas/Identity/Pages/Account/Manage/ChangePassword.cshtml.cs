@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Exam.Areas.Identity.Pages.Account.Manage
 {
+    // PageModel for handling password change functionality
     public class ChangePasswordModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -32,6 +33,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
         [TempData]
         public string StatusMessage { get; set; }
 
+        // Model for capturing user input for the password change form
         public class InputModel
         {
 
@@ -52,6 +54,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             public string ConfirmPassword { get; set; }
         }
 
+        // Handles the initial loading of the password change page
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -69,6 +72,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             return Page();
         }
 
+        // Handles the form submission for password change
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

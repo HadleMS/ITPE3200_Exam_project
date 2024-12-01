@@ -6,12 +6,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Begrens bredden på skjemaet */
+/* Limit the maximum width of forms */
 .form-max-width {
   max-width: 400px;
 }
 
-/* Begrens bredden på bildet */
+/* Limit the maximum width of images */
 .image-max-width {
   max-width: 70%;
 }
@@ -19,12 +19,12 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 h1 {
-  font-family: "Poppins", sans-serif; /* Poppins-font */
-  font-weight: 700; /* Fet tekst */
-  font-size: 2.5rem; /* Størrelse på fonten */
-  text-align: center; /* Sentrer teksten */
-  color: #343a40; /* Mørk grå farge */
-  margin-bottom: 1.5rem; /* Gi litt avstand under */
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 1.5rem;
 }
 
 /* Input-felt styling */
@@ -32,13 +32,13 @@ h1 {
   border-radius: 30px;
   background-color: #f0f0f0;
   border: none;
-  padding: 12px 20px 12px 45px; /* Rom for ikonet */
+  padding: 12px 20px 12px 45px;
   font-size: 1rem;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
 
-/* Ikon-styling */
+/* Icon styling */
 .icon {
   position: absolute;
   left: 15px;
@@ -46,17 +46,17 @@ h1 {
   transform: translateY(-50%);
   font-size: 1.2rem;
   color: #888;
-  pointer-events: none; /* Hindrer interaksjon med ikonet */
+  pointer-events: none;
 }
 
-/* Animasjon på SVG-ikon i input-felt */
+/* Animation for icons on focus within the input field */
 .form-group.position-relative:focus-within .icon svg path {
-  fill: #ff66b2; /* Endre farge ved fokus */
-  transform: scale(1.1); /* Gjør ikonet litt større ved fokus */
+  fill: #ff66b2;
+  transform: scale(1.1);
   transition: fill 0.3s ease, transform 0.3s ease;
 }
 
-/* Knapp med hover-animasjon */
+/* Button styling with hover animation */
 .btn-primary {
   background-color: #ff66b2;
   border: none;

@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 
 namespace Exam.Areas.Identity.Pages.Account
 {
+
+    // Handles user logout functionality, including signing out the user and redirecting to the appropriate page.
     public class LogoutModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -23,6 +25,7 @@ namespace Exam.Areas.Identity.Pages.Account
             _logger = logger;
         }
 
+        // Processes the logout request and redirects to the specified return URL or the default page.
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await _signInManager.SignOutAsync();

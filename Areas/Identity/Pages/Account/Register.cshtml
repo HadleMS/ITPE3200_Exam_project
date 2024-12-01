@@ -7,53 +7,66 @@
 <link rel="stylesheet" href="~/css/Register.css?v=1.1">
 <div class="container-fluid">
     <div class="row min-vh-100">
-        
-        <!-- Venstre seksjon - Registreringsskjema -->
+
+        <!-- Left section - Registration form -->
         <div class="col-md-6 d-flex align-items-center justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <h1 class="text-center mb-4">Sign Up</h1>
-                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center w-100 form-max-width">
+                <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post"
+                    class="text-center w-100 form-max-width">
                     <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
-                    <!-- E-post input-felt med SVG-ikon -->
+                    <!-- Email input field with SVG icon -->
                     <div class="form-group mb-3 position-relative">
                         <span class="icon position-absolute">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 4H4C2.89 4 2 4.9 2 6V18C2 19.1 2.89 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#888"/>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 4H4C2.89 4 2 4.9 2 6V18C2 19.1 2.89 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                                    fill="#888" />
                             </svg>
                         </span>
-                        <input asp-for="Input.Email" class="form-control pl-5" autocomplete="username" aria-required="true" placeholder="Email" />
+                        <input asp-for="Input.Email" class="form-control pl-5" autocomplete="username"
+                            aria-required="true" placeholder="Email" />
                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                     </div>
 
-                    <!-- Passord input-felt med SVG-ikon -->
+                    <!-- Password input field with SVG icon -->
                     <div class="form-group mb-3 position-relative">
                         <span class="icon position-absolute">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 17C11.45 17 11 16.55 11 16V14C11 13.45 11.45 13 12 13C12.55 13 13 13.45 13 14V16C13 16.55 12.55 17 12 17ZM17 8V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V8C5.9 8 5 8.9 5 10V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V10C19 8.9 18.1 8 17 8ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V8H9V7ZM17 20H7V10H17V20Z" fill="#888"/>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 17C11.45 17 11 16.55 11 16V14C11 13.45 11.45 13 12 13C12.55 13 13 13.45 13 14V16C13 16.55 12.55 17 12 17ZM17 8V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V8C5.9 8 5 8.9 5 10V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V10C19 8.9 18.1 8 17 8ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V8H9V7ZM17 20H7V10H17V20Z"
+                                    fill="#888" />
                             </svg>
                         </span>
-                        <input asp-for="Input.Password" class="form-control pl-5" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                        <input asp-for="Input.Password" class="form-control pl-5" autocomplete="new-password"
+                            aria-required="true" placeholder="Password" />
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
                     </div>
 
-                    <!-- Bekreft passord input-felt med SVG-ikon -->
+                    <!-- Confirm password input field with SVG icon -->
                     <div class="form-group mb-3 position-relative">
                         <span class="icon position-absolute">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 17C11.45 17 11 16.55 11 16V14C11 13.45 11.45 13 12 13C12.55 13 13 13.45 13 14V16C13 16.55 12.55 17 12 17ZM17 8V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V8C5.9 8 5 8.9 5 10V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V10C19 8.9 18.1 8 17 8ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V8H9V7ZM17 20H7V10H17V20Z" fill="#888"/>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 17C11.45 17 11 16.55 11 16V14C11 13.45 11.45 13 12 13C12.55 13 13 13.45 13 14V16C13 16.55 12.55 17 12 17ZM17 8V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 7V8C5.9 8 5 8.9 5 10V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V10C19 8.9 18.1 8 17 8ZM9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7V8H9V7ZM17 20H7V10H17V20Z"
+                                    fill="#888" />
                             </svg>
                         </span>
-                        <input asp-for="Input.ConfirmPassword" class="form-control pl-5" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+                        <input asp-for="Input.ConfirmPassword" class="form-control pl-5" autocomplete="new-password"
+                            aria-required="true" placeholder="Confirm Password" />
                         <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                     </div>
-
+                    <!-- Submit button -->
                     <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary"> SIGN UP</button>
                 </form>
             </div>
         </div>
 
-        <!-- Høyre seksjon - Bilde -->
+        <!-- Right section - Illustration -->
         <div class="col-md-6 d-none d-md-flex flex-column align-items-center justify-content-center">
             <img src="~/images/register.png" alt="Illustration" class="img-fluid mt-4 image-max-width">
         </div>
@@ -61,5 +74,6 @@
 </div>
 
 @section Scripts {
+    <!-- Include validation scripts for input fields -->
     <partial name="_ValidationScriptsPartial" />
 }

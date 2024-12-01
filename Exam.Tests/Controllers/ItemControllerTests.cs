@@ -9,8 +9,10 @@ using Exam.ViewModels;
 
 namespace MyShop.Test.Controllers
 {
+    // Unit tests for the ItemController, verifying the behavior of CRUD operations
     public class ItemControllerTests
     {
+        // Tests the Table action to ensure it returns the correct view and data.
         [Fact]
         public async Task TestTable()
         {
@@ -192,6 +194,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal(itemList, itemsViewModel.Items);
         }
 
+        // Tests creating a valid item to ensure it redirects to the Products page.
         [Fact]
         public async Task Create_ValidItem_ReturnsRedirectToAction() //Positiv
         {
@@ -210,6 +213,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal("Products", redirectResult.ActionName);
         }
 
+        // Tests creating an invalid item to ensure it returns the view with the original model.
         [Fact]
         public async Task Create_InvalidItem_ReturnsView() //Negativ
         {
@@ -228,6 +232,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal(item, viewResult.Model);
         }
 
+        // Tests retrieving details of an existing item to ensure it returns a partial view.
         [Fact]
         public async Task Details_ExistingItem_ReturnsPartialView() //Positiv
         {
@@ -247,6 +252,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal(1, model.ItemId);
         }
 
+        // Tests retrieving details of a non-existing item to ensure it returns a NotFound result.
         [Fact]
         public async Task Details_NonExistingItem_ReturnsNotFound() //Negativ
         {
@@ -263,6 +269,7 @@ namespace MyShop.Test.Controllers
             Assert.IsType<NotFoundObjectResult>(result);
         }
 
+        // Tests updating a valid item to ensure it redirects to the Products page.
         [Fact]
         public async Task Update_ValidItem_ReturnsRedirectToAction() //Positiv
         {
@@ -281,6 +288,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal("Products", redirectResult.ActionName);
         }
 
+        // Tests updating an invalid item to ensure it returns the view with the original model.
         [Fact]
         public async Task Update_InvalidItem_ReturnsView() //Negativ
         {
@@ -299,6 +307,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal(item, viewResult.Model);
         }
 
+        // Tests deleting a valid item to ensure it redirects to the Products page.
         [Fact]
         public async Task DeleteConfirmed_ValidId_ReturnsRedirectToAction() //Positiv
         {
@@ -316,6 +325,7 @@ namespace MyShop.Test.Controllers
             Assert.Equal("Products", redirectResult.ActionName);
         }
 
+        // Tests deleting an invalid item to ensure it returns a BadRequest result.
         [Fact]
         public async Task DeleteConfirmed_InvalidId_ReturnsBadRequest() //Negativ
         {

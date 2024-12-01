@@ -1,20 +1,22 @@
 @model Exam.Models.Item
 
 @{
-    ViewData["Title"] = "Update Item";
+    ViewData["Title"] = "Update Item"; // Sets the page title for the "Update Item" page.
 }
 
 <link href="~/css/Update.css" rel="stylesheet" />
 <!-- Sentralisert form-container -->
 <div class="form-container">
+
+    <!-- Centralized container for the update form -->
     <h2>Update Item</h2>
     <form asp-action="Update" enctype="multipart/form-data" id="itemForm">
         <input type="hidden" asp-for="ItemId" />
         <input type="hidden" asp-for="ImageUrl" />
-        
+
         <div asp-validation-summary="All" class="text-danger"></div>
 
-
+        <!-- Input fields for item attributes -->
         <div class="form-group">
             <input asp-for="Name" class="form-control" placeholder="Name" />
             <span asp-validation-for="Name" class="text-danger"></span>
@@ -61,7 +63,8 @@
             <span asp-validation-for="ImageFile" class="text-danger"></span>
         </div>
 
+        <!-- Buttons for submitting the form or returning to the products page -->
         <button type="submit" class="btn btn-success mt-4">Save Changes</button>
-           <a asp-action="Products" class="btn btn-outline-success mt-4">Back to Products</a>
+        <a asp-action="Products" class="btn btn-outline-success mt-4">Back to Products</a>
     </form>
 </div>

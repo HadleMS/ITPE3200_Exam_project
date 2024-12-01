@@ -1,4 +1,4 @@
-/* Generell styling for hele siden */
+/* General styling for the entire page */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,30 +6,31 @@ body {
   background-color: #f1fff6;
 }
 
-/* Styling av overskriften inni skjemaet */
+/* Styling for the heading inside the form */
 .form-container h2 {
-  font-size: 28px; /* Større skrift */
-  font-weight: bold; /* Tykkere tekst */
-  color: #198754; /* Helsefokusert grønnfarge */
-  margin-bottom: 20px; /* Avstand til skjemaet */
-  text-align: center; /* Sentralisering av tekst */
+  font-size: 28px;
+  font-weight: bold;
+  color: #198754;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Sentralisering og styling av form-container */
+
+/* Centering and styling of the form container */
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px;
-  background-color: #fff; /* Bakgrunnsfarge for skjemaet */
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 450px; /* Bredde på skjemaet */
+  width: 450px;
   margin: 50px auto;
 }
 
-/* Input-felt (uten labels utenfor feltene) */
+/* Input fields (without external labels) */
 .form-group {
   width: 100%;
   margin-bottom: 20px;
@@ -44,12 +45,12 @@ body {
   font-size: 16px;
 }
 
-/* Placeholder tekst i inputfeltene */
+/* Placeholder text styling for input fields */
 .form-group input::placeholder {
-  color: #888; /* Farge på placeholder-teksten */
+  color: #888;
 }
 
-/* Knapp for å sende inn skjemaet */
+/* Submit button styling */
 button {
   width: 100%;
   padding: 12px;
@@ -61,7 +62,7 @@ button {
   font-size: 16px;
 }
 
-/* Tilbakestill knapp (Back to Table View) */
+/* Reset button (Back to Table View) */
 a {
   width: 100%;
   text-align: center;
@@ -69,26 +70,26 @@ a {
   text-decoration: none;
 }
 
-/* Styling for bildet i skjemaet (img-thumbnail) */
+/* Styling for images inside the form (img-thumbnail) */
 .img-thumbnail {
-  max-width: 150px; /* Begrens maksimal bredde */
-  max-height: 150px; /* Begrens maksimal høyde */
-  width: auto; /* Behold proporsjoner */
-  height: auto; /* Behold proporsjoner */
-  object-fit: contain; /* Tilpass bildet uten beskjæring */
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border: none;
 }
 
-/* Valideringstekst for inputfeltene */
+/* Validation text styling for input fields */
 .text-danger {
   font-size: 14px;
   color: #d32f2f;
 }
 
-/* Responsivitet for skjermen - tilpasser skjemaet til små skjermer */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .form-container {
-    width: 90%; /* Gjør skjemaet bredere på små skjermer */
+    width: 90%;
   }
 
   .form-control {

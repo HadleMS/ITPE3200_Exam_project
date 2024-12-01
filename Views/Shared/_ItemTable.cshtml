@@ -1,6 +1,7 @@
 @model IEnumerable<Item>
 
 
+<!-- Table displaying items -->
 <table style="overflow-y: scroll;">
     <thead>
         <tr>
@@ -15,13 +16,14 @@
             <th>Keyhole</th>
             @if (User.Identity?.IsAuthenticated == true)
             {
-                <th>Actions</th>
+                <th>Actions</th> <!-- Visible only if the user is authenticated -->
             }
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
+            <!-- Table row for each item -->
             <tr class="open-modal" data-item-id="@item.ItemId"> <!-- Added class and data attribute for the modal -->
                 <td style="font-weight: 700">@item.Name</td>
                 <td>@item.Food_Group</td>
@@ -35,6 +37,7 @@
                         style="max-width: 50px; max-height: 50px; display: block; margin: 0 auto;" />
                 </td>
                 <td>
+                    <!-- Display Keyhole symbol if applicable -->
                     @if (item.HasGreenKeyhole)
                     {
                         <img src="~/images/green_keyhole.jpg" alt="Keyhole"
@@ -44,6 +47,7 @@
                 @if (User.Identity?.IsAuthenticated == true)
                 {
                     <td class="action-links">
+                        <!-- Links for authenticated users to update or delete the item -->
                         <div style="display: flex">
                             <a href="@Url.Action("Update", new { id = item.ItemId })" style="margin-right: 10px"
                                 class="update-link">Update</a>

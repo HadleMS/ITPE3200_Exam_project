@@ -14,6 +14,8 @@ using Exam.Areas.Identity.Pages.Account;  // For RegisterModel
 
 namespace Exam.Tests.Areas.Identity.Pages.Account
 {
+
+    // Unit tests for the RegisterModel in the Identity Account area, verifying the behavior during registration.
     public class RegisterModelTests
     {
         private readonly Mock<UserManager<IdentityUser>> _userManager;
@@ -61,6 +63,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account
             SetupMocks();
         }
 
+        // Helper method to configure mock behavior
         private void SetupMocks()
         {
             // UserManager setups
@@ -87,6 +90,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account
                 .Returns(Task.CompletedTask);
         }
 
+        // Test case to verify that an invalid model returns a PageResult
         [Fact]
         public async Task OnPostAsync_InvalidModel_ReturnsPageResult()
         {

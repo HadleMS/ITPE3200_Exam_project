@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Exam.Areas.Identity.Pages.Account
 {
+    // Handles user login functionality, including processing user credentials and managing external authentication schemes.
     public class LoginModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -31,6 +32,8 @@ namespace Exam.Areas.Identity.Pages.Account
         public string ReturnUrl { get; set; }
         [TempData]
         public string ErrorMessage { get; set; }
+
+        // Represents user input for the login form, including email and password fields.
         public class InputModel
         {
 

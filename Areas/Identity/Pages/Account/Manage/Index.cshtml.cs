@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Exam.Areas.Identity.Pages.Account.Manage
 {
+
+    // PageModel for managing and updating user profile details
     public class IndexModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -35,6 +37,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
         [BindProperty]
         public InputModel Input { get; set; }
 
+        // Model for capturing user input on the profile page.
         public class InputModel
         {
             [Required(ErrorMessage = "Phone number is required.")]
@@ -64,7 +67,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
-            // Hent FullName, Address, and DOB fra brukerens claims
+            // Retrieve FullName, Address, and DOB from user claims
             var claims = await _userManager.GetClaimsAsync(user);
             var fullName = claims.FirstOrDefault(c => c.Type == "FullName")?.Value ?? "";
             var address = claims.FirstOrDefault(c => c.Type == "Address")?.Value ?? "";

@@ -21,6 +21,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Exam.Areas.Identity.Pages.Account
 {
+
+    // Handles user registration functionality, including creating user accounts, validating input, 
+    // and sending email confirmation links for account verification.
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -50,6 +53,8 @@ namespace Exam.Areas.Identity.Pages.Account
 
         public string ReturnUrl { get; set; }
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
+
+        // Model for capturing user input during registration.
         public class InputModel
         {
 

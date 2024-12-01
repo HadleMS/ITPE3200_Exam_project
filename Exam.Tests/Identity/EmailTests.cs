@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Authentication;
 
 namespace MyShop.Tests.Identity
 {
+
+    // Unit tests for the EmailModel, verifying behavior for updating user email.
     public class EmailTests
     {
         private readonly Mock<UserManager<IdentityUser>> _mockUserManager;
@@ -19,6 +21,7 @@ namespace MyShop.Tests.Identity
 
         public EmailTests()
         {
+            // Setting up mocks for UserManager, SignInManager, and test user.
             var userStore = new Mock<IUserStore<IdentityUser>>();
             _mockUserManager = new Mock<UserManager<IdentityUser>>(
                 userStore.Object,
@@ -50,6 +53,7 @@ namespace MyShop.Tests.Identity
             };
         }
 
+        // Tests successful update of email with valid input.
         [Fact]
         public async Task OnPostUpdateEmailAsync_ValidEmail_ReturnsRedirectResult() // Positive
         {
@@ -76,6 +80,7 @@ namespace MyShop.Tests.Identity
             Assert.Equal("Your email has been updated successfully.", model.StatusMessage);
         }
 
+        // Tests unsuccessful update of email with invalid input.
         [Fact]
         public async Task OnPostUpdateEmailAsync_InvalidEmail_ReturnsPageResult() // Negative
         {

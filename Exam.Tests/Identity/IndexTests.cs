@@ -17,12 +17,16 @@ using Microsoft.AspNetCore.Authentication;
 
 namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
 {
+
+    // Unit tests for the IndexModel in the Identity Account Manage area, verifying user profile management functionality.
     public class IndexModelTests
     {
         private readonly Mock<UserManager<IdentityUser>> _userManager;
         private readonly Mock<SignInManager<IdentityUser>> _signInManager;
         private readonly IdentityUser _testUser;
 
+
+        // Initialize a test user and mock dependencies.
         public IndexModelTests()
         {
             // Setup test user
@@ -94,6 +98,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
                 .ReturnsAsync(IdentityResult.Success);
         }
 
+        // Test to verify that a valid user can access their profile page successfully.
         [Fact]
         public async Task OnGetAsync_ValidUser_ReturnsPageResult()
         {
@@ -112,6 +117,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             Assert.Equal("Test Address", indexModel.Input.Address);
         }
 
+        // Test to verify that a NotFound result is returned when the user is not found.
         [Fact]
         public async Task OnGetAsync_UserNotFound_ReturnsNotFoundResult()
         {
@@ -132,6 +138,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             }
         }
 
+        // Test to verify that a valid model successfully updates user information and redirects.
         [Fact]
         public async Task OnPostAsync_ValidModel_UpdatesUserAndRedirects()
         {
@@ -162,6 +169,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             _userManager.Verify(x => x.AddClaimAsync(_testUser, It.Is<Claim>(c => c.Type == "DOB")), Times.Once);
         }
 
+        // Test to verify that an invalid model returns the page with validation errors.
         [Fact]
         public async Task OnPostAsync_InvalidModel_ReturnsPageWithErrors()
         {
@@ -186,6 +194,7 @@ namespace Exam.Tests.Areas.Identity.Pages.Account.Manage
             Assert.False(indexModel.ModelState.IsValid);
         }
 
+        // Test to verify that a failed phone number update returns an appropriate error message.
         [Fact]
         public async Task OnPostAsync_PhoneUpdateFails_ReturnsErrorMessage()
         {

@@ -6,6 +6,8 @@
 }
 <link rel="stylesheet" href="~/css/Account.css?">
 
+
+<!--managing the user's profile information-->
 <div class="form-wrapper">
     <div class="row">
         <div class="col-md-6 custom-width">
@@ -16,21 +18,26 @@
                 <!-- Username -->
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" width="20" height="20">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
                     </span>
-                    <input asp-for="Username" class="form-control pl-5" placeholder="Please choose your username." disabled />
+                    <input asp-for="Username" class="form-control pl-5" placeholder="Please choose your username."
+                        disabled />
                 </div>
 
                 <!-- Full Name -->
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                            <path fill="#888" d="M12 12c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4zm0-2c1.65 0 3-1.35 3-3s-1.35-3-3-3-3 1.35-3 3 1.35 3 3 3z"/>
+                            <path fill="#888"
+                                d="M12 12c2.67 0 8 1.34 8 4v2H4v-2c0-2.66 5.33-4 8-4zm0-2c1.65 0 3-1.35 3-3s-1.35-3-3-3-3 1.35-3 3 1.35 3 3 3z" />
                         </svg>
                     </span>
-                    <input asp-for="Input.FullName" class="form-control pl-5" placeholder="Please enter your full name." />
+                    <input asp-for="Input.FullName" class="form-control pl-5"
+                        placeholder="Please enter your full name." />
                     <span asp-validation-for="Input.FullName" class="text-danger"></span>
                 </div>
 
@@ -38,7 +45,9 @@
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#888"/>
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="#888" />
                         </svg>
                     </span>
                     <input asp-for="Input.Address" class="form-control pl-5" placeholder="Please enter your address." />
@@ -49,10 +58,13 @@
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.62 10.79a15.561 15.561 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.26 1.12.32 2.33.5 3.57.5.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1-10.49 0-19-8.51-19-19 0-.55.45-1 1-1H5c.55 0 1 .45 1 1 0 1.25.18 2.45.5 3.57.1.34.01.74-.27 1.02l-2.2 2.2z" fill="#888"/>
+                            <path
+                                d="M6.62 10.79a15.561 15.561 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.26 1.12.32 2.33.5 3.57.5.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1-10.49 0-19-8.51-19-19 0-.55.45-1 1-1H5c.55 0 1 .45 1 1 0 1.25.18 2.45.5 3.57.1.34.01.74-.27 1.02l-2.2 2.2z"
+                                fill="#888" />
                         </svg>
                     </span>
-                    <input asp-for="Input.PhoneNumber" class="form-control pl-5" placeholder="Please enter your phone number." />
+                    <input asp-for="Input.PhoneNumber" class="form-control pl-5"
+                        placeholder="Please enter your phone number." />
                     <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
                 </div>
 
@@ -60,7 +72,8 @@
                 <div class="form-group mb-4 position-relative">
                     <span class="icon position-absolute">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
-                            <path fill="#888" d="M20 3h-3V1h-2v2H9V1H7v2H4c-1.1 0-1.99.9-1.99 2L2 19c0 1.1.89 2 1.99 2H20c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.89-2-1.99-2zM4 19V8h16v11H4zm16-14H4V5h16v1z"/>
+                            <path fill="#888"
+                                d="M20 3h-3V1h-2v2H9V1H7v2H4c-1.1 0-1.99.9-1.99 2L2 19c0 1.1.89 2 1.99 2H20c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.89-2-1.99-2zM4 19V8h16v11H4zm16-14H4V5h16v1z" />
                         </svg>
                     </span>
                     <input asp-for="Input.DOB" type="date" class="form-control pl-5" />

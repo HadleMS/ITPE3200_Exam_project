@@ -1,15 +1,18 @@
 @model ItemsViewModel
 @{
+    // Helper method to convert energy in kJ to kcal, rounded to the nearest whole number.
     double EnergiToKcal(double energi)
     {
         return Math.Round(energi / 4.184);
     }
 }
 
+<!-- Iterate through each item in the ItemsViewModel to display in a grid layout -->
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @foreach (var item in Model.Items)
     {
         <div class="col">
+            <!-- Clickable card element to open a modal with item details -->
             <div class="card">
                 <a href="javascript:void(0);" style="position: relative;" class="open-modal w-100"
                     data-item-id="@item.ItemId">
@@ -20,6 +23,7 @@
                     </div>
                     @if (item.HasGreenKeyhole)
                     {
+                        <!-- Display the Green Keyhole icon if the item is eligible -->
                         <img src="~/images/green_keyhole.jpg" alt="Nøkkelhullsmerke"
                             style="position: absolute; top: 15px; right: 15px;" class="keyhole-icon" />
                     }

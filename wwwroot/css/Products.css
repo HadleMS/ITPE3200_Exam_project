@@ -1,45 +1,46 @@
 body {
-  background-color: #f1fff6; /* Lys grønn bakgrunn */
+  background-color: #f1fff6;
 }
-/* Generelle tabellinnstillinger */
+
+/* General table styling */
 table {
   width: 100%;
-  border-collapse: collapse; /* Sikrer at celler deler kantlinjer */
-  background-color: white; /* Bakgrunnsfarge for tabellen */
-  border: 1px solid #ddd; /* Legger til en lys grå ramme rundt hele tabellen */
+  border-collapse: collapse;
+  background-color: white;
+  border: 1px solid #ddd;
 }
 
 /* Header-styling */
 thead th {
-  background-color: #05954f; /* Velg ønsket bakgrunnsfarge for headeren */
-  color: white; /* Tekstfarge */
-  font-weight: bold; /* Fet skrift */
-  border: 1px solid #ddd; /* Legger til ramme mellom headercellene */
-  text-align: center; /* Justerer teksten midtstilt */
+  background-color: #05954f;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-/* Cellestil (vanlig innhold) */
+/* Cell styling */
 td,
 th {
-  padding: 10px; /* Gjør cellene mer lesbare */
-  border: 1px solid #ddd; /* Gir hver celle en lys grå ramme */
-  text-align: left; /* Venstrejustering for tekst */
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
-/* Stripede rader for bedre lesbarhet */
+/* Striped row styling for better readability */
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Lys grå for partallsrader */
+  background-color: #f9f9f9;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: white; /* Hvit for oddetallsrader */
+  background-color: white;
 }
 
 /* Full width container to ensure the content stretches to the full page width */
 .full-width-container {
   width: 100%;
-  margin: 0; /* No margin to the left or right */
-  padding: 0; /* No padding */
+  margin: 0;
+  padding: 0;
 }
 
 /* Button container styling */
@@ -76,9 +77,9 @@ tbody tr:nth-child(odd) {
 }
 
 .view-switch-button img {
-  width: 30px; /* Inline style: width: 30px */
-  height: auto; /* Inline style: height: auto */
-  vertical-align: middle; /* Inline style: vertical-align: middle */
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
 }
 
 .view-switch-button:hover {

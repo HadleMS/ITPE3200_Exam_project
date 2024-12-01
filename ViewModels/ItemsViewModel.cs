@@ -2,6 +2,7 @@ using Exam.Models;
 using System.Collections.Generic;
 using System.Linq;
 
+// ViewModel for managing and displaying a collection of items in the application.
 namespace Exam.ViewModels
 {
     public class ItemsViewModel

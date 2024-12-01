@@ -187,7 +187,7 @@ namespace Exam.Controllers
             if (ModelState.IsValid)
             {
                 // Check if the user uploaded a new image
-                if (ImageFile != null && ImageFile.Length > 0)
+                if (ImageFile != null && ImageFile.Length > 0 && item.ImageFile != null)
                 {
                     // Delete the old image if it exists (optional)
                     if (!string.IsNullOrEmpty(item.ImageUrl))

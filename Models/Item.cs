@@ -13,7 +13,7 @@ namespace Exam.Models
         public int ItemId { get; set; }
 
         // Validation for the Name property 
-        [RegularExpression(@"[a-zA-ZæøåÆØÅ. \-]{2,20}", ErrorMessage = "Name must be letters and between 2 to 20 characters.")]
+        [Required(ErrorMessage = "Name is required.")]
         [Display(Name = "Name")]
         public string Name { get; set; } = string.Empty;
 
@@ -47,8 +47,6 @@ namespace Exam.Models
         [Display(Name = "Salt per 100g")]
         public double Salt { get; set; } = 0;
 
-        // Validation for ImageUrl
-        [RegularExpression(@"[a-zA-ZæøåÆØÅ., \-]{1,20}", ErrorMessage = "ImageUrl must be letters and between 1 to 20 characters.")]
         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; } = string.Empty;
 

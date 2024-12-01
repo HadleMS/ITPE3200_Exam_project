@@ -14,61 +14,64 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                    <img src="/images/logo.png" alt="My Nutrition Tracker Logo" />
-                    My Nutrition Tracker
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Products", "Item")">Items</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Index", "About")">About</a>
-                        </li>
+    <div style="flex-direction:column; display:flex; min-height:100vh;">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="/images/logo.png" alt="My Nutrition Tracker Logo" />
+                        My Nutrition Tracker
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Products", "Item")">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "About")">About</a>
+                            </li>
 
-                        <!-- Account Dropdown with _LoginPartial.cshtml -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Account
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                @await Html.PartialAsync("_LoginPartial")
-                            </ul>
-                        </li>
-                    </ul>
+                            <!-- Account Dropdown with _LoginPartial.cshtml -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Account
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    @await Html.PartialAsync("_LoginPartial")
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            <!-- Dynamic content for each page -->
-            @RenderBody()
-            @RenderSection("Scripts", required: false)
-        </main>
-    </div>
-    
-    <div class="footer">
-        <div class="container">
-            <!-- Footer Contact Info (Center) -->
-            <ul class="list-unstyled footer-contact-info">
-                <li><span class="footer-contact-item">Pilestredet Park 0890, 0176 Oslo</span></li>
-                <li><span class="footer-contact-item">+47 (123) 456-7890</span></li>
-                <li><span class="footer-contact-item">NutritionTracker@oslomet.no</span></li>
-                <li><span class="footer-contact-item">© 2024 My Nutrition Tracker. All rights reserved.</span></li>
-            </ul>
+        <div style="flex: 1 1 0%" class="container">
+            <main role="main" class="pb-3">
+                <!-- Dynamic content for each page -->
+                @RenderBody()
+                @RenderSection("Scripts", required: false)
+            </main>
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <!-- Footer Contact Info (Center) -->
+                <ul class="list-unstyled footer-contact-info">
+                    <li><span class="footer-contact-item">Pilestredet Park 0890, 0176 Oslo</span></li>
+                    <li><span class="footer-contact-item">+47 (123) 456-7890</span></li>
+                    <li><span class="footer-contact-item">NutritionTracker@oslomet.no</span></li>
+                    <li><span class="footer-contact-item">© 2024 My Nutrition Tracker. All rights reserved.</span></li>
+                </ul>
+            </div>
         </div>
     </div>
+
 </body>
 </html>

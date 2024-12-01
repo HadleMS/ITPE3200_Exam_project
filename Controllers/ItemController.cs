@@ -23,55 +23,55 @@ namespace Exam.Controllers
         }
 
         // Action to display Products.cshtml
-      public async Task<IActionResult> Products()
-{
-    var items = await _itemRepository.GetAll(); // Get items from the repository
-    if (items == null)
-    {
-        _logger.LogError("[ItemController] Item list not found.");
-        return NotFound("Item list not found");
-    }
+        public async Task<IActionResult> Products()
+        {
+            var items = await _itemRepository.GetAll(); // Get items from the repository
+            if (items == null)
+            {
+                _logger.LogError("[ItemController] Item list not found.");
+                return NotFound("Item list not found");
+            }
 
-    var viewModel = new ItemsViewModel
-    {
-        Items = items.ToList(), // Ensure that 'Items' is populated correctly
-        TotalPages = (int)Math.Ceiling(items.Count() / (double)6),
-        CurrentPage = 1
-    };
+            var viewModel = new ItemsViewModel
+            {
+                Items = items.ToList(), // Ensure that 'Items' is populated correctly
+                TotalPages = (int)Math.Ceiling(items.Count() / (double)6),
+                CurrentPage = 1
+            };
 
-    return View(viewModel); // Pass the populated view model
-}
+            return View(viewModel); // Pass the populated view model
+        }
 
 
         // Action to display items in grid layout with pagination
         public async Task<IActionResult> Grid(int page = 1, int pageSize = 6)
-{
-    var items = await _itemRepository.GetAll();
-    if (items == null)
-    {
-        _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
-        return NotFound("Item list not found");
-    }
+        {
+            var items = await _itemRepository.GetAll();
+            if (items == null)
+            {
+                _logger.LogError("[ItemController] Item list not found while executing _itemRepository.GetAll()");
+                return NotFound("Item list not found");
+            }
 
-    var totalItems = items.Count();
-    var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var totalItems = items.Count();
+            var pagedItems = items.Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
-    var viewModel = new ItemsViewModel
-    {
-        Items = pagedItems,
-        TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize),
-        CurrentPage = page
-    };
+            var viewModel = new ItemsViewModel
+            {
+                Items = pagedItems,
+                TotalPages = (int)Math.Ceiling(totalItems / (double)pageSize),
+                CurrentPage = page
+            };
 
-    // Check for AJAX request to return only the items as partial view
-    if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
-    {
-        return PartialView("_ItemCardsPartial", viewModel);
-    }
+            // Check for AJAX request to return only the items as partial view
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("_ItemCardsPartial", viewModel);
+            }
 
-    // For full page load
-    return View(viewModel);
-}
+            // For full page load
+            return View(viewModel);
+        }
 
 
         // Partial view action for table view
@@ -125,45 +125,45 @@ namespace Exam.Controllers
         {
             return View();
         }
-        
+
 
         // New Create method to check eligibility and save the item
         [HttpPost]
-[Authorize]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> Create(Item item, IFormFile ImageFile)
-{
-    if (ModelState.IsValid)
-    {
-        // Handle the file upload if provided
-        if (ImageFile != null && ImageFile.Length > 0)
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Item item, IFormFile? ImageFile)
         {
-            var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            if (ModelState.IsValid)
             {
-                await ImageFile.CopyToAsync(stream);
+                // Handle the file upload if provided
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+                    item.ImageUrl = "/images/" + ImageFile.FileName;
+                }
+
+                // Check if the item qualifies for the Nøkkelhullet symbol
+                item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
+
+                // Save the item to the repository
+                bool success = await _itemRepository.Create(item);
+                if (success)
+                {
+                    // Redirect to the Products view after successful creation
+                    return RedirectToAction(nameof(Products));
+                }
+
+                _logger.LogError("[ItemController] Failed to save the item to the repository.");
             }
 
-            item.ImageUrl = "/images/" + ImageFile.FileName;
+            // Return to the Create view with the item to show errors if creation fails
+            return View(item);
         }
-
-        // Check if the item qualifies for the Nøkkelhullet symbol
-        item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
-
-        // Save the item to the repository
-        bool success = await _itemRepository.Create(item);
-        if (success)
-        {
-            // Redirect to the Products view after successful creation
-            return RedirectToAction(nameof(Products));
-        }
-
-        _logger.LogError("[ItemController] Failed to save the item to the repository.");
-    }
-
-    // Return to the Create view with the item to show errors if creation fails
-    return View(item);
-}
 
 
         // Action to return the form for updating an existing item (GET request)
@@ -180,49 +180,49 @@ public async Task<IActionResult> Create(Item item, IFormFile ImageFile)
             return View(item);
         }
 
-     [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> Update(Item item, IFormFile ImageFile)
-{
-    if (ModelState.IsValid)
-    {
-        // Check if the user uploaded a new image
-        if (ImageFile != null && ImageFile.Length > 0)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(Item item, IFormFile? ImageFile)
         {
-            // Delete the old image if it exists (optional)
-            if (!string.IsNullOrEmpty(item.ImageUrl))
+            if (ModelState.IsValid)
             {
-                var oldImagePath = Path.Combine("wwwroot", item.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(oldImagePath))
+                // Check if the user uploaded a new image
+                if (ImageFile != null && ImageFile.Length > 0)
                 {
-                    System.IO.File.Delete(oldImagePath);
+                    // Delete the old image if it exists (optional)
+                    if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        var oldImagePath = Path.Combine("wwwroot", item.ImageUrl.TrimStart('/'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+
+                    // Save the new image
+                    var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+                    item.ImageUrl = "/images/" + ImageFile.FileName; // Update the item with the new image path
                 }
+
+                // Re-check if the item qualifies for the Nøkkelhullet symbol after updating
+                item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
+
+                // Update the item in the repository
+                bool success = await _itemRepository.Update(item);
+                if (success)
+                {
+                    return RedirectToAction(nameof(Products)); // Redirect to the Products view after update
+                }
+
+                _logger.LogError("[ItemController] Failed to update the item.");
             }
 
-            // Save the new image
-            var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await ImageFile.CopyToAsync(stream);
-            }
-            item.ImageUrl = "/images/" + ImageFile.FileName; // Update the item with the new image path
+            return View(item); // Return to the Update view with the item if update fails
         }
-
-        // Re-check if the item qualifies for the Nøkkelhullet symbol after updating
-        item.HasGreenKeyhole = NokkelhullValidator.IsEligibleForNokkelhull(item);
-
-        // Update the item in the repository
-        bool success = await _itemRepository.Update(item);
-        if (success)
-        {
-            return RedirectToAction(nameof(Products)); // Redirect to the Products view after update
-        }
-
-        _logger.LogError("[ItemController] Failed to update the item.");
-    }
-
-    return View(item); // Return to the Update view with the item if update fails
-}
 
 
         // Action to display the confirmation page for deleting an item
@@ -256,15 +256,15 @@ public async Task<IActionResult> Update(Item item, IFormFile ImageFile)
         }
     }
     public class GridViewModel
-{
-    public IEnumerable<Item> Items { get; set; }
-    public bool ShowViewMore { get; set; }
-
-    public GridViewModel(IEnumerable<Item> items, bool showViewMore)
     {
-        Items = items;
-        ShowViewMore = showViewMore;
+        public IEnumerable<Item> Items { get; set; }
+        public bool ShowViewMore { get; set; }
+
+        public GridViewModel(IEnumerable<Item> items, bool showViewMore)
+        {
+            Items = items;
+            ShowViewMore = showViewMore;
+        }
     }
-}
 
 }

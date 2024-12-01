@@ -55,6 +55,7 @@ namespace Exam.Models
 
         // Property to handle file upload, not mapped to the database
         [NotMapped]
+        [Required(ErrorMessage = "File is required.")]
         [AllowedFileExtensions(new string[] { ".jpg", ".jpeg", ".png", }, ErrorMessage = "Only image files (.jpg, .jpeg, .png) are allowed.")]
         public IFormFile? ImageFile { get; set; }
     }

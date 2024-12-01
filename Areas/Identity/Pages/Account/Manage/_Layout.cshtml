@@ -1,4 +1,5 @@
 ﻿﻿@{
+    // Use parent layout if provided, otherwise use default layout
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout) && parentLayout != null)
     {
         Layout = parentLayout.ToString();
@@ -10,9 +11,12 @@
 }
 
 <div class="row">
+    <!-- Sidebar navigation -->
     <div style="position: relative" class="col-md-3">
         <partial name="_ManageNav" />
     </div>
+
+    <!-- Main content area -->
     <div class="col-md-9">
         @RenderBody()
     </div>

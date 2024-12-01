@@ -252,7 +252,7 @@ namespace MyShop.Test.Controllers
         {
             // Arrange
             var mockItemRepository = new Mock<IItemRepository>();
-            mockItemRepository.Setup(repo => repo.GetItemById(999)).ReturnsAsync((Item)null);
+            mockItemRepository.Setup(repo => repo.GetItemById(999)).ReturnsAsync((Item?)null);
             var mockLogger = new Mock<ILogger<ItemController>>();
             var controller = new ItemController(mockItemRepository.Object, mockLogger.Object);
 

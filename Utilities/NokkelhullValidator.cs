@@ -1,9 +1,10 @@
 using System;
 using Exam.Models;
 
-namespace Exam.Utilities{
-    
-       public static class NokkelhullValidator
+namespace Exam.Utilities
+{
+
+    public static class NokkelhullValidator
     {
         public static bool IsEligibleForNokkelhull(Item item)
         {
@@ -24,4 +25,3 @@ namespace Exam.Utilities{
 
 }
 
- 

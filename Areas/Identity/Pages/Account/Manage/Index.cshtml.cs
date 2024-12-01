@@ -35,7 +35,7 @@ namespace Exam.Areas.Identity.Pages.Account.Manage
         [BindProperty]
         public InputModel Input { get; set; }
 
-       public class InputModel
+        public class InputModel
         {
             [Required(ErrorMessage = "Phone number is required.")]
             [Phone(ErrorMessage = "Please enter a valid phone number.")]

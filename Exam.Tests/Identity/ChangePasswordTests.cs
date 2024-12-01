@@ -37,7 +37,7 @@ namespace MyShop.Tests.Identity
 
             var contextAccessor = new Mock<IHttpContextAccessor>();
             var userPrincipalFactory = new Mock<IUserClaimsPrincipalFactory<IdentityUser>>();
-            
+
             _mockSignInManager = new Mock<SignInManager<IdentityUser>>(
                 _mockUserManager.Object,
                 contextAccessor.Object,
@@ -89,7 +89,7 @@ namespace MyShop.Tests.Identity
         {
             // Arrange
             var user = new IdentityUser { Id = "testId", UserName = "test@test.com" };
-            
+
             _mockUserManager.Setup(um => um.GetUserAsync(It.IsAny<ClaimsPrincipal>()))
                 .ReturnsAsync(user);
             _mockUserManager.Setup(um => um.ChangePasswordAsync(user, "WrongPass123!", "NewPass123!"))

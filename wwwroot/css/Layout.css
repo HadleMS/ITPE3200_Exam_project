@@ -1,115 +1,112 @@
 /* Ultimate Navbar Styling */
 body {
-    font-family: 'Open Sans', sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .navbar {
-    background-color: #2f4f4f; /* Rich dark teal */
-    border-bottom: 2px solid #2f4f4f; /* Highlight green border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem 1.5rem;
+  background-color: #2f4f4f; /* Rich dark teal */
+  border-bottom: 2px solid #2f4f4f; /* Highlight green border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.5rem;
 }
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28208, 240, 192, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28208, 240, 192, 0.9%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Brand Styling */
 .navbar-brand {
-    color: #ffffff;
-    font-size: 1rem;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
 }
 .navbar-brand:hover {
-    color: #4CAF50;
+  color: #4caf50;
 }
 
 /* Brand Logo */
 .navbar-brand img {
-    width: 40px;
-    height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-    transition: transform 0.3s ease;
+  width: 40px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
 }
 
 /* Logo Animation on Hover */
 .navbar-brand:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Navbar Links */
 .navbar-nav .nav-link {
-    color: #d0f0c0;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #d0f0c0;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 /* Toggler Button for Mobile */
 .navbar-toggler {
-    border: none;
-    color: #ffffff;
+  border: none;
+  color: #ffffff;
 }
 
 @keyframes dropdownSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer Styling */
 .footer {
-    overflow: hidden;
-    background-color: #2f4f4f;
-    color: #ffffff;
-    padding: 1.5rem 1rem;
-    border-top: 2px solid #2f4f4f;
-    font-size: 1rem;
+  overflow: hidden;
+  background-color: #2f4f4f;
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  border-top: 2px solid #2f4f4f;
+  font-size: 1rem;
 }
 .footer-contact-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    font-size: 0.875rem;
-    color: #d0f0c0;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.875rem;
+  color: #d0f0c0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-grow: 2;
 }
-
 
 .footer-contact-item:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-
-
 @media (max-width: 767px) {
-    .footer .container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .footer-contact-info {
-        flex-direction: column;
-        margin-bottom: 1rem;
-    }
+  .footer-contact-info {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 
-    .footer-bottom-text {
-        margin-left: 0;
-    }
+  .footer-bottom-text {
+    margin-left: 0;
+  }
 }

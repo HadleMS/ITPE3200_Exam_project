@@ -4,7 +4,7 @@ namespace Exam.Controllers
 {
     public class AboutController : Controller
     {
-       
+
         public IActionResult Index()
         {
             // Returns a View

@@ -26,6 +26,7 @@ namespace Exam.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
         }
+
         [BindProperty]
         public InputModel Input { get; set; }
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
@@ -36,7 +37,6 @@ namespace Exam.Areas.Identity.Pages.Account
         // Represents user input for the login form, including email and password fields.
         public class InputModel
         {
-
             [Required]
             [EmailAddress]
             public string Email { get; set; }
@@ -44,6 +44,8 @@ namespace Exam.Areas.Identity.Pages.Account
             [Required]
             [DataType(DataType.Password)]
             public string Password { get; set; }
+
+            public bool RememberMe { get; set; } // Optional: Add "Remember Me" functionality
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -61,6 +63,36 @@ namespace Exam.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
+        }
+
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        {
+            returnUrl ??= Url.Content("~/");
+
+            if (!ModelState.IsValid)
+            {
+                // If the input model is invalid, redisplay the form
+                return Page();
+            }
+
+            // Attempt to sign in the user with the provided credentials
+            var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+            if (result.Succeeded)
+            {
+                _logger.LogInformation("User logged in.");
+                return LocalRedirect(returnUrl);
+            }
+            else if (result.IsLockedOut)
+            {
+                _logger.LogWarning("User account locked out.");
+                return RedirectToPage("./Lockout");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return Page();
+            }
         }
     }
 }

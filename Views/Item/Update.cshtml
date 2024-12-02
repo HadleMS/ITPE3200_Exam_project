@@ -68,3 +68,16 @@
         <a asp-action="Products" class="btn btn-outline-success mt-4">Back to Products</a>
     </form>
 </div>
+
+<script>
+    document.getElementById("itemForm").addEventListener("submit", function (event) {
+        const inputs = document.querySelectorAll("input[type='text'], input[type='number']");
+
+        inputs.forEach(input => {
+            if (input.value) {
+                // Replace commas with periods
+                input.value = input.value.replace(',', '.');
+            }
+        });
+    });
+</script>
